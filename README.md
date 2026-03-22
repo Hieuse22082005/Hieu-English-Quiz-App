@@ -42,7 +42,7 @@ Nếu bạn muốn chạy thử ứng dụng này trên máy cá nhân:
 
 1. **Clone dự án:**
    ```bash
-   git clone [https://github.com/Hieuse22082005/Hieu-English-Quiz-App.git](https://github.com/Hieuse22082005/Hieu-English-Quiz-App.git)
+git clone [https://github.com/Hieuse22082005/Hieu-English-Quiz-App.git](https://github.com/Hieuse22082005/Hieu-English-Quiz-App.git)
 
 2. **Cài Đặt Thư Viện**
 ```bash
