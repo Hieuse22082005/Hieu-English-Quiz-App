@@ -33,7 +33,7 @@ Hiện nay, hầu hết các nền tảng học từ vựng phổ biến (như Q
 ---
 
 ## 📸 Giao diện ứng dụng
-*(Hiếu hãy chụp ảnh màn hình Dashboard của bạn, sau đó kéo thả ảnh vào dòng này trên GitHub để nó tự hiện link ảnh nhé)*
+<img width="1920" height="950" alt="image" src="https://github.com/user-attachments/assets/6d277fcf-82c9-4bbd-a072-a98dd9f6d4ef" />
 
 ---
 
