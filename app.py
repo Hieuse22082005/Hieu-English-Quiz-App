@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 import random
-
+#phan moi nha
 # 1. Cấu hình trang
 st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wide")
 
@@ -238,4 +238,3 @@ elif menu == "📝 Kiểm tra":
                 if cols[1].button("Tiếp theo ➡️"):
                     del st.session_state.q2
                     st.rerun()
-                  # chao
