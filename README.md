@@ -45,10 +45,9 @@ Nếu bạn muốn chạy thử ứng dụng này trên máy cá nhân:
    git clone [https://github.com/Hieuse22082005/Hieu-English-Quiz-App.git](https://github.com/Hieuse22082005/Hieu-English-Quiz-App.git)
 
 2. **Cài Đặt Thư Viện**
-
 ```bash
 pip install -r requirements.txt
 
-3. **Khởi chạy:**
+3. **Khởi Chạy**
 ```bash
 streamlit run app.py
