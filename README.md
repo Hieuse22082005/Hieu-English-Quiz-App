@@ -48,6 +48,5 @@ Nếu bạn muốn chạy thử ứng dụng này trên máy cá nhân:
 ```bash
 pip install -r requirements.txt
 //
-chạy 
-```bash
+
 streamlit run app.py
