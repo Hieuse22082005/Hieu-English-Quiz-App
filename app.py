@@ -237,3 +237,4 @@ elif menu == "📝 Kiểm tra":
                 if cols[1].button("Tiếp theo ➡️"):
                     del st.session_state.q2
                     st.rerun()
+                  # chao
