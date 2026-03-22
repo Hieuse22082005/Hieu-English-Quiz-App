@@ -1,0 +1,3 @@
+1)tại sao t truy cập vào địa chỉ ip của máy tính thêm localhost lại có thể truy cập đc vào trang 
+2)cái dự án extension tại sao có thể truy cập được vào trang web nào nó và tự động hành động 
+3)https://hieu-english-quiz-app-b95iynas58mvcfu3naxjkz.streamlit.app/ vào được mà dùng đại chỉ ip lại ko vào đc 
