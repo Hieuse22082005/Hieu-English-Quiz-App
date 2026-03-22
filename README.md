@@ -49,9 +49,7 @@ Nếu bạn muốn chạy thử ứng dụng này trên máy cá nhân:
 pip install -r requirements.txt
 ```
 
-
-
-3.**Khởi Động Ứng Dụng **
+3. **Khởi Động Ứng Dụng**
 ```bash
 streamlit run app.py
 
