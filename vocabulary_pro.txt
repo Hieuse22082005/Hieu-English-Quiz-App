@@ -1,351 +1,379 @@
-abbreviation Viết vắn tắt n
-absent vắng mặt adj
-absolute tuyệt đối adj
-accelerate tăng tốc v
-access truy cập n
-accommodation chỗ ở n
-accompany đồng hành v
-accountant kế toán n
-accurate chính xác adj
-achieve thành tựu v
-achievement thành tựu n
-adapt thích nghi v
-adjustment sự thay đổi n
-advanced tiên tiến adj
-advertise quảng cáo v
-advertising agency 	công ty quảng cáo n
-advise Lời Khuyên v
-adviser Cố Vấn n
-agency Đại lí n
-agenda Nhãn Hàng n
-air fare 	Vé máy bay n
-airsick say máy bay adj
-airsickness Sự say máy bay n
-alarming cảnh báo adj
-alternative có thể thay thế adj
-amazed kinh ngạc adj
-ambution tham vọng adj
-ambutiously đày tham vọng n
-amusing vui nhộn adv
-analyse phân tích v
-analysis Sự phân tích n
-angle Góc độ n
-annoyed bực bội dj
-annual hằng năm adj
-anouncement thông báo n
-antique đồ cổ n
-apart from 	ngoại trừ v
-apologize xin lỗi v
-apology lời xin lỗi n
-application đơn ứng tuyển n
-approach tiếp cận n
-approximately xấp xi adj
-argue tranh luận v
-argument sự tranh cãi n
-arrangement sự sắp xếp n
-arrival sự đến n
-artefact đồ tạo tác n
-astronaut phi hành gia n
-atmosphere bầu không khí n
-attach đính kèm v
-attachment vật đính kèm n
-attitude thái độ n
-attraction sự thu hút n
-authentic chính hãng adj
-award trao thưởng v
-babysitter trông trẻ n
-backache đau lưng n
-backbone cột sống n
-background bối cảnh n
-backpack balo n
-backpacker người đi buik n
-backup dự phòng n
-bakery tiệm bánh n
-balance cân bằng n
-bank gửi tiền ngân hàng v
-bargain trả giá v
-base cơ sở n
-basic cơ bản adj
-basis nền tảng n
-basket rổ n
-bathrope khăn tắm n
-battery pin n
-battle gây gổ v
-bay vịnh n
-beauty vẻ đẹp n
-bed giường n
-beginer người mới bắt đầu n
-behave hành vi v
-belong thuộc về v
-benefit lợi ích n
-best-selling bán chạy adj
-bestseller sản phẩm bán chạy n
-biannual 2 năm 1 lần adj
-big screen 	màn hình to n
-blame đổ lỗi v
-blend trộn v
-blogger người viết blog n
-blogging viết blog n
-blow thổi v
-board lên tàu v
-body-language ngôn ngữ cơ thể n
-bold táo bạo adj
-booking đặt vé n
-booking office	phòng vé n
-booklet cuốn sổ nhỏ n
-boost thúc đẩy v
-border giới hạn n
-branch chi nhánh n
-brand thương hiệu n
-brave dũng cảm adj
-breath taking 	hấp dẫn , ngoạn mục adj
-breath hơi thở n
-breathe thở v
-breathing việc hít thở n
-brief ngắn gọn adj
-briefly ngắn gọn adv
-brochure sách hưỡng dẫn n
-bubble gum 	kẹo cao su n
-buffet tiệc đứng n
-burglar trộm n
-burglar alarm 	cánh báo trộm n
-burnout kiệt sức n
-business card 	danh thiếp n
-business class	hạng thương gia n
-businessman thương gia n
-buyer người mua n
-cabin crew 	tiếp viên n
-call center 	trunng tâm chăm sóc n
-callous nhẫn tâm adj
-cameo diễn viên phụ n
-cameraman nhân viên quay phim n
-campaign chiến dịch n
-campfire lửa trại n
-campsite nơi cắm trại n
-canal con kênh n
-cancel huỷ v
-candidate ứng viên n
-capacity Sức chứa n
-careless bất cẩn adj
-cashback hoàn tiền n
-casual bình thường adj
-cater phục vụ v
-celebration lễ kỉ niệm n
-central trung tâm adj
-centre around	ngồi xung quanh v
-certain chắc chắn adj
-certificate chứng chỉ n
-chain dãy n
-challenge thử thách n
-challenging thách thức adj
-champion quán quân n
-championship giải đấu n
-chapter chương n
-charming hấp dẫn , ngoạn mục adj
-check-in làm thủ tục v
-check-up kiểm tra sức khoẻ n
-checklist danh sách n
-cheerful vui vẻ adj
-childcare chăm sóc trẻ em n
-childhood tuổi thơ n
-circumstance tình huống n
-citizen cư dân n
-claim yêu cầu v
-clarify sáng tỏ v
-climate change 	thay đổi thời tiết n
-clinic phòng khám n
-closing date 	hết hạn n
-cloth vải n
-co-worker đồng nghiệp n
-coal than n
-coastline bờ biển n
-coincide xảy ra đồng thời v
-coincidence sự trùng hợp n
-colourful đầy màu sắc adj
-combine kết hợp v
-comfort thoải mái n
-comment bình luận n
-communication giao tiếp n
-compete cạnh tranh v
-competitor đối thủ n
-complaint phàn nàn n
-concentrate tập trung v
-conclusion kê luận n
-conference hội nghị n
-confidence tự tin adj
-confuse gây nhầm lẫn v
-confused lúng túng adj
-congratulate chúc mừng v
-connection sự kết nối n
-consumer khách hàng n
-contact sự liên lạc n
-container thùng đựng hàng n
-content hài lòng adj
-context bối cảnh n
-contract hợp đồng n
-contradict mâu thuẫn v
-convenience sự thuận tiện n
-convince thuyết phục v
-cookbook sách nấu ăn n
-cookery nghệ thuật nấu ăn n
-cool điềm tĩnh adj
-cooperate hợp tác v
-correct chỉnh sửa v
-council hội đồng n
-countdown đếm ngược n
-courage can đảm n
-cover letter 	thư ứng tuyển n
-creative sáng tạo adj
-creator người sáng tạo n
-crime kẻ trộm n
-criminal tội phạm n
-critical quan trọng adj
-cross tức giận adj
-crucial quantrongj adj
-cultural thuộc về văn hoá adj
-culture văn hoá n
-curious tò mò adj
-currency tiền tệ n
-currenly hiện tại adv
-curriculum vitea	sơ yếu lí lịch n
-custom phong tục n
-custom-made thiết kế riêng n
-customize thay đổi theo yêu cầu v
-custume trang phục n
-cutting-edge hiện đại adj
-cycle chu kì n
-deal thương lượng n
-decorate trang trí v
-define định nghĩa v
-defining có tính quyết định adj
-definite chắc chắn adj
-definition sự định nghĩa n
-degrade làm suy thoái v
-delete xoá bỏ v
-deliver giao hàng v
-delivery sự phân phát n
-demand nhu cầu n
-demonstrate chứng minh v
-deny phủ nhận v
-depart khởi hành v
-departure sự khởi hành n
-deposit tiền đặt cọc n
-depressed trầm cảm adj
-design mẫu thiết kế n
-desirable đáng ao ước adj
-destination điểm đến n
-destroy phá huỷ v
-determine xác nhận v
-development sự phát triển n
-diagram biểu đồ n
-dialogue cuộc hội thoại n
-dieter người ăn kiêng n
-difficulty khó khăn n
-direct trực tiếp adj
-direction sự chỉ đạo n
-directly mottj cách trực tiếp adv
-director người giám đốc n
-disability khuyết tật n
-disagreement sự bất đồng n
-disappoint làm thất vọng v
-disappointed thất vọng adj
-disappointing đáng thất vọng adj
-disappointment sự thất vọng n
-disapprove không tán thành,phảnđói v
-disavantage bất lợi n
-disconnect mất kết nối v
-discouranged nản lòng adj
-display trưng bày v
-divide phân chia v
-domestic trong nước adj
-donate quyên góp v
-double tăng gấp đôi v
-doubt sự nghi ngờ n
-dramatic kịch tính adj
-drastic quyết liệt adj
-drawback nhược điểm n
-dress code	qui định trang phục n
-drop sự giảm n
-due dự kiến adj
-duty nhiệm vu n
-ease sự dễ dàng n
-economic thuộc kinh tế adj
-economical tiết kiệm adj
-economy kinh tế n
-economy class	hạng phổ thông n
-ecosystem hệ sinh thái n
-editor biên tập viên n
-educate giáo dục v
-educated được giáo dục adj
-educational thuộc về giáo dục adj
-effective hiệu quả adj
-efficient có hiệu quả adj
-effort cố gắng n
-elaborate công phu , tỉ mỉ adj
-elastic co giãn adj
-elasticity tính co giãn n
-election cuộc bầu cử n
-electrical thuộc về điện adj
-element yếu tố cơ bản n
-elementary cơ bản adj
-embarrassed lúng túng , xấu hổ adj
-emergency khẩn cấp n
-emotion cảm xúc n
-employment việc làm n
-empty làm trống rỗng v
-enclose đính kèm v
-encourage động viên v
-endangered bị đe doạ adj
-endeavour sự cố gắng n
-endurance sức chịu đựng n
-enemy đối thủ n
-engineering kỹ thuật n
-enjoyable thú vị adj
-entertain giải trí v
-entertainment sự giải trí n
-entry lối vào n
-environment môi trường n
-environmental thuộc về môi trường adj
-envision hình dung v
-equip trang bị v
-essential thiết yêu adj
-establish thành lập v
-examine kiểm tra v
-exceed vượt quá v
-except ngoại trừ v
-exception ngoại lệ n
-excess vượt qua s adj
-exhibition buổi triển lãm n
-exist tồn tại v
-expand mở rộng v
-expect trông đợi v
-expectation kỳ vọng b
-expedition chuyến thám hiểm n
-expense chi phí n
-experienced kinh nghiệm adj
-experiment thí nghiệm n
-expert chuyên gia n
-expire hết hạn v
-explannation lời giải thích n
-exploit khai thaccs v
-explore khám phá v
-export xuất khẩu v
-extend mở rộng v
-face đối mặt v
-facility cơ sở vật chất n
-fair chợ n
-fair công bằng adj
-familiar quen thuộc adj
-fancy muốn , mong ước v
-fantastic tuyệt vời adj
-fare giá vé n
-fascinate thu hút , lôi cuốn v
-fascinating lôi cuốn adj
-fashion thời trang n
-fashion designer	nhà thiết kế n
-fashionable hợp thời trang adj
-fashionable hợp thời trang adj
-fashionable hợp thời trang adj
-fashionable hợp thời trang adj
-fasten thắt , cài v
-fatigue sự mệt mỏi n
+abbreviation,Viết vắn tắt,n,/əˌbriːviˈeɪʃən/
+absent,vắng mặt,adj,/ˈæbsənt/
+absolute,tuyệt đối,adj,/ˈæbsəluːt/
+accelerate,tăng tốc,v,/əkˈseləreɪt/
+access,truy cập,n,/ˈækses/
+accommodation,chỗ ở,n,/əˌkɒməˈdeɪʃən/
+accompany,đồng hành,v,/əˈkʌmpəni/
+accountant,kế toán,n,/əˈkaʊntənt/
+accurate,chính xác,adj,/ˈækjərət/
+achieve,thành tựu,v,/əˈtʃiːv/
+achievement,thành tựu,n,/əˈtʃiːvmənt/
+adapt,thích nghi,v,/əˈdæpt/
+adjustment,sự thay đổi,n,/əˈdʒʌstmənt/
+advanced,tiên tiến,adj,/ədˈvɑːnst/
+advertise,quảng cáo,v,/ˈædvətaɪz/
+advertising agency,công ty quảng cáo,n,/ˈædvətaɪzɪŋ ˈeɪdʒənsi/
+advise,Lời Khuyên,v,/ədˈvaɪz/
+adviser,Cố Vấn,n,/ədˈvaɪzə/
+agency,Đại lí,n,/ˈeɪdʒənsi/
+agenda,Nhãn Hàng,n,/əˈdʒendə/
+air fare,Vé máy bay,n,/ˈeə feə/
+airsick,say máy bay,adj,/ˈeə sɪk/
+airsickness,Sự say máy bay,n,/ˈeə ˌsɪknəs/
+alarming,cảnh báo,adj,/əˈlɑːmɪŋ/
+alternative,có thể thay thế,adj,/ɔːlˈtɜːnətɪv/
+amazed,kinh ngạc,adj,/əˈmeɪzd/
+ambution,tham vọng,adj,/æmˈbɪʃən/
+ambutiously,đày tham vọng,n,/æmˈbɪʃəsli/
+amusing,vui nhộn,adv,/əˈmjuːzɪŋ/
+analyse,phân tích,v,/ˈænəlaɪz/
+analysis,Sự phân tích,n,/əˈnæləsɪs/
+angle,Góc độ,n,/ˈæŋɡl/
+annoyed,bực bội,dj,/əˈnɔɪd/
+annual,hằng năm,adj,/ˈænjuəl/
+anouncement,thông báo,n,/əˈnaʊnsmənt/
+antique,đồ cổ,n,/ænˈtiːk/
+apart from,ngoại trừ,v,/əˈpɑːt frəm/
+apologize,xin lỗi,v,/əˈpɒlədʒaɪz/
+apology,lời xin lỗi,n,/əˈpɒlədʒi/
+application,đơn ứng tuyển,n,/ˌæplɪˈkeɪʃən/
+approach,tiếp cận,n,/əˈprəʊtʃ/
+approximately,xấp xi,adj,/əˈprɒksɪmətli/
+argue,tranh luận,v,/ɑːɡjuː/
+argument,sự tranh cãi,n,/ˈɑːɡjumənt/
+arrangement,sự sắp xếp,n,/əˈreɪndʒmənt/
+arrival,sự đến,n,/əˈraɪvəl/
+artefact,đồ tạo tác,n,/ˈɑːtɪfækt/
+astronaut,phi hành gia,n,/ˈæstrənɔːt/
+atmosphere,bầu không khí,n,/ˈætməsfɪə/
+attach,đính kèm,v,/əˈtætʃ/
+attachment,vật đính kèm,n,/əˈtætʃmənt/
+attitude,thái độ,n,/ˈætɪtjuːd/
+attraction,sự thu hút,n,/əˈtrækʃən/
+authentic,chính hãng,adj,/ɔːˈθentɪk/
+award,trao thưởng,v,/əˈwɔːd/
+babysitter,trông trẻ,n,/ˈbeɪbisɪtə/
+backache,đau lưng,n,/ˈbækeɪk/
+backbone,cột sống,n,/ˈbækbəʊn/
+background,bối cảnh,n,/ˈbækɡraʊnd/
+backpack,balo,n,/ˈbækpæk/
+backpacker,người đi buik,n,/ˈbækpækə/
+backup,dự phòng,n,/ˈbækʌp/
+bakery,tiệm bánh,n,/ˈbeɪkəri/
+balance,cân bằng,n,/ˈbæləns/
+bank,gửi tiền ngân hàng,v,/bæŋk/
+bargain,trả giá,v,/ˈbɑːɡɪn/
+base,cơ sở,n,/beɪs/
+basic,cơ bản,adj,/ˈbeɪsɪk/
+basis,nền tảng,n,/ˈbeɪsɪs/
+basket,rổ,n,/ˈbɑːskɪt/
+bathrope,khăn tắm,n,/ˈbɑːθrəʊb/
+battery,pin,n,/ˈbætəri/
+battle,gây gổ,v,/ˈbætəl/
+bay,vịnh,n,/beɪ/
+beauty,vẻ đẹp,n,/ˈbjuːti/
+bed,giường,n,/bed/
+beginer,người mới bắt đầu,n,/bɪˈɡɪnə/
+behave,hành vi,v,/bɪˈheɪv/
+belong,thuộc về,v,/bɪˈlɒŋ/
+benefit,lợi ích,n,/ˈbenɪfɪt/
+best-selling,bán chạy,adj,/ˌbestˈselɪŋ/
+bestseller,sản phẩm bán chạy,n,/ˈbestsɛlə/
+biannual,2 năm 1 lần,adj,/baɪˈænjuəl/
+big screen,màn hình to,n,/ˌbɪɡ ˈskriːn/
+blame,đổ lỗi,v,/bleɪm/
+blend,trộn,v,/blend/
+blogger,người viết blog,n,/ˈblɒɡə/
+blogging,viết blog,n,/ˈblɒɡɪŋ/
+blow,thổi,v,/bləʊ/
+board,lên tàu,v,/bɔːd/
+body-language,ngôn ngữ cơ thể,n,/ˈbɒdi ˌlæŋɡwɪdʒ/
+bold,táo bạo,adj,/bəʊld/
+booking,đặt vé,n,/ˈbʊkɪŋ/
+booking office,phòng vé,n,/ˈbʊkɪŋ ˌɒfɪs/
+booklet,cuốn sổ nhỏ,n,/ˈbʊklət/
+boost,thúc đẩy,v,/buːst/
+border,giới hạn,n,/ˈbɔːdə/
+branch,chi nhánh,n,/brɑːntʃ/
+brand,thương hiệu,n,/brænd/
+brave,dũng cảm,adj,/breɪv/
+breath,hơi thở,n,/breθ/
+breath taking,hấp dẫn,ngoạn mục,adj
+breathe,thở,v,/briːð/
+breathing,việc hít thở,n,/ˈbriːðɪŋ/
+brief,ngắn gọn,adj,/briːf/
+briefly,ngắn gọn,adv,/ˈbriːfli/
+brochure,sách hưỡng dẫn,n,/brəʊˈʃʊə/
+bubble gum,kẹo cao su,n,/ˈbʌbəl ɡʌm/
+buffet,tiệc đứng,n,/ˈbʊfeɪ/
+burglar,trộm,n,/ˈbɜːɡlə/
+burglar alarm,cánh báo trộm,n,/ˈbɜːɡlə əˌlɑːm/
+burnout,kiệt sức,n,/ˈbɜːnaʊt/
+business card,danh thiếp,n,/ˈbɪznəs kɑːd/
+business class,hạng thương gia,n,/ˈbɪznəs klɑːs/
+businessman,thương gia,n,/ˈbɪznəsmən/
+buyer,người mua,n,/ˈbaɪə/
+cabin crew,tiếp viên,n,/ˈkæbɪn kruː/
+call center,trunng tâm chăm sóc,n,/ˈkɔːl ˌsentə/
+callous,nhẫn tâm,adj,/ˈkæləs/
+cameo,diễn viên phụ,n,/ˈkæmiəʊ/
+cameraman,nhân viên quay phim,n,/ˈkæmrəmæn/
+campaign,chiến dịch,n,/kæmˈpeɪn/
+campfire,lửa trại,n,/ˈkæmpfaɪə/
+campsite,nơi cắm trại,n,/ˈkæmpsaɪt/
+canal,con kênh,n,/kəˈnæl/
+cancel,huỷ,v,/ˈkænsəl/
+candidate,ứng viên,n,/ˈkændɪdət/
+capacity,Sức chứa,n,/kəˈpæsɪti/
+careless,bất cẩn,adj,/ˈkeələs/
+cashback,hoàn tiền,n,/ˈkæʃbæk/
+casual,bình thường,adj,/ˈkæʒuəl/
+cater,phục vụ,v,/ˈkeɪtə/
+celebration,lễ kỉ niệm,n,/ˌselɪˈbreɪʃən/
+central,trung tâm,adj,/ˈsentrəl/
+centre around,ngồi xung quanh,v,/ˈsentə əˌraʊnd/
+certain,chắc chắn,adj,/ˈsɜːtən/
+certificate,chứng chỉ,n,/səˈtɪfɪkət/
+chain,dãy,n,/tʃeɪn/
+challenge,thử thách,n,/ˈtʃælɪndʒ/
+challenging,thách thức,adj,/ˈtʃælɪndʒɪŋ/
+champion,quán quân,n,/ˈtʃæmpiən/
+championship,giải đấu,n,/ˈtʃæmpiənʃɪp/
+chapter,chương,n,/ˈtʃæptə/
+charming,hấp dẫn,ngoạn mục,adj
+check-in,làm thủ tục,v,/ˈtʃek ɪn/
+check-up,kiểm tra sức khoẻ,n,/ˈtʃek ʌp/
+checklist,danh sách,n,/ˈtʃeklɪst/
+cheerful,vui vẻ,adj,/ˈtʃɪəfəl/
+childcare,chăm sóc trẻ em,n,/ˈtʃaɪldkeə/
+childhood,tuổi thơ,n,/ˈtʃaɪldhʊd/
+circumstance,tình huống,n,/ˈsɜːkəmstəns/
+citizen,cư dân,n,/ˈsɪtɪzən/
+claim,yêu cầu,v,/kleɪm/
+clarify,sáng tỏ,v,/ˈklærɪfaɪ/
+climate change,thay đổi thời tiết,n,/ˈklaɪmət tʃeɪndʒ/
+clinic,phòng khám,n,/ˈklɪnɪk/
+closing date,hết hạn,n,/ˈkləʊzɪŋ deɪt/
+cloth,vải,n,/klɒθ/
+co-worker,đồng nghiệp,n,/ˌkəʊˈwɜːkə/
+coal,than,n,/kəʊl/
+coastline,bờ biển,n,/ˈkəʊstlaɪn/
+coincide,xảy ra đồng thời,v,/ˌkəʊɪnˈsaɪd/
+coincidence,sự trùng hợp,n,/kəʊˈɪnsɪdəns/
+colourful,đầy màu sắc,adj,/ˈkʌləfəl/
+combine,kết hợp,v,/kəmˈbaɪn/
+comfort,thoải mái,n,/ˈkʌmfət/
+comment,bình luận,n,/ˈkɒment/
+communication,giao tiếp,n,/kəˌmjuːnɪˈkeɪʃən/
+compete,cạnh tranh,v,/kəmˈpiːt/
+competitor,đối thủ,n,/kəmˈpetɪtə/
+complaint,phàn nàn,n,/kəmˈpleɪnt/
+concentrate,tập trung,v,/ˈkɒnsəntreɪt/
+conclusion,kê luận,n,/kənˈkluːʒən/
+conference,hội nghị,n,/ˈkɒnfərəns/
+confidence,tự tin,adj,/ˈkɒnfɪdəns/
+confuse,gây nhầm lẫn,v,/kənˈfjuːz/
+confused,lúng túng,adj,/kənˈfjuːzd/
+congratulate,chúc mừng,v,/kənˈɡrætʃʊleɪt/
+connection,sự kết nối,n,/kəˈnekʃən/
+consumer,khách hàng,n,/kənˈsjuːmə/
+contact,sự liên lạc,n,/ˈkɒntækt/
+container,thùng đựng hàng,n,/kənˈteɪnə/
+content,hài lòng,adj,/ˈkɒntent/
+context,bối cảnh,n,/ˈkɒntekst/
+contract,hợp đồng,n,/ˈkɒntrækt/
+contradict,mâu thuẫn,v,/ˌkɒntrəˈdɪkt/
+convenience,sự thuận tiện,n,/kənˈviːniəns/
+convince,thuyết phục,v,/kənˈvɪns/
+cookbook,sách nấu ăn,n,/ˈkʊkbʊk/
+cookery,nghệ thuật nấu ăn,n,/ˈkʊkəri/
+cool,điềm tĩnh,adj,/kuːl/
+cooperate,hợp tác,v,/kəʊˈɒpəreɪt/
+correct,chỉnh sửa,v,/kəˈrekt/
+council,hội đồng,n,/ˈkaʊnsəl/
+countdown,đếm ngược,n,/ˈkaʊntdaʊn/
+courage,can đảm,n,/ˈkʌrɪdʒ/
+cover letter,thư ứng tuyển,n,/ˈkʌvə ˌletə/
+creative,sáng tạo,adj,/kriˈeɪtɪv/
+creator,người sáng tạo,n,/kriˈeɪtə/
+crime,kẻ trộm,n,/kraɪm/
+criminal,tội phạm,n,/ˈkrɪmɪnəl/
+critical,quan trọng,adj,/ˈkrɪtɪkəl/
+cross,tức giận,adj,/krɒs/
+crucial,quantrongj,adj,/ˈkruːʃəl/
+cultural,thuộc về văn hoá,adj,/ˈkʌltʃərəl/
+culture,văn hoá,n,/ˈkʌltʃə/
+curious,tò mò,adj,/ˈkjʊəriəs/
+currency,tiền tệ,n,/ˈkʌrənsi/
+currenly,hiện tại,adv,/ˈkʌrəntli/
+curriculum vitea,sơ yếu lí lịch,n,/kəˌrɪkjʊləm ˈviːtaɪ/
+custom,phong tục,n,/ˈkʌstəm/
+custom-made,thiết kế riêng,n,/ˌkʌstəm ˈmeɪd/
+customize,thay đổi theo yêu cầu,v,/ˈkʌstəmaɪz/
+custume,trang phục,n,/ˈkɒstjuːm/
+cutting-edge,hiện đại,adj,/ˌkʌtɪŋ ˈedʒ/
+cycle,chu kì,n,/ˈsaɪkəl/
+deal,thương lượng,n,/diːl/
+decorate,trang trí,v,/ˈdekəreɪt/
+define,định nghĩa,v,/dɪˈfaɪn/
+defining,có tính quyết định,adj,/dɪˈfaɪnɪŋ/
+definite,chắc chắn,adj,/ˈdefɪnət/
+definition,sự định nghĩa,n,/ˌdefɪˈnɪʃən/
+degrade,làm suy thoái,v,/dɪˈɡreɪd/
+delete,xoá bỏ,v,/dɪˈliːt/
+deliver,giao hàng,v,/dɪˈlɪvə/
+delivery,sự phân phát,n,/dɪˈlɪvəri/
+demand,nhu cầu,n,/dɪˈmɑːnd/
+demonstrate,chứng minh,v,/ˈdemənstreɪt/
+deny,phủ nhận,v,/dɪˈnaɪ/
+depart,khởi hành,v,/dɪˈpɑːt/
+departure,sự khởi hành,n,/dɪˈpɑːtʃə/
+deposit,tiền đặt cọc,n,/dɪˈpɒzɪt/
+depressed,trầm cảm,adj,/dɪˈprest/
+design,mẫu thiết kế,n,/dɪˈzaɪn/
+desirable,đáng ao ước,adj,/dɪˈzaɪərəbl/
+destination,điểm đến,n,/ˌdestɪˈneɪʃən/
+destroy,phá huỷ,v,/dɪˈstrɔɪ/
+determine,xác nhận,v,/dɪˈtɜːmɪn/
+development,sự phát triển,n,/dɪˈveləpmənt/
+diagram,biểu đồ,n,/ˈdaɪəɡræm/
+dialogue,cuộc hội thoại,n,/ˈdaɪəlɒɡ/
+dieter,người ăn kiêng,n,/ˈdaɪətə/
+difficulty,khó khăn,n,/ˈdɪfɪkəlti/
+direct,trực tiếp,adj,/dəˈrekt/
+direction,sự chỉ đạo,n,/dəˈrekʃən/
+directly,mottj cách trực tiếp,adv,/dəˈrektli/
+director,người giám đốc,n,/dəˈrektə/
+disability,khuyết tật,n,/ˌdɪsəˈbɪləti/
+disagreement,sự bất đồng,n,/ˌdɪsəˈɡriːmənt/
+disappoint,làm thất vọng,v,/ˌdɪsəˈpɔɪnt/
+disappointed,thất vọng,adj,/ˌdɪsəˈpɔɪntɪd/
+disappointing,đáng thất vọng,adj,/ˌdɪsəˈpɔɪntɪŋ/
+disappointment,sự thất vọng,n,/ˌdɪsəˈpɔɪntmənt/
+disapprove,không tán thành,phảnđói,v
+disavantage,bất lợi,n,/ˌdɪsədˈvɑːntɪdʒ/
+disconnect,mất kết nối,v,/ˌdɪskəˈnekt/
+discouranged,nản lòng,adj,/dɪsˈkʌrɪdʒd/
+display,trưng bày,v,/dɪˈspleɪ/
+divide,phân chia,v,/dɪˈvaɪd/
+domestic,trong nước,adj,/dəˈmestɪk/
+donate,quyên góp,v,/dəʊˈneɪt/
+double,tăng gấp đôi,v,/ˈdʌbəl/
+doubt,sự nghi ngờ,n,/daʊt/
+dramatic,kịch tính,adj,/drəˈmætɪk/
+drastic,quyết liệt,adj,/ˈdræstɪk/
+drawback,nhược điểm,n,/ˈdrɔːbæk/
+dress code,qui định trang phục,n,/ˈdres kəʊd/
+drop,sự giảm,n,/drɒp/
+due,dự kiến,adj,/djuː/
+duty,nhiệm vu,n,/ˈdjuːti/
+ease,sự dễ dàng,n,/iːz/
+economic,thuộc kinh tế,adj,/ˌiːkəˈnɒmɪk/
+economical,tiết kiệm,adj,/ˌiːkəˈnɒmɪkəl/
+economy,kinh tế,n,/ɪˈkɒnəmi/
+economy class,hạng phổ thông,n,/ɪˈkɒnəmi klɑːs/
+ecosystem,hệ sinh thái,n,/ˈiːkəʊˌsɪstəm/
+editor,biên tập viên,n,/ˈedɪtə/
+educate,giáo dục,v,/ˈedjʊkeɪt/
+educated,được giáo dục,adj,/ˈedjʊkeɪtɪd/
+educational,thuộc về giáo dục,adj,/ˌedjʊˈkeɪʃənəl/
+effective,hiệu quả,adj,/ɪˈfektɪv/
+efficient,có hiệu quả,adj,/ɪˈfɪʃənt/
+effort,cố gắng,n,/ˈefət/
+elaborate,công phu,tỉ mỉ,adj
+elastic,co giãn,adj,/ɪˈlæstɪk/
+elasticity,tính co giãn,n,/ˌelæˈstɪsɪti/
+election,cuộc bầu cử,n,/ɪˈlekʃən/
+electrical,thuộc về điện,adj,/ɪˈlektrɪkəl/
+element,yếu tố cơ bản,n,/ˈelɪmənt/
+elementary,cơ bản,adj,/ˌelɪˈmentəri/
+embarrassed,lúng túng,xấu hổ,adj
+emergency,khẩn cấp,n,/ɪˈmɜːdʒənsi/
+emotion,cảm xúc,n,/ɪˈməʊʃən/
+employment,việc làm,n,/ɪmˈplɔɪmənt/
+empty,làm trống rỗng,v,/ˈempti/
+enclose,đính kèm,v,/ɪnˈkləʊz/
+encourage,động viên,v,/ɪnˈkʌrɪdʒ/
+endangered,bị đe doạ,adj,/ɪnˈdeɪndʒəd/
+endeavour,sự cố gắng,n,/ɪnˈdevə/
+endurance,sức chịu đựng,n,/ɪnˈdjʊərəns/
+enemy,đối thủ,n,/ˈenəmi/
+engineering,kỹ thuật,n,/ˌendʒɪˈnɪərɪŋ/
+enjoyable,thú vị,adj,/ɪnˈdʒɔɪəbl/
+entertain,giải trí,v,/ˌentəˈteɪn/
+entertainment,sự giải trí,n,/ˌentəˈteɪnmənt/
+entry,lối vào,n,/ˈentri/
+environment,môi trường,n,/ɪnˈvaɪrənmənt/
+environmental,thuộc về môi trường,adj,/ɪnˌvaɪrənˈmentəl/
+envision,hình dung,v,/ɪnˈvɪʒən/
+equip,trang bị,v,/ɪˈkwɪp/
+essential,thiết yêu,adj,/ɪˈsenʃəl/
+establish,thành lập,v,/ɪˈstæblɪʃ/
+examine,kiểm tra,v,/ɪɡˈzæmɪn/
+exceed,vượt quá,v,/ɪkˈsiːd/
+except,ngoại trừ,v,/ɪkˈsept/
+exception,ngoại lệ,n,/ɪkˈsepʃən/
+excess,vượt qua s,adj,/ɪkˈses/
+exhibition,buổi triển lãm,n,/ˌeksɪˈbɪʃən/
+exist,tồn tại,v,/ɪɡˈzɪst/
+expand,mở rộng,v,/ɪkˈspænd/
+expect,trông đợi,v,/ɪkˈspekt/
+expectation,kỳ vọng,b,/ˌekspekˈteɪʃən/
+expedition,chuyến thám hiểm,n,/ˌekspəˈdɪʃən/
+expense,chi phí,n,/ɪkˈspens/
+experienced,kinh nghiệm,adj,/ɪkˈspɪəriənst/
+experiment,thí nghiệm,n,/ɪkˈsperɪmənt/
+expert,chuyên gia,n,/ˈekspɜːt/
+expire,hết hạn,v,/ɪkˈspaɪə/
+explannation,lời giải thích,n,/ˌekspləˈneɪʃən/
+exploit,khai thaccs,v,/ɪkˈsplɔɪt/
+explore,khám phá,v,/ɪkˈsplɔː/
+export,xuất khẩu,v,/ɪkˈspɔːt/
+extend,mở rộng,v,/ɪkˈstend/
+face,đối mặt,v,/feɪs/
+facility,cơ sở vật chất,n,/fəˈsɪləti/
+fair,chợ,n,/feə/
+fair,công bằng,adj,/feə/
+familiar,quen thuộc,adj,/fəˈmɪliə/
+fancy,muốn,mong ước,v
+fantastic,tuyệt vời,adj,/fænˈtæstɪk/
+fare,giá vé,n,/feə/
+fascinate,thu hút,lôi cuốn,v
+fascinating,lôi cuốn,adj,/ˈfæsɪneɪtɪŋ/
+fashion,thời trang,n,/ˈfæʃən/
+fashion designer,nhà thiết kế,n,/ˈfæʃən dɪˌzaɪnə/
+fashionable,hợp thời trang,adj,/ˈfæʃənəbl/
+fasten,thắt,cài,v
+fatigue,sự mệt mỏi,n,/fəˈtiːɡ/
+favour,sự ủng hộ,giúp đỡ,n
+favourite,ưa thích,adj,/ˈfeɪvərɪt/
+feature,đặc trưng,n,/ˈfiːtʃə/
+feedback,phản hồi,n,/ˈfiːdbæk/
+fertilizer,phân bón,n,/ˈfɜːtəlaɪzə/
+figure,con số,n,/ˈfɪɡə/
+finance,tài chính,n,/faɪˈnæns/
+financial,thuộc về tài chính,adj,/faɪˈnænʃəl/
+fire,sa thải,v,/faɪə/
+firework,pháo hoa,n,/ˈfaɪəwɜːk/
+first class,hạng thương gia,n,/ˌfɜːst ˈklɑːs/
+fitness center,trung tâm thể hình,n,/ˈfɪtnəs ˌsentə/
+fitting room,phòng thử đồ,n,/ˈfɪtɪŋ ruːm/
+fix,cố định,v,/fɪks/
+flight attendant,tiếp viên hàng không,n,/ˈflaɪt əˌtendənt/
+flora,hệ thực vật,n,/ˈflɔːrə/
+fluent,thông thạo,adj,/ˈfluːənt/
+focus,sự tập trung,n,/ˈfəʊkəs/
+focus,tập trung,v,/ˈfəʊkəs/
+food bank,ngân hàng thực phẩm,n,/ˈfuːd bæŋk/
+footwear,giày dép,n,/ˈfʊtwɛə/
+forecast,dự báo,n,/ˈfɔːkɑːst/
+foresee,biết trước,v,/fɔːˈsiː/
+forgive,tha thứ,v,/fəˈɡɪv/
+formal,chính thức,v,/ˈfɔːməl/
+fortunately,may mắn thay,adj,/ˈfɔːtʃənətli/
+forward,chuyển tiếp,gửi,adv
+free,miễn phí,v,/friː/
+frequency,tần suất,adj,/ˈfriːkwənsi/
+frequent,thường xuyên,adj,/ˈfriːkwənt/
+friendly,thân thiện,adj,/ˈfrendli/
