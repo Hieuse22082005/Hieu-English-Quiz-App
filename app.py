@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 import random
-#phan moi nha
+
 # 1. Cấu hình trang
 st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wide")
 
@@ -73,7 +73,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- LOGIC DỮ LIỆU ---
+# --- LOGIC DỮ LIỆU (CHUYỂN SANG DÙNG DẤU PHẨY) ---
 DB_FILE = 'vocabulary_pro.txt'
 
 def load_data():
@@ -82,22 +82,24 @@ def load_data():
         with open(DB_FILE, 'r', encoding='utf-8') as f:
             for line in f:
                 line = line.strip()
-                if line:
+                if line and ',' in line:
                     try:
-                        # Tách lấy Loại từ (ở cuối) và Word/Meaning
-                        main, w_type = line.rsplit(maxsplit=1)
-                        w_word, w_mean = main.split(maxsplit=1)
-                        words.append(w_word); meanings.append(w_mean); types.append(w_type)
+                        # Tách theo định dạng: Từ, Nghĩa, Loại
+                        parts = line.split(',')
+                        if len(parts) >= 3:
+                            words.append(parts[0].strip())
+                            meanings.append(parts[1].strip())
+                            types.append(parts[2].strip())
                     except: continue
     df = pd.DataFrame({'Từ': words, 'Nghĩa': meanings, 'Loại': types})
-    # Tự động sắp xếp A-Z
     return df.sort_values(by='Từ').reset_index(drop=True)
 
 def save_all(df):
     df_sorted = df.sort_values(by='Từ')
     with open(DB_FILE, 'w', encoding='utf-8') as f:
         for _, row in df_sorted.iterrows():
-            f.write(f"{row['Từ']} {row['Nghĩa']} {row['Loại']}\n")
+            # Lưu file ngăn cách bởi dấu phẩy
+            f.write(f"{row['Từ']},{row['Nghĩa']},{row['Loại']}\n")
 
 # --- GIAO DIỆN ---
 df_current = load_data()
@@ -108,42 +110,47 @@ if menu == "⚙️ Dashboard Quản lý":
     st.title("⚙️ Quản lý Từ vựng")
     
     tab1, tab2 = st.tabs(["✨ Thêm từ đơn", "📦 Thêm hàng loạt"])
+    
     with tab1:
         with st.container(border=True):
             c1, c2, c3 = st.columns([3, 4, 2])
-            w = c1.text_input("Word (Không dấu cách)").strip()
-            m = c2.text_input("Meaning").strip()
-            t = c3.selectbox("Type", ["n", "v", "adj", "adv"])
-            if st.button("LƯU TỪ VỰNG"):
+            w = c1.text_input("Từ (Word)").strip()
+            m = c2.text_input("Nghĩa (Meaning)").strip()
+            t = c3.selectbox("Loại từ", ["n", "v", "adj", "adv", "phr"])
+            if st.button("LƯU TỪ VỰNG", use_container_width=True):
                 if w and m:
                     if w.lower() in df_current['Từ'].str.lower().values:
                         st.warning("Từ này đã có trong danh sách!")
                     else:
-                        new_df = pd.concat([df_current, pd.DataFrame({'Từ':[w], 'Nghĩa':[m], 'Loại':[t]})])
-                        save_all(new_df)
+                        new_row = pd.DataFrame({'Từ':[w], 'Nghĩa':[m], 'Loại':[t]})
+                        save_all(pd.concat([df_current, new_row]))
                         st.rerun()
+                else:
+                    st.error("Vui lòng nhập đầy đủ Từ và Nghĩa")
 
     with tab2:
-        txt = st.text_area("Định dạng: Word Meaning Type (Mỗi từ 1 dòng)", height=120)
+        st.info("Nhập theo định dạng: **Từ, Nghĩa, Loại** (Ví dụ: Hello, Xin chào, n)")
+        txt = st.text_area("Mỗi từ một dòng", height=150, placeholder="Apple, Quả táo, n\nRun, Chạy, v")
         if st.button("🚀 XÁC NHẬN NẠP LOẠT"):
             if txt:
                 lines = txt.strip().split('\n')
                 new_list = []
                 for l in lines:
                     try:
-                        main, tp = l.strip().rsplit(maxsplit=1)
-                        wd, mn = main.split(maxsplit=1)
-                        if wd.lower() not in df_current['Từ'].str.lower().values:
-                            new_list.append({'Từ': wd, 'Nghĩa': mn, 'Loại': tp})
+                        parts = l.split(',')
+                        if len(parts) >= 3:
+                            wd, mn, tp = parts[0].strip(), parts[1].strip(), parts[2].strip()
+                            if wd.lower() not in df_current['Từ'].str.lower().values:
+                                new_list.append({'Từ': wd, 'Nghĩa': mn, 'Loại': tp})
                     except: continue
                 if new_list:
                     save_all(pd.concat([df_current, pd.DataFrame(new_list)]))
+                    st.success(f"Đã thêm thành công {len(new_list)} từ!")
                     st.rerun()
 
     st.subheader(f"📋 Kho từ vựng của bạn ({len(df_current)} từ)")
     
     if not df_current.empty:
-        # Hiển thị dạng GRID 4 cột
         cols = st.columns(4)
         for idx, row in df_current.iterrows():
             with cols[idx % 4]:
@@ -156,7 +163,6 @@ if menu == "⚙️ Dashboard Quản lý":
                         </div>
                     </div>
                 """, unsafe_allow_html=True)
-                # Nút xóa
                 st.markdown('<div class="del-btn">', unsafe_allow_html=True)
                 if st.button(f"Xoá {row['Từ']}", key=f"del_{idx}", use_container_width=True):
                     save_all(df_current.drop(idx))
@@ -172,11 +178,19 @@ elif menu == "💎 Flashcard":
     if not df_current.empty:
         if 'idx' not in st.session_state: st.session_state.idx = 0
         if 'flip' not in st.session_state: st.session_state.flip = False
+        
         row = df_current.iloc[st.session_state.idx % len(df_current)]
         
         display = f"<h1>{row['Từ']}</h1>" if not st.session_state.flip else f"<h1 style='color:#58a6ff'>{row['Nghĩa']}</h1>"
-        st.markdown(f"<div style='background:#1c2128; border:1px solid #30363d; border-radius:20px; height:300px; display:flex; align-items:center; justify-content:center; flex-direction:column;'>{display}<p>({row['Loại']})</p></div>", unsafe_allow_html=True)
+        st.markdown(f"""
+            <div style='background:#1c2128; border:2px solid #30363d; border-radius:20px; height:300px; 
+            display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center; padding:20px;'>
+                {display}
+                <p style='color:#8b949e; margin-top:10px;'>({row['Loại']})</p>
+            </div>
+        """, unsafe_allow_html=True)
         
+        st.write("")
         c1, c2 = st.columns(2)
         if c1.button("🔄 LẬT THẺ", use_container_width=True):
             st.session_state.flip = not st.session_state.flip
@@ -191,14 +205,14 @@ elif menu == "💎 Flashcard":
 # --- 3. KIỂM TRA ---
 elif menu == "📝 Kiểm tra":
     st.title("📝 Kiểm tra trình độ")
-    if len(df_current) < 5:
-        st.warning("Cần tối thiểu 5 từ để tạo bài kiểm tra.")
+    if len(df_current) < 4:
+        st.warning("Cần tối thiểu 4 từ để tạo bài kiểm tra.")
     else:
         mode = st.radio("Dạng:", ["Dạng 1 (Nộp bài tập trung)", "Dạng 2 (Làm đâu biết đó)"], horizontal=True)
         
         if mode == "Dạng 1 (Nộp bài tập trung)":
-            num = st.slider("Số lượng:", 5, 50, 20)
-            if st.button("🔄 LÀM MỚI ĐỀ") or 'ex_list' not in st.session_state:
+            num = st.slider("Số lượng:", 5, 50, 10)
+            if st.button("🔄 TẠO ĐỀ MỚI") or 'ex_list' not in st.session_state:
                 st.session_state.ex_list = df_current.sample(n=min(len(df_current), num)).to_dict('records')
                 for it in st.session_state.ex_list:
                     others = df_current[df_current['Nghĩa'] != it['Nghĩa']]['Nghĩa'].unique().tolist()
@@ -209,11 +223,11 @@ elif menu == "📝 Kiểm tra":
 
             with st.form("exam_form"):
                 for i, it in enumerate(st.session_state.ex_list):
-                    st.markdown(f"**Câu {i+1}: {it['Từ']}**")
-                    st.session_state.ans[i] = st.radio("Chọn:", it['opts'], index=None, key=f"q_{i}", label_visibility="collapsed")
+                    st.markdown(f"**Câu {i+1}: {it['Từ']}** ({it['Loại']})")
+                    st.session_state.ans[i] = st.radio("Chọn nghĩa đúng:", it['opts'], index=None, key=f"q_{i}")
                     st.divider()
+                
                 if st.form_submit_button("📤 NỘP BÀI"):
-                    # SỬA LỖI KEYERROR: Đã đổi 'ans' thành 'Nghĩa' để khớp với dữ liệu thực tế
                     score = sum(1 for i, it in enumerate(st.session_state.ex_list) if st.session_state.ans.get(i) == it['Nghĩa'])
                     st.success(f"Kết quả: {score} / {len(st.session_state.ex_list)}")
                     if score == len(st.session_state.ex_list): st.balloons()
@@ -224,17 +238,19 @@ elif menu == "📝 Kiểm tra":
                 others = df_current[df_current['Nghĩa'] != target['Nghĩa']]['Nghĩa'].unique().tolist()
                 opts = [target['Nghĩa']] + random.sample(others, min(len(others), 3))
                 random.shuffle(opts)
-                st.session_state.q2 = {'w':target['Từ'], 'ans':target['Nghĩa'], 'opts':opts, 'done':False}
+                st.session_state.q2 = {'w':target['Từ'], 'ans':target['Nghĩa'], 'opts':opts, 'done':False, 'type':target['Loại']}
             
             q = st.session_state.q2
-            st.info(f"Từ vựng: {q['w']}")
+            st.info(f"Từ vựng: **{q['w']}** ({q['type']})")
+            
             for opt in q['opts']:
-                if st.button(opt, use_container_width=True):
+                if st.button(opt, use_container_width=True, disabled=q['done']):
                     q['done'] = True
-                    if opt == q['ans']: st.success("Chính xác!")
-                    else: st.error(f"Sai! Đáp án là: {q['ans']}")
+                    if opt == q['ans']: st.success("Chính xác! 🎉")
+                    else: st.error(f"Sai rồi! Đáp án đúng là: **{q['ans']}**")
+                    st.rerun()
+            
             if q['done']:
-                cols = st.columns([5, 1])
-                if cols[1].button("Tiếp theo ➡️"):
+                if st.button("Câu tiếp theo ➡️"):
                     del st.session_state.q2
                     st.rerun()
