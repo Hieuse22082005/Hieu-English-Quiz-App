@@ -9,38 +9,97 @@ st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wi
 # --- CSS CUSTOM ---
 st.markdown("""
     <style>
-    .stApp { background-color: #0e1117; color: #ffffff; }
-    [data-testid="stSidebar"] { background-color: #161b22; }
+    /* 1. Thiết lập màu chủ đạo cho toàn bộ ứng dụng (Global Theme) */
+    :root {
+        --primary-color: #58a6ff;
+        --background-color: #0d1117;
+        --secondary-background-color: #161b22;
+        --text-color: #ffffff;
+    }
 
+    /* 2. Ép nền tối cho toàn bộ trang và Sidebar */
+    .stApp { 
+        background-color: #0d1117 !important; 
+        color: #ffffff !important; 
+    }
+    
+    [data-testid="stSidebar"] { 
+        background-color: #161b22 !important; 
+        border-right: 1px solid #30363d;
+    }
+
+    /* 3. Sửa màu chữ cho các thành phần nhập liệu (Input, Selectbox) */
+    input, select, textarea, [data-baseweb="select"] {
+        color: white !important;
+        background-color: #0d1117 !important;
+    }
+    
+    label, p, span {
+        color: #ffffff !important;
+    }
+
+    /* 4. Khối Card Từ vựng (Giữ phong cách Cyber của bạn) */
     .vocab-card {
         background: #1c2128;
         border: 1px solid #30363d;
         border-radius: 12px;
         padding: 20px;
         margin-bottom: 15px;
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
-    .vocab-card:hover { border-color: #58a6ff; transform: translateY(-5px); }
-
-    .word-title { color: #58a6ff; font-size: 1.4em; font-weight: bold; }
-    .word-type {
-        background: #238636; color: white; padding: 2px 8px;
-        border-radius: 5px; font-size: 0.8em; width: fit-content;
-        margin: 5px 0;
+    
+    .vocab-card:hover { 
+        border-color: #58a6ff; 
+        transform: translateY(-5px);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     }
-    .word-ipa { color: #8b949e; font-style: italic; font-size: 0.9em; }
-    .word-meaning { color: #c9d1d9; font-size: 1.1em; margin-top: 10px; }
 
+    .word-title { color: #58a6ff; font-size: 1.4em; font-weight: bold; margin-bottom: 2px; }
+    
+    .word-type {
+        background: #238636; 
+        color: white; 
+        padding: 2px 10px;
+        border-radius: 6px; 
+        font-size: 0.75em; 
+        width: fit-content;
+        margin: 5px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .word-ipa { color: #8b949e; font-style: italic; font-size: 0.95em; }
+    .word-meaning { color: #c9d1d9; font-size: 1.1em; margin-top: 12px; font-weight: 500; }
+
+    /* 5. Nút Xóa (Phong cách Danger của GitHub) */
     .del-btn button {
         background-color: transparent !important;
         border: 1px solid #f85149 !important;
         color: #f85149 !important;
+        border-radius: 8px !important;
+        font-size: 0.8em !important;
     }
-    .del-btn button:hover { background-color: #f85149 !important; color: white !important; }
+    
+    .del-btn button:hover { 
+        background-color: #f85149 !important; 
+        color: white !important; 
+        border-color: #f85149 !important;
+    }
+
+    /* 6. Tùy chỉnh các Tab (Thêm vào để đồng bộ màu tối) */
+    .stTabs [data-baseweb="tab-list"] {
+        background-color: transparent;
+    }
+    .stTabs [data-baseweb="tab"] {
+        color: #8b949e;
+    }
+    .stTabs [aria-selected="true"] {
+        color: #58a6ff !important;
+    }
     </style>
     """, unsafe_allow_html=True)
 
