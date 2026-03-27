@@ -213,17 +213,22 @@ elif menu == "💎 Flashcard":
             st.session_state.flip = False
             st.rerun()
 
-# --- 3. KIỂM TRA (Đã thêm Cảm xúc & Hiệu ứng) ---
+# --- 3. KIỂM TRA (Full 3 Dạng) ---
 elif menu == "📝 Kiểm tra":
     st.title("📝 Kiểm tra trình độ")
     if len(df_current) < 4:
         st.warning("Cần tối thiểu 4 từ để tạo bài kiểm tra.")
     else:
-        mode = st.radio("Chọn dạng kiểm tra:", ["Dạng 1 (Nộp bài tập trung)", "Dạng 2 (Làm đâu biết đó)"], horizontal=True)
+        # Thêm lựa chọn Dạng 3 vào Menu điều khiển
+        mode = st.radio("Chọn dạng kiểm tra:", 
+                        ["Dạng 1 (Nộp bài tập trung)", "Dạng 2 (Làm đâu biết đó)", "Dạng 3 (Thử thách viết từ)"], 
+                        horizontal=True)
         
-        # --- DẠNG 1 (NỘP BÀI TẬP TRUNG) ---
+      # --- DẠNG 1 (NỘP BÀI TẬP TRUNG) ---
         if mode == "Dạng 1 (Nộp bài tập trung)":
             num = st.slider("Số lượng câu hỏi:", 5, 50, 10)
+            
+            # Khởi tạo đề thi
             if st.button("🔄 TẠO ĐỀ MỚI") or 'ex_list' not in st.session_state:
                 st.session_state.ex_list = df_current.sample(n=min(len(df_current), num)).to_dict('records')
                 for it in st.session_state.ex_list:
@@ -232,50 +237,63 @@ elif menu == "📝 Kiểm tra":
                     random.shuffle(opts)
                     it['opts'] = opts
                 st.session_state.ans = {}
+                st.session_state.submitted_d1 = False  # Reset trạng thái nộp bài
 
             with st.form("exam_form"):
                 for i, it in enumerate(st.session_state.ex_list):
                     st.markdown(f"**Câu {i+1}: {it['Từ']}** ({it['Loại']}) - *{it['Phát âm']}*")
-                    st.session_state.ans[i] = st.radio("Chọn nghĩa đúng:", it['opts'], index=None, key=f"q_{i}")
+                    
+                    # Radio chọn đáp án
+                    st.session_state.ans[i] = st.radio(
+                        "Chọn nghĩa đúng:", 
+                        it['opts'], 
+                        index=None, 
+                        key=f"q_{i}",
+                        disabled=st.session_state.get('submitted_d1', False) # Khóa input sau khi nộp
+                    )
+                    
+                    # Logic hiển thị đáp án sau khi bấm NỘP BÀI
+                    if st.session_state.get('submitted_d1', False):
+                        user_choice = st.session_state.ans.get(i)
+                        correct_ans = it['Nghĩa']
+                        
+                        if user_choice == correct_ans:
+                            st.success(f"✨ Chính xác: {correct_ans}")
+                        else:
+                            st.error(f"❌ Sai rồi. Đáp án đúng là: **{correct_ans}**")
+                    
                     st.divider()
-                if st.form_submit_button("📤 NỘP BÀI"):
-                    score = sum(1 for i, it in enumerate(st.session_state.ex_list) if st.session_state.ans.get(i) == it['Nghĩa'])
-                    total = len(st.session_state.ex_list)
-                    percent = (score / total) * 100
-                    
-                    # Hiển thị điểm số cơ bản
-                    st.metric(label="Kết quả của bạn", value=f"{score} / {total}", delta=f"{percent:.0f}%")
-                    
-                    # --- XỬ LÝ CẢM XÚC THEO TỪNG BẬC ĐẠT ĐƯỢC ---
-                    if percent == 100:
-                        st.success(f"Xuất sắc! Bạn đã đạt điểm tuyệt đối. Giao diện pháo hoa chào đón bạn! 🏆🎉🥳")
-                        st.balloons() # Hiệu ứng pháo hoa
-                    elif percent >= 80:
-                        st.success(f"Tuyệt vời! Bạn nhớ từ rất tốt. Tiếp tục phát huy nhé! 💪🌟😊")
-                    elif percent >= 50:
-                        st.warning(f"Khá tốt! Bạn đã vượt qua mức trung bình. Cố gắng thêm chút nữa! 👍📖😐")
-                    elif percent > 0:
-                        st.error(f"Cố gắng lên! Bạn cần ôn tập thêm một chút. Đừng bỏ cuộc! 📚✍️😟")
-                    else:
-                        st.error(f"Hic! Bạn chưa trả lời đúng câu nào. Hãy xem lại Flashcard nhé! 😭📕")
 
-        
-        # --- DẠNG 2 (LÀM ĐÂU BIẾT ĐÓ) ---
-        else:
+                # Nút nộp bài
+                submit_btn = st.form_submit_button("📤 NỘP BÀI")
+                if submit_btn:
+                    st.session_state.submitted_d1 = True
+                    st.rerun() # Refresh để hiển thị các thông báo success/error phía trên
+
+            # Hiển thị bảng điểm tổng quát sau khi nộp
+            if st.session_state.get('submitted_d1', False):
+                score = sum(1 for i, it in enumerate(st.session_state.ex_list) if st.session_state.ans.get(i) == it['Nghĩa'])
+                total = len(st.session_state.ex_list)
+                percent = (score / total) * 100
+                
+                st.metric(label="Kết quả chung", value=f"{score} / {total}", delta=f"{percent:.0f}%")
+                
+                if percent == 100:
+                    st.balloons()
+                elif percent >= 50: st.info("Khá tốt! Tiếp tục cố gắng nhé! 👍")
+                else: st.error("Bạn cần ôn tập kỹ hơn rồi! 📚")
+
+        # --- DẠNG 2 (LÀM ĐÂU BIẾT ĐÓ - TRẮC NGHIỆM) ---
+        elif mode == "Dạng 2 (Làm đâu biết đó)":
             if 'q2' not in st.session_state:
                 target = df_current.sample(n=1).iloc[0]
                 others = df_current[df_current['Nghĩa'] != target['Nghĩa']]['Nghĩa'].unique().tolist()
                 opts = [target['Nghĩa']] + random.sample(others, min(len(others), 3))
                 random.shuffle(opts)
                 st.session_state.q2 = {
-                    'w':target['Từ'], 
-                    'ans':target['Nghĩa'], 
-                    'opts':opts, 
-                    'done':False, 
-                    'ipa':target['Phát âm'], 
-                    'type':target['Loại'],
-                    'user_choice': None,
-                    'correct': False # Lưu trạng thái đúng/sai
+                    'w':target['Từ'], 'ans':target['Nghĩa'], 'opts':opts, 
+                    'done':False, 'ipa':target['Phát âm'], 'type':target['Loại'],
+                    'user_choice': None, 'correct': False
                 }
             
             q = st.session_state.q2
@@ -284,18 +302,71 @@ elif menu == "📝 Kiểm tra":
                 if st.button(opt, use_container_width=True, disabled=q['done']):
                     q['done'] = True
                     q['user_choice'] = opt
-                    if opt == q['ans']:
-                        q['correct'] = True
+                    if opt == q['ans']: q['correct'] = True
                     st.rerun()
 
             if q['done']:
-                # --- XỬ LÝ HIỆU ỨNG KHI ĐÚNG/SAI ---
                 if q['correct']:
                     st.success(f"Chính xác! 🎉 Đáp án là: **{q['ans']}**")
-                    st.balloons() # Hiệu ứng pháo hoa ngay lập tức khi đúng
+                    st.balloons()
                 else:
-                    st.error(f"Sai rồi! Lựa chọn của bạn: {q['user_choice']}. Đáp án đúng là: **{q['ans']}** 😟")
+                    st.error(f"Sai rồi! Đáp án đúng là: **{q['ans']}** 😟")
                 
                 if st.button("Câu tiếp theo ➡️"):
                     del st.session_state.q2
+                    st.rerun()
+
+      
+       # --- DẠNG 3 (ĐIỀN TỪ TIẾNG ANH - WRITING) ---
+        else:
+            st.subheader("✍️ Thử thách ghi nhớ")
+            
+            # 1. Khởi tạo câu hỏi
+            if 'q3' not in st.session_state:
+                target = df_current.sample(n=1).iloc[0]
+                st.session_state.q3 = {
+                    'w': target['Từ'], 
+                    'ans': target['Nghĩa'], 
+                    'ipa': target['Phát âm'], 
+                    'type': target['Loại'],
+                    'submitted': False,  # Trạng thái đã kiểm tra hay chưa
+                    'user_input': ""      # Lưu lại từ người dùng đã gõ
+                }
+            
+            q = st.session_state.q3
+            
+            # 2. Giao diện hiển thị
+            st.info(f"Hãy viết từ tiếng Anh có nghĩa là: **{q['ans']}**")
+            st.caption(f"Gợi ý: Từ loại **({q['type']})** | Phát âm: *{q['ipa']}*")
+            
+            # 3. Ô nhập liệu
+            # Lưu ý: Nếu đã submit thì disable ô nhập để chốt kết quả
+            user_word = st.text_input(
+                "Câu trả lời của bạn:", 
+                placeholder="Nhập từ tại đây...", 
+                key="input_write",
+                disabled=q['submitted']
+            ).strip()
+            
+            # 4. Nút bấm kiểm tra
+            if not q['submitted']:
+                if st.button("🔍 KIỂM TRA", use_container_width=True):
+                    if user_word:
+                        q['user_input'] = user_word
+                        q['submitted'] = True
+                        st.rerun() # Chạy lại để hiển thị kết quả dựa trên 'submitted' = True
+                    else:
+                        st.warning("Bạn chưa nhập gì cả!")
+            
+            # 5. Hiển thị kết quả sau khi bấm kiểm tra
+            if q['submitted']:
+                if q['user_input'].lower() == q['w'].lower():
+                    st.success(f"Chính xác! ✨ Từ đúng là: **{q['w']}**")
+                    st.balloons()
+                else:
+                    st.error(f"Sai rồi! Bạn nhập: '{q['user_input']}'. Đáp án đúng là: **{q['w']}** 😟")
+                
+                # Nút chuyển câu tiếp theo
+                if st.button("Câu tiếp theo ➡️", use_container_width=True):
+                    del st.session_state.q3
                     st.rerun()
