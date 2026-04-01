@@ -2,10 +2,18 @@ import streamlit as st
 import pandas as pd
 import os
 import random
-
+import streamlit.components.v1 as components
 # 1. Cấu hình trang
 st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wide")
-
+def play_sound(url):
+    components.html(
+        f"""
+        <audio autoplay style="display:none">
+            <source src="{url}" type="audio/mp3">
+        </audio>
+        """,
+        height=0,
+    )
 # --- CSS CUSTOM ---
 st.markdown("""
     <style>
@@ -100,8 +108,33 @@ st.markdown("""
     .stTabs [aria-selected="true"] {
         color: #58a6ff !important;
     }
+    /* Hiệu ứng trượt lên cho các Card từ vựng */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.vocab-card {
+    animation: slideUp 0.4s ease-out forwards;
+    background: rgba(28, 33, 40, 0.8) !important;
+    backdrop-filter: blur(10px); /* Hiệu ứng kính mờ */
+    border: 1px solid rgba(88, 166, 255, 0.2) !important;
+}
+
+/* Hiệu ứng phát sáng khi di chuột qua card */
+.vocab-card:hover {
+    border-color: #58a6ff !important;
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.3) !important;
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* Làm đẹp nút Xóa */
+.del-btn button {
+    transition: all 0.2s ease;
+}
     </style>
     """, unsafe_allow_html=True)
+
 
 # --- LOGIC DỮ LIỆU (Từ, Nghĩa, Loại, Phát âm) ---
 DB_FILE = 'vocabulary_pro.txt'
@@ -308,9 +341,11 @@ elif menu == "📝 Kiểm tra":
             if q['done']:
                 if q['correct']:
                     st.success(f"Chính xác! 🎉 Đáp án là: **{q['ans']}**")
+                    play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
                     st.balloons()
                 else:
                     st.error(f"Sai rồi! Đáp án đúng là: **{q['ans']}** 😟")
+                    play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
                 
                 if st.button("Câu tiếp theo ➡️"):
                     del st.session_state.q2
@@ -318,6 +353,7 @@ elif menu == "📝 Kiểm tra":
 
       
        # --- DẠNG 3 (ĐIỀN TỪ TIẾNG ANH - WRITING) ---
+      
         else:
             st.subheader("✍️ Thử thách ghi nhớ")
             
@@ -347,7 +383,8 @@ elif menu == "📝 Kiểm tra":
                 key="input_write",
                 disabled=q['submitted']
             ).strip()
-            
+      
+             
             # 4. Nút bấm kiểm tra
             if not q['submitted']:
                 if st.button("🔍 KIỂM TRA", use_container_width=True):
@@ -362,10 +399,11 @@ elif menu == "📝 Kiểm tra":
             if q['submitted']:
                 if q['user_input'].lower() == q['w'].lower():
                     st.success(f"Chính xác! ✨ Từ đúng là: **{q['w']}**")
+                    play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
                     st.balloons()
                 else:
                     st.error(f"Sai rồi! Bạn nhập: '{q['user_input']}'. Đáp án đúng là: **{q['w']}** 😟")
-                
+                    play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
                 # Nút chuyển câu tiếp theo
                 if st.button("Câu tiếp theo ➡️", use_container_width=True):
                     del st.session_state.q3
