@@ -473,3 +473,83 @@ imagination	,	trí tưởng tuownghj 	,	n	,	/ɪˌmædʒɪˈneɪʃən/
 imagine	,	tưởng tượng 	,	v	,	/ɪˈmædʒɪn/
 immediate	,	ngay lập tức	,	adj	,	/ɪˈmiːdiət/
 imperative	,	cấp thiết 	,	adj	,	/ɪmˈperətɪv/ 
+impolite 	,	bất lịch sự 	,	adj 	,	/ˌɪmpəˈlaɪt/
+importance	,	tầm quan trọng 	,	n 	,	/ɪmˈpɔːtəns/
+importantly 	,	quan trọng là 	,	adv	,	/ɪmˈpɔːtəntli/
+impossible 	,	bất khả thi 	,	adj	,	/ɪmˈpɒsəbl/
+improvement	,	sự cải thiện 	,	n	,	/ɪmˈpruːvmənt/
+income	,	thu nhập 	,	n	,	/ˈɪnkʌm/
+incorrect	,	không đúng	,	adj	,	/ˌɪnkəˈrekt/
+increased	,	tăng   	,	adj	,	/ɪnˈkriːst/
+incredible	,	tuyệt vời 	,	adj	,	/ɪnˈkredəbl/
+independent	,	độc lập 	,	adj	,	/ˌɪndɪˈpendənt/
+indifferent	,	thờ ơ 	,	adj	,	/ɪnˈdɪfrənt/
+indirect	,	gián tiếp 	,	adj	,	/ˌɪndəˈrekt/
+indicate	,	chỉ ra 	,	v	,	/ˈɪndɪkeɪt/
+indicator	,	chỉ báo 	,	n	,	/ˈɪndɪkeɪtə/
+indirectly 	,	một cách gián tiếp 	,	adv	,	/ˌɪndəˈrektli/
+indoor	,	trong nhà 	,	adj	,	/ˈɪndɔː/
+inform 	,	thông báo 	,	v	,	/ɪnˈfɔːm/
+ingredient	,	nguyên liệu 	,	n	,	/ɪnˈɡriːdiənt/
+initial	,	lúc đầu 	,	adj	,	/ɪˈnɪʃəl/
+in-house	,	nội bộ 	,	adj	,	/ˌɪn ˈhaʊs/
+install	,	cài đặt 	,	v	,	/ɪnˈstɔːl/
+installation 	,	sự cài đặt 	,	n	,	/ˌɪnstəˈleɪʃən/
+intelligence	,	thông minh 	,	n	,	/ɪnˈtelɪdʒəns/
+intend	,	có ý định 	,	v	,	/ɪnˈtend/
+interupt	,	gián đoán	,	v	,	/ˌɪntəˈrʌpt/
+invent	,	phát minh 	,	v	,	/ɪnˈvent/
+invention 	,	sự phát minh 	,	n	,	/ɪnˈvenʃən/
+invest	,	đầu tư 	,	v	,	/ɪnˈvest/
+investigate	,	điều tra 	,	v	,	/ɪnˈvestɪɡeɪt/
+investment	,	sự đầu tư 	,	n	,	/ɪnˈvestmənt/
+invitation	,	lời mời 	,	n	,	/ˌɪnvɪˈteɪʃən/
+involve	,	đòi hỏi 	,	v	,	/ɪnˈvɒlv/ 
+ironing 	,	việc là ủi 	,	n	,	/ˈaɪənɪŋ/
+issue	,	vấn đề 	,	n	,	/ˈɪʃuː/
+irrelevant	,	không liên quan 	,	adj	,	/ɪˈreləvənt/
+irritate	,	chọc tức	,	v	,	/ˈɪrɪteɪt/
+jealous	,	ghen tị 	,	adj	,	/ˈdʒeləs/
+jet lag	,	hội chứng lệch múi giờ 	,	n	,	/ˈdʒet læɡ/
+jewellery	,	trang sức	,	n	,	/ˈdʒuːəlri/
+job description 	,	mô tả công viêc 	,	n	,	/ˈdʒɒb dɪˌskrɪpʃən/
+job-hunt	,	tìm việc 	,	v	,	/ˈdʒɒb hʌnt/
+job seeker	,	người tìm việc 	,	n	,	/ˈdʒɒb ˌsiːkə/
+journalism	,	báo chí 	,	n	,	/ˈdʒɜːnəlɪzəm/
+journalist 	,	nhà báo 	,	n	,	/ˈdʒɜːnəlɪst/
+judge	,	đánh giá 	,	v	,	/dʒʌdʒ/
+judgement	,	sự đánh giá 	,	n	,	/ˈdʒʌdʒmənt/
+junk mail 	,	tin rác	,	n	,	/ˈdʒʌŋk meɪl/
+key 	,	then chốt 	,	adj	,	/kiː/ 
+kick off	,	bắt đầu	,	phv 	,	/ˈkɪk ɒf/
+kind-hearted	,	tốt bụng 	,	adj	,	/ˌkaɪnd ˈhɑːtɪd/
+king-size	,	cỡ lớn 	,	adj	,	/ˌkɪŋ ˈsaɪz/
+kitchenware	,	đồ dùng nhà bếp 	,	n	,	/ˈkɪtʃənweə/
+knowledge	,	kiến thức	,	n	,	/ˈnɒlɪdʒ/
+knowledgeable	,	hiểu biết nhiều 	,	n	,	/ˈnɒlɪdʒəbl/
+label 	,	nhãn 	,	n	,	/ˈleɪbəl/
+laboratory 	,	phòng thí nghiệm 	,	n	,	/ləˈbɒrətri/
+lack 	,	thiếu 	,	n	,	/læk/
+laid-back	,	thư thái 	,	adj	,	/ˌleɪd ˈbæk/
+land	,	hạ cánh 	,	v	,	/lænd/
+landscape	,	phong cảnh 	,	n	,	/ˈlændskeɪp/
+large-scale	,	quy mô lớn 	,	adj	,	/ˌlɑːdʒ ˈskeɪl/
+lasting 	,	bền vững	,	adj	,	/ˈlɑːstɪŋ/
+latest	,	mới nhất 	,	n	,	/ˈleɪtɪst/
+launch	,	khai trương 	,	v	,	/lɔːntʃ/
+law	,	luật lệ 	,	n	,	/lɔː/
+leave	,	thời gian nghỉ phép 	,	n	,	/liːv/
+lecture	,	giảng dạy 	,	v	,	/ˈlektʃə/
+lecturer	,	người giảng dạy 	,	n	,	/ˈlektʃərə/
+legitimate	,	hợp pháp 	,	adj	,	/lɪˈdʒɪtɪmət/
+leisure	,	thời gian rảnh rỗi 	,	n	,	/ˈleʒə/
+length	,	chiều dài 	,	n	,	/leŋθ/
+lengthen	,	kéo dài 	,	v	,	/ˈleŋθən/
+lengthy 	,	dài dòng 	,	adj	,	/ˈleŋθi/
+license	,	giấy phép 	,	n	,	/ˈlaɪsəns/
+lie	,	nói dối 	,	v	,	/laɪ/
+link 	,	kết nối 	,	v	,	/lɪŋk/
+liquid	,	chất lỏng 	,	n	,	/ˈlɪkwɪd/
+list 	,	liệt kê	,	v	,	/lɪst/
+listener	,	người nghe	,	n	,	/ˈlɪsənə/
+literature	,	văn học 	,	n	,	/ˈlɪtərətʃə/
