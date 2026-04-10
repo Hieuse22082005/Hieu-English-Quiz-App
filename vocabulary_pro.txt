@@ -553,3 +553,67 @@ liquid	,	chất lỏng 	,	n	,	/ˈlɪkwɪd/
 list 	,	liệt kê	,	v	,	/lɪst/
 listener	,	người nghe	,	n	,	/ˈlɪsənə/
 literature	,	văn học 	,	n	,	/ˈlɪtərətʃə/
+livelihood	,	kế sinh nhai 	,	n	,	/ˈlaɪvlihʊd/
+lively 	,	sống động 	,	adj	,	/ˈlaɪvli/
+loan	,	khoản vay 	,	n	,	/ləʊn/
+local 	,	địa phương 	,	adj	,	/ˈləʊkəl/
+locate	,	đặt tại 	,	v	,	/ləʊˈkeɪt/
+located	,	toạ lạc 	,	adj	,	/ləʊˈkeɪtɪd/
+location	,	địa điểm 	,	n	,	/ləʊˈkeɪʃən/
+long-distance	,	đường dài 	,	adj	,	/ˌlɒŋ ˈdɪstəns/
+long-term	,	lâu dài 	,	adj	,	/ˌlɒŋ ˈtɜːm/
+loose	,	rộng (quần áo )	,	adj	,	/luːs/
+loss	,	thiệt hại 	,	n	,	/lɒs/
+lower	,	giảm	,	v	,	/ˈləʊə/
+loyal	,	trung thành 	,	adj	,	/ˈlɔɪəl/
+loyalty	,	sự trung thành 	,	n	,	/ˈlɔɪəlti/
+luxury	,	sang trọng 	,	n	,	/ˈlʌkʃəri/
+loser	,	người thua cuộc	,	n	,	/ˈluːzə/
+magical	,	thần kì 	,	adj	,	/ˈmædʒɪkəl/
+main 	,	chính 	,	adj	,	/meɪn/
+mainly 	,	chủ yếu 	,	adv	,	/ˈmeɪnli/
+maintain 	,	duy trì 	,	v	,	/meɪnˈteɪn/
+maintenance	,	sự duy trì 	,	n	,	/ˈmeɪntənəns/
+major	,	quan trọng 	,	adj	,	/ˈmeɪdʒə/
+mall	,	trung tâm mua sắm 	,	n	,	/mɔːl/
+manage	,	quản lý 	,	v	,	/ˈmænɪdʒ/
+management	,	sự quản lý 	,	n	,	/ˈmænɪdʒmənt/
+manual	,	thủ công 	,	adj	,	/ˈmænjʊəl/
+manufacture	,	sản xuất 	,	v	,	/ˌmænjuˈfæktʃə/
+manufacturer	,	nhà sản xuất 	,	n	,	/ˌmænjuˈfæktʃərə/
+market	,	chợ 	,	n	,	/ˈmɑːkɪt/
+material	,	chất liệu 	,	n	,	/məˈtɪəriəl/
+meaningful 	,	có ý nghĩa	,	adj	,	/ˈmiːnɪŋfəl/
+meanwhile	,	trong khi đó 	,	adv	,	/ˈmiːnwaɪl/
+medical	,	thuộc về y tế 	,	adj	,	/ˈmedɪkəl/
+medium 	,	trung bình 	,	adj	,	/ˈmiːdiəm/
+membership 	,	tư cách thành viên 	,	n	,	/ˈmembəʃɪp/
+mend	,	sửa chữa 	,	v	,	/mend/
+memorize	,	ghi nhớ 	,	v	,	/ˈmeməraɪz/
+memory 	,	trí nhớ 	,	n	,	/ˈmeməri/
+mention 	,	đề cập đến 	,	v	,	/ˈmenʃən/
+mess	,	sự lộn xộn 	,	n	,	/mes/
+merge	,	hợp nhất 	,	v	,	/mɜːdʒ/
+mindset	,	tư duy 	,	n	,	/ˈmaɪndset/
+method	,	phương pháp 	,	n	,	/ˈmeθəd/
+mineral 	,	khoáng chất 	,	n	,	/ˈmɪnərəl/
+minimal 	,	tối thiểu 	,	adj	,	/ˈmɪnɪməl/
+minimize	,	giảm thiểu 	,	v	,	/ˈmɪnɪmaɪz/
+minimum 	,	tối thiểu 	,	adj	,	/ˈmɪnɪməm/
+minor 	,	nhỏ 	,	adj	,	/ˈmaɪnə/
+miserable	,	khổ sở	,	adj	,	/ˈmɪzərəbl/
+misinform 	,	báo tin sai 	,	v	,	/ˌmɪsɪnˈfɔːm/
+mission	,	sứ mệnh 	,	n	,	/ˈmɪʃən/
+mistaken 	,	nhầm lẫn 	,	adj	,	/mɪˈsteɪkən/
+misunderstand	,	hiểu lầm 	,	v	,	/ˌmɪsʌndəˈstænd/
+misunderstanding 	,	sự hiểu nhầm 	,	n	,	/ˌmɪsʌndəˈstændɪŋ/
+moderate	,	vừa phải 	,	adj	,	/ˈmɒdərət/
+modern 	,	hiện đại 	,	adj	,	/ˈmɒdən/
+modest 	,	khiêm tốn 	,	adj	,	/ˈmɒdɪst/
+modify 	,	chỉnh sửa 	,	v	,	/ˈmɒdɪfaɪ/
+monthly	,	hàng tháng 	,	adj	,	/ˈmʌnθli/
+mood	,	tâm trạng 	,	n	,	/muːd/
+motivate	,	tạo động lực 	,	v	,	/ˈməʊtɪveɪt/
+motivation 	,	động lực	,	n	,	/ˌməʊtɪˈveɪʃən/
+multicultural 	,	đa văn hoá 	,	adj	,	/ˌmʌltiˈkʌltʃərəl/
+multipurpose	,	đa chức năng 	,	adj	,	/ˌmʌltiˈpɜːpəs/
