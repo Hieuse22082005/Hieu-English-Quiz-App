@@ -1,619 +1,619 @@
-advise 	,	Lời Khuyên 	,	v	,	/ədˈvaɪz/
-adviser 	,	Cố Vấn 	,	n	,	/ədˈvaɪzə/
-agency 	,	Đại lí 	,	n	,	/ˈeɪdʒənsi/
-agenda	,	Nhãn Hàng 	,	n	,	/əˈdʒendə/
-air fare 	,	Vé máy bay 	,	n	,	/ˈeə feə/
-airsick	,	say máy bay 	,	adj	,	/ˈeə sɪk/
-airsickness	,	Sự say máy bay 	,	n	,	/ˈeə ˌsɪknəs/
-alarming	,	cảnh báo 	,	adj	,	/əˈlɑːmɪŋ/
-alternative	,	có thể thay thế	,	adj	,	/ɔːlˈtɜːnətɪv/
-amazed 	,	kinh ngạc 	,	adj	,	/əˈmeɪzd/
-ambution 	,	tham vọng 	,	adj	,	/æmˈbɪʃən/
-ambutiously	,	đày tham vọng 	,	n	,	/æmˈbɪʃəsli/
-amusing	,	vui nhộn 	,	adv	,	/əˈmjuːzɪŋ/
-analyse	,	phân tích 	,	v	,	/ˈænəlaɪz/
-analysis	,	Sự phân tích 	,	n	,	/əˈnæləsɪs/
-angle	,	Góc độ 	,	n	,	/ˈæŋɡl/
-abbreviation	,	Viết vắn tắt 	,	n	,	/əˌbriːviˈeɪʃən/
-absent	,	vắng mặt 	,	adj	,	/ˈæbsənt/
-absolute	,	tuyệt đối 	,	adj	,	/ˈæbsəluːt/
-accelerate	,	tăng tốc 	,	v	,	/əkˈseləreɪt/
-access	,	truy cập 	,	n	,	/ˈækses/
-accommodation	,	chỗ ở 	,	n	,	/əˌkɒməˈdeɪʃən/
-accompany 	,	đồng hành 	,	v	,	/əˈkʌmpəni/
-accountant	,	kế toán 	,	n	,	/əˈkaʊntənt/
-accurate	,	chính xác 	,	adj	,	/ˈækjərət/
-achieve 	,	thành tựu 	,	v	,	/əˈtʃiːv/
-achievement	,	thành tựu 	,	n	,	/əˈtʃiːvmənt/
-adapt	,	thích nghi 	,	v	,	/əˈdæpt/
-adjustment	,	sự thay đổi 	,	n	,	/əˈdʒʌstmənt/
-advanced 	,	tiên tiến 	,	adj	,	/ədˈvɑːnst/
-advertise 	,	quảng cáo 	,	v	,	/ˈædvətaɪz/
-advertising agency 	,	công ty quảng cáo 	,	n	,	/ˈædvətaɪzɪŋ ˈeɪdʒənsi/
-anouncement	,	thông báo	,	n	,	/əˈnaʊnsmənt/
-annual	,	hằng năm 	,	adj	,	/ˈænjuəl/
-annoyed 	,	bực bội 	,	dj	,	/əˈnɔɪd/
-antique	,	đồ cổ 	,	n	,	/ænˈtiːk/
-apart from 	,	ngoại trừ 	,	v	,	/əˈpɑːt frəm/
-apologize	,	xin lỗi 	,	v	,	/əˈpɒlədʒaɪz/
-apology	,	lời xin lỗi 	,	n	,	/əˈpɒlədʒi/
-application 	,	đơn ứng tuyển 	,	n	,	/ˌæplɪˈkeɪʃən/
-approach 	,	tiếp cận 	,	n	,	/əˈprəʊtʃ/
-approximately 	,	xấp xi	,	adj	,	/əˈprɒksɪmətli/
-argue	,	tranh luận 	,	v	,	/ɑːɡjuː/
-argument 	,	sự tranh cãi 	,	n	,	/ˈɑːɡjumənt/
-arrangement	,	sự sắp xếp 	,	n	,	/əˈreɪndʒmənt/
-arrival 	,	sự đến 	,	n	,	/əˈraɪvəl/
-artefact	,	đồ tạo tác	,	n	,	/ˈɑːtɪfækt/
-astronaut	,	phi hành gia 	,	n	,	/ˈæstrənɔːt/
-atmosphere 	,	bầu không khí 	,	n	,	/ˈætməsfɪə/
-attach 	,	đính kèm 	,	v	,	/əˈtætʃ/
-attachment 	,	vật đính kèm 	,	n	,	/əˈtætʃmənt/
-attitude 	,	thái độ 	,	n	,	/ˈætɪtjuːd/
-attraction 	,	sự thu hút 	,	n	,	/əˈtrækʃən/
-authentic	,	chính hãng 	,	adj 	,	/ɔːˈθentɪk/
-award 	,	trao thưởng 	,	v	,	/əˈwɔːd/
-babysitter	,	trông trẻ 	,	n	,	/ˈbeɪbisɪtə/
-backache 	,	đau lưng 	,	n	,	/ˈbækeɪk/
-backbone 	,	cột sống 	,	n	,	/ˈbækbəʊn/
-background 	,	bối cảnh 	,	n	,	/ˈbækɡraʊnd/
-backpack 	,	balo 	,	n	,	/ˈbækpæk/
-backpacker 	,	người đi buik 	,	n	,	/ˈbækpækə/
-backup 	,	dự phòng 	,	n	,	/ˈbækʌp/
-bakery 	,	tiệm bánh 	,	n	,	/ˈbeɪkəri/
-balance 	,	cân bằng 	,	n	,	/ˈbæləns/
-bank 	,	gửi tiền ngân hàng 	,	v	,	/bæŋk/
-bargain 	,	trả giá 	,	v	,	/ˈbɑːɡɪn/
-base 	,	cơ sở 	,	n	,	/beɪs/
-basic	,	cơ bản 	,	adj	,	/ˈbeɪsɪk/
-basis	,	nền tảng 	,	n	,	/ˈbeɪsɪs/
-basket 	,	rổ	,	n	,	/ˈbɑːskɪt/
-bathrope 	,	khăn tắm 	,	n	,	/ˈbɑːθrəʊb/
-battery 	,	pin 	,	n	,	/ˈbætəri/
-battle 	,	gây gổ 	,	v	,	/ˈbætəl/
-bay 	,	vịnh 	,	n	,	/beɪ/
-beauty 	,	vẻ đẹp 	,	n	,	/ˈbjuːti/
-bed 	,	giường 	,	n	,	/bed/
-beginer 	,	người mới bắt đầu 	,	n	,	/bɪˈɡɪnə/
-behave 	,	hành vi 	,	v	,	/bɪˈheɪv/
-belong 	,	thuộc về 	,	v	,	/bɪˈlɒŋ/
-benefit	,	lợi ích 	,	n	,	/ˈbenɪfɪt/
-bestseller 	,	sản phẩm bán chạy 	,	n	,	/ˈbestsɛlə/
-best-selling 	,	bán chạy 	,	adj	,	/ˌbestˈselɪŋ/
-biannual 	,	2 năm 1 lần 	,	adj	,	/baɪˈænjuəl/
-big screen 	,	màn hình to 	,	n	,	/ˌbɪɡ ˈskriːn/
-blame	,	đổ lỗi 	,	v	,	/bleɪm/
-blend 	,	trộn 	,	v	,	/blend/
-blogger 	,	người viết blog 	,	n	,	/ˈblɒɡə/
-blogging 	,	viết blog 	,	n	,	/ˈblɒɡɪŋ/
-blow	,	thổi 	,	v	,	/bləʊ/ 
-board 	,	lên tàu 	,	v	,	/bɔːd/
-body-language 	,	ngôn ngữ cơ thể 	,	n	,	/ˈbɒdi ˌlæŋɡwɪdʒ/
-bold 	,	táo bạo 	,	adj	,	/bəʊld/
-booking 	,	đặt vé 	,	n	,	/ˈbʊkɪŋ/
-booking office	,	phòng vé 	,	n	,	/ˈbʊkɪŋ ˌɒfɪs/
-booklet 	,	cuốn sổ nhỏ 	,	n	,	/ˈbʊklət/
-boost 	,	thúc đẩy	,	v	,	/buːst/
-border 	,	giới hạn 	,	n	,	/ˈbɔːdə/
-branch 	,	chi nhánh 	,	n	,	/brɑːntʃ/
-brand 	,	thương hiệu 	,	n	,	/brænd/
-brave 	,	dũng cảm 	,	adj	,	/breɪv/
-breath 	,	hơi thở 	,	n	,	/breθ/
-breathe	,	thở	,	v	,	/briːð/
-breathing 	,	việc hít thở	,	n	,	/ˈbriːðɪŋ/
-breath taking 	,	hấp dẫn , ngoạn mục 	,	adj	,	/ˈbreθ ˌteɪkɪŋ/
-brief  	,	ngắn gọn 	,	adj	,	/briːf/
-briefly 	,	ngắn gọn 	,	adv	,	/ˈbriːfli/
-brochure 	,	sách hưỡng dẫn 	,	n	,	/brəʊˈʃʊə/
-bubble gum 	,	kẹo cao su 	,	n	,	/ˈbʌbəl ɡʌm/
-buffet	,	tiệc đứng 	,	n	,	/ˈbʊfeɪ/
-burglar 	,	trộm 	,	n	,	/ˈbɜːɡlə/
-burglar alarm 	,	cánh báo trộm 	,	n	,	/ˈbɜːɡlə əˌlɑːm/
-burnout 	,	kiệt sức 	,	n	,	/ˈbɜːnaʊt/
-business card 	,	danh thiếp 	,	n	,	/ˈbɪznəs kɑːd/
-business class	,	hạng thương gia 	,	n	,	/ˈbɪznəs klɑːs/
-businessman 	,	thương gia 	,	n	,	/ˈbɪznəsmən/
-buyer 	,	người mua 	,	n	,	/ˈbaɪə/
-cabin crew 	,	tiếp viên 	,	n	,	/ˈkæbɪn kruː/
-call center 	,	trunng tâm chăm sóc	,	n	,	/ˈkɔːl ˌsentə/
-cameraman 	,	nhân viên quay phim 	,	n	,	/ˈkæmrəmæn/
-callous 	,	nhẫn tâm	,	adj	,	/ˈkæləs/
-cameo 	,	diễn viên phụ 	,	n	,	/ˈkæmiəʊ/
-campaign	,	chiến dịch	,	n	,	/kæmˈpeɪn/
-campfire	,	lửa trại 	,	n	,	/ˈkæmpfaɪə/
-campsite	,	nơi cắm trại	,	n	,	/ˈkæmpsaɪt/
-canal	,	con kênh 	,	n	,	/kəˈnæl/
-cancel	,	huỷ 	,	v	,	/ˈkænsəl/
-candidate	,	ứng viên 	,	n	,	/ˈkændɪdət/
-capacity	,	 Sức chứa	,	n	,	/kəˈpæsɪti/
-careless	,	bất cẩn 	,	adj	,	/ˈkeələs/
-cashback	,	hoàn tiền 	,	n	,	/ˈkæʃbæk/
-casual 	,	bình thường	,	adj	,	/ˈkæʒuəl/
-cater 	,	phục vụ 	,	v	,	/ˈkeɪtə/
-celebration	,	lễ kỉ niệm 	,	n	,	/ˌselɪˈbreɪʃən/
-central	,	trung tâm 	,	adj	,	/ˈsentrəl/
-centre around	,	ngồi xung quanh	,	v	,	/ˈsentə əˌraʊnd/
-certain	,	chắc chắn 	,	adj	,	/ˈsɜːtən/
-chain	,	dãy 	,	n	,	/tʃeɪn/
-certificate	,	chứng chỉ 	,	n	,	/səˈtɪfɪkət/
-challenge	,	thử thách 	,	n	,	/ˈtʃælɪndʒ/
-challenging	,	thách thức	,	adj	,	/ˈtʃælɪndʒɪŋ/
-champion	,	quán quân 	,	n	,	/ˈtʃæmpiən/
-championship	,	giải đấu 	,	n	,	/ˈtʃæmpiənʃɪp/
-coal  	,	than 	,	n	,	/kəʊl/
-coastline	,	bờ biển 	,	n	,	/ˈkəʊstlaɪn/
-coincide	,	xảy ra đồng thời 	,	v	,	/ˌkəʊɪnˈsaɪd/
-coincidence	,	sự trùng hợp 	,	n	,	/kəʊˈɪnsɪdəns/
-colourful	,	đầy màu sắc	,	adj	,	/ˈkʌləfəl/
-combine	,	kết hợp 	,	v	,	/kəmˈbaɪn/
-comfort	,	thoải mái 	,	n	,	/ˈkʌmfət/
-comment	,	bình luận 	,	n	,	/ˈkɒment/
-communication	,	giao tiếp 	,	n	,	/kəˌmjuːnɪˈkeɪʃən/
-compete	,	cạnh tranh 	,	v	,	/kəmˈpiːt/
-competitor	,	đối thủ 	,	n	,	/kəmˈpetɪtə/
-complaint	,	phàn nàn	,	n	,	/kəmˈpleɪnt/
-concentrate	,	tập trung 	,	v	,	/ˈkɒnsəntreɪt/
-conclusion	,	kê luận 	,	n	,	/kənˈkluːʒən/
-conference	,	hội nghị 	,	n	,	/ˈkɒnfərəns/
-confidence	,	tự tin 	,	adj	,	/ˈkɒnfɪdəns/
-chapter 	,	chương 	,	n	,	/ˈtʃæptə/
-charming 	,	hấp dẫn , ngoạn mục 	,	adj	,	/ˈtʃɑːmɪŋ/
-check-in 	,	làm thủ tục 	,	v	,	/ˈtʃek ɪn/
-checklist 	,	danh sách 	,	n	,	/ˈtʃeklɪst/
-check-up 	,	kiểm tra sức khoẻ 	,	n	,	/ˈtʃek ʌp/
-cheerful 	,	vui vẻ 	,	adj	,	/ˈtʃɪəfəl/
-childcare	,	chăm sóc trẻ em 	,	n	,	/ˈtʃaɪldkeə/
-childhood 	,	tuổi thơ 	,	n	,	/ˈtʃaɪldhʊd/
-circumstance	,	tình huống 	,	n	,	/ˈsɜːkəmstəns/
-citizen 	,	cư dân 	,	n	,	/ˈsɪtɪzən/
-claim 	,	yêu cầu 	,	v	,	/kleɪm/
-clarify 	,	sáng tỏ 	,	v	,	/ˈklærɪfaɪ/
-climate change 	,	thay đổi thời tiết 	,	n	,	/ˈklaɪmət tʃeɪndʒ/
-clinic	,	phòng khám 	,	n	,	/ˈklɪnɪk/
-closing date 	,	hết hạn 	,	n	,	/ˈkləʊzɪŋ deɪt/
-cloth 	,	vải 	,	n	,	/klɒθ/
-confuse	,	gây nhầm lẫn 	,	v	,	/kənˈfjuːz/
-confused	,	lúng túng 	,	adj	,	/kənˈfjuːzd/
-congratulate	,	chúc mừng 	,	v	,	/kənˈɡrætʃʊleɪt/
-connection	,	sự kết nối 	,	n	,	/kəˈnekʃən/
-consumer 	,	khách hàng 	,	n	,	/kənˈsjuːmə/
-contact	,	sự liên lạc 	,	n	,	/ˈkɒntækt/
-container	,	thùng đựng hàng 	,	n	,	/kənˈteɪnə/
-content	,	hài lòng 	,	adj	,	/ˈkɒntent/
-context	,	bối cảnh 	,	n	,	/ˈkɒntekst/
-contract	,	hợp đồng 	,	n	,	/ˈkɒntrækt/
-contradict 	,	mâu thuẫn 	,	v	,	/ˌkɒntrəˈdɪkt/ 
-convenience	,	sự thuận tiện 	,	n	,	/kənˈviːniəns/
-convince	,	thuyết phục 	,	v	,	/kənˈvɪns/
-cookbook 	,	sách nấu ăn 	,	n	,	/ˈkʊkbʊk/
-cookery 	,	nghệ thuật nấu ăn 	,	n	,	/ˈkʊkəri/
-cool	,	điềm tĩnh 	,	adj	,	/kuːl/
-cooperate	,	hợp tác	,	v	,	/kəʊˈɒpəreɪt/
-correct	,	chỉnh sửa 	,	v	,	/kəˈrekt/
-custume	,	trang phục 	,	n	,	/ˈkɒstjuːm/
-council	,	hội đồng 	,	n	,	/ˈkaʊnsəl/
-countdown	,	đếm ngược 	,	n	,	/ˈkaʊntdaʊn/
-courage	,	can đảm 	,	n	,	/ˈkʌrɪdʒ/
-cover letter 	,	thư ứng tuyển	,	n	,	/ˈkʌvə ˌletə/
-co-worker 	,	đồng nghiệp 	,	n	,	/ˌkəʊˈwɜːkə/
-creative	,	sáng tạo 	,	adj	,	/kriˈeɪtɪv/
-creator	,	người sáng tạo 	,	n	,	/kriˈeɪtə/
-crime	,	kẻ trộm 	,	n	,	/kraɪm/
-criminal 	,	tội phạm 	,	n	,	/ˈkrɪmɪnəl/
-critical 	,	quan trọng 	,	adj	,	/ˈkrɪtɪkəl/
-cross	,	tức giận 	,	adj	,	/krɒs/
-crucial 	,	quantrongj 	,	adj	,	/ˈkruːʃəl/
-cultural	,	thuộc về văn hoá 	,	adj	,	/ˈkʌltʃərəl/
-culture	,	văn hoá 	,	n	,	/ˈkʌltʃə/
-curious	,	tò mò 	,	adj	,	/ˈkjʊəriəs/
-currency 	,	tiền tệ 	,	n	,	/ˈkʌrənsi/
-currenly	,	hiện tại 	,	adv	,	/ˈkʌrəntli/
-curriculum vitea	,	sơ yếu lí lịch 	,	n	,	/kəˌrɪkjʊləm ˈviːtaɪ/
-custom 	,	phong tục 	,	n	,	/ˈkʌstəm/
-customize	,	thay đổi theo yêu cầu 	,	v	,	/ˈkʌstəmaɪz/
-custom-made	,	thiết kế riêng 	,	n	,	/ˌkʌstəm ˈmeɪd/
-cutting-edge	,	hiện đại 	,	adj	,	/ˌkʌtɪŋ ˈedʒ/
-cycle	,	chu kì 	,	n	,	/ˈsaɪkəl/
-deal	,	thương lượng 	,	n	,	/diːl/
-decorate	,	trang trí 	,	v	,	/ˈdekəreɪt/
-define	,	định nghĩa 	,	v	,	/dɪˈfaɪn/
-defining 	,	có tính quyết định 	,	adj	,	/dɪˈfaɪnɪŋ/
-definite	,	chắc chắn 	,	adj	,	/ˈdefɪnət/
-definition 	,	sự định nghĩa 	,	n 	,	/ˌdefɪˈnɪʃən/
-disapprove 	,	không tán thành,phảnđói 	,	v	,	/ˌdɪsəˈpruːv/
-disconnect 	,	mất kết nối 	,	v	,	/ˌdɪskəˈnekt/
-discouranged	,	nản lòng 	,	adj	,	/dɪsˈkʌrɪdʒd/
-display 	,	trưng bày 	,	v	,	/dɪˈspleɪ/
-divide	,	phân chia 	,	v	,	/dɪˈvaɪd/
-domestic	,	trong nước	,	adj	,	/dəˈmestɪk/
-donate	,	quyên góp 	,	v	,	/dəʊˈneɪt/
-double 	,	tăng gấp đôi 	,	v	,	/ˈdʌbəl/
-doubt	,	sự nghi ngờ	,	n	,	/daʊt/
-dramatic	,	kịch tính 	,	adj	,	/drəˈmætɪk/
-drastic	,	quyết liệt 	,	adj	,	/ˈdræstɪk/
-drawback 	,	nhược điểm	,	n	,	/ˈdrɔːbæk/
-drop	,	sự giảm 	,	n	,	/drɒp/
-dress code	,	qui định trang phục 	,	n	,	/ˈdres kəʊd/
-due	,	dự kiến 	,	adj	,	/djuː/
-duty 	,	nhiệm vu 	,	n	,	/ˈdjuːti/
-development	,	sự phát triển 	,	n	,	/dɪˈveləpmənt/
-diagram	,	biểu đồ 	,	n	,	/ˈdaɪəɡræm/
-dialogue	,	cuộc hội thoại 	,	n	,	/ˈdaɪəlɒɡ/
-dieter	,	người ăn kiêng 	,	n	,	/ˈdaɪətə/
-difficulty 	,	khó khăn 	,	n	,	/ˈdɪfɪkəlti/
-direct	,	trực tiếp 	,	adj	,	/dəˈrekt/
-direction 	,	sự chỉ đạo 	,	n	,	/dəˈrekʃən/
-directly 	,	mottj cách trực tiếp 	,	adv	,	/dəˈrektli/
-director	,	người giám đốc	,	n	,	/dəˈrektə/
-disability 	,	khuyết tật 	,	n	,	/ˌdɪsəˈbɪləti/
-disavantage	,	bất lợi 	,	n	,	/ˌdɪsədˈvɑːntɪdʒ/
-disagreement	,	sự bất đồng 	,	n	,	/ˌdɪsəˈɡriːmənt/
-disappoint 	,	làm thất vọng 	,	v	,	/ˌdɪsəˈpɔɪnt/
-disappointed	,	thất vọng 	,	adj	,	/ˌdɪsəˈpɔɪntɪd/
-disappointing 	,	đáng thất vọng 	,	adj	,	/ˌdɪsəˈpɔɪntɪŋ/
-disappointment	,	sự thất vọng 	,	n	,	/ˌdɪsəˈpɔɪntmənt/
-degrade	,	làm suy thoái 	,	v	,	/dɪˈɡreɪd/
-delete	,	xoá bỏ 	,	v	,	/dɪˈliːt/
-deliver	,	giao hàng 	,	v	,	/dɪˈlɪvə/
-delivery	,	sự phân phát 	,	n	,	/dɪˈlɪvəri/
-demand	,	nhu cầu 	,	n	,	/dɪˈmɑːnd/
-demonstrate	,	chứng minh 	,	v	,	/ˈdemənstreɪt/
-deny	,	phủ nhận 	,	v	,	/dɪˈnaɪ/
-depart	,	khởi hành 	,	v	,	/dɪˈpɑːt/
-departure	,	sự khởi hành 	,	n	,	/dɪˈpɑːtʃə/
-deposit 	,	tiền đặt cọc 	,	n	,	/dɪˈpɒzɪt/
-depressed	,	trầm cảm 	,	adj	,	/dɪˈprest/
-design	,	mẫu thiết kế 	,	n	,	/dɪˈzaɪn/ 
-desirable	,	đáng ao ước	,	adj	,	/dɪˈzaɪərəbl/
-destination	,	điểm đến 	,	n	,	/ˌdestɪˈneɪʃən/
-destroy	,	phá huỷ 	,	v	,	/dɪˈstrɔɪ/
-determine	,	xác nhận 	,	v	,	/dɪˈtɜːmɪn/
-engineering	,	kỹ thuật 	,	n	,	/ˌendʒɪˈnɪərɪŋ/
-enjoyable	,	thú vị 	,	adj	,	/ɪnˈdʒɔɪəbl/
-entertain 	,	giải trí 	,	v	,	/ˌentəˈteɪn/
-entertainment	,	sự giải trí 	,	n	,	/ˌentəˈteɪnmənt/
-entry 	,	lối vào 	,	n	,	/ˈentri/
-environment	,	môi trường 	,	n	,	/ɪnˈvaɪrənmənt/
-environmental 	,	thuộc về môi trường 	,	adj	,	/ɪnˌvaɪrənˈmentəl/
-envision	,	hình dung 	,	v	,	/ɪnˈvɪʒən/
-equip	,	trang bị 	,	v	,	/ɪˈkwɪp/
-essential	,	thiết yêu 	,	adj	,	/ɪˈsenʃəl/
-establish	,	thành lập 	,	v	,	/ɪˈstæblɪʃ/
-examine	,	kiểm tra   	,	v	,	/ɪɡˈzæmɪn/
-except	,	ngoại trừ 	,	v	,	/ɪkˈsept/
-exception 	,	ngoại lệ 	,	n	,	/ɪkˈsepʃən/
-exceed	,	vượt quá 	,	v	,	/ɪkˈsiːd/
-excess	,	vượt qua s	,	adj	,	/ɪkˈses/
-exhibition 	,	buổi triển lãm 	,	n	,	/ˌeksɪˈbɪʃən/
-exist	,	tồn tại 	,	v	,	/ɪɡˈzɪst/
-expand	,	mở rộng 	,	v	,	/ɪkˈspænd/
-expectation 	,	kỳ vọng 	,	b	,	/ˌekspekˈteɪʃən/
-expect 	,	trông đợi 	,	v	,	/ɪkˈspekt/
-expedition 	,	chuyến thám hiểm 	,	n	,	/ˌekspəˈdɪʃən/
-expense	,	chi phí 	,	n	,	/ɪkˈspens/
-experienced	,	kinh nghiệm 	,	adj	,	/ɪkˈspɪəriənst/
-experiment	,	thí nghiệm 	,	n	,	/ɪkˈsperɪmənt/
-expert	,	chuyên gia 	,	n	,	/ˈekspɜːt/
-expire	,	hết hạn 	,	v	,	/ɪkˈspaɪə/
-explannation	,	lời giải thích 	,	n	,	/ˌekspləˈneɪʃən/
-exploit	,	khai thaccs 	,	v	,	/ɪkˈsplɔɪt/
-explore	,	khám phá 	,	v	,	/ɪkˈsplɔː/
-export 	,	xuất khẩu 	,	v	,	/ɪkˈspɔːt/
-election 	,	cuộc bầu cử 	,	n	,	/ɪˈlekʃən/
-electrical	,	thuộc về điện 	,	adj	,	/ɪˈlektrɪkəl/
-element	,	yếu tố cơ bản 	,	n	,	/ˈelɪmənt/
-elementary	,	cơ bản 	,	adj	,	/ˌelɪˈmentəri/
-embarrassed	,	lúng túng , xấu hổ 	,	adj	,	/ɪmˈbærəst/
-emergency 	,	khẩn cấp 	,	n	,	/ɪˈmɜːdʒənsi/
-emotion 	,	cảm xúc	,	n	,	/ɪˈməʊʃən/
-employment	,	việc làm 	,	n	,	/ɪmˈplɔɪmənt/
-empty 	,	làm trống rỗng 	,	v	,	/ˈempti/
-enclose	,	đính kèm 	,	v	,	/ɪnˈkləʊz/
-encourage	,	động viên 	,	v	,	/ɪnˈkʌrɪdʒ/
-endangered	,	bị đe doạ 	,	adj	,	/ɪnˈdeɪndʒəd/
-endeavour	,	sự cố gắng 	,	n	,	/ɪnˈdevə/
-endurance	,	sức chịu đựng 	,	n	,	/ɪnˈdjʊərəns/
-enemy	,	đối thủ 	,	n	,	/ˈenəmi/
-ease	,	sự dễ dàng 	,	n	,	/iːz/
-economic	,	thuộc kinh tế	,	adj	,	/ˌiːkəˈnɒmɪk/
-economical 	,	tiết kiệm	,	adj	,	/ˌiːkəˈnɒmɪkəl/
-economy	,	kinh tế	,	n	,	/ɪˈkɒnəmi/
-economy class	,	hạng phổ thông 	,	n	,	/ɪˈkɒnəmi klɑːs/
-ecosystem 	,	hệ sinh thái 	,	n	,	/ˈiːkəʊˌsɪstəm/
-editor	,	biên tập viên	,	n	,	/ˈedɪtə/
-educate	,	giáo dục 	,	v	,	/ˈedjʊkeɪt/
-educated	,	được giáo dục	,	adj	,	/ˈedjʊkeɪtɪd/
-educational	,	thuộc về giáo dục 	,	adj	,	/ˌedjʊˈkeɪʃənəl/
-effective	,	hiệu quả 	,	adj	,	/ɪˈfektɪv/
-efficient	,	có hiệu quả 	,	adj	,	/ɪˈfɪʃənt/
-effort	,	cố gắng 	,	n	,	/ˈefət/
-elaborate	,	công phu , tỉ mỉ 	,	adj	,	/ɪˈlæbəreɪt/
-elastic	,	co giãn 	,	adj	,	/ɪˈlæstɪk/
-elasticity	,	tính co giãn 	,	n	,	/ˌelæˈstɪsɪti/
-extend	,	mở rộng 	,	v	,	/ɪkˈstend/
-face	,	đối mặt 	,	v	,	/feɪs/
-facility	,	cơ sở vật chất 	,	n	,	/fəˈsɪləti/
-fair	,	chợ 	,	n	,	/feə/
-fair 	,	công bằng 	,	adj	,	/feə/
-familiar	,	quen thuộc 	,	adj	,	/fəˈmɪliə/
-fancy	,	muốn , mong ước	,	v	,	/ˈfænsi/
-fantastic	,	tuyệt vời 	,	adj	,	/fænˈtæstɪk/
-fare	,	giá vé	,	n	,	/feə/
-fascinate	,	thu hút , lôi cuốn 	,	v	,	/ˈfæsɪneɪt/
-fascinating	,	lôi cuốn 	,	adj	,	/ˈfæsɪneɪtɪŋ/
-fashion	,	thời trang 	,	n	,	/ˈfæʃən/
-fashion designer	,	nhà thiết kế	,	n	,	/ˈfæʃən dɪˌzaɪnə/
-fashionable	,	hợp thời trang 	,	adj	,	/ˈfæʃənəbl/
-fasten	,	thắt , cài 	,	v	,	/ˈfɑːsən/
-fatigue	,	sự mệt mỏi 	,	n	,	/fəˈtiːɡ/ 
-favour	,	sự ủng hộ , giúp đỡ	,	n	,	/ˈfeɪvə/
-favourite	,	ưa thích 	,	adj	,	/ˈfeɪvərɪt/
-fertilizer	,	phân bón 	,	n	,	/ˈfɜːtəlaɪzə/
-feature	,	đặc trưng	,	n	,	/ˈfiːtʃə/
-feedback	,	phản hồi 	,	n	,	/ˈfiːdbæk/
-figure	,	con số 	,	n	,	/ˈfɪɡə/
-finance	,	tài chính 	,	n	,	/faɪˈnæns/
-financial	,	thuộc về tài chính 	,	adj	,	/faɪˈnænʃəl/
-fire	,	sa thải 	,	v	,	/faɪə/
-firework	,	pháo hoa	,	n	,	/ˈfaɪəwɜːk/
-first class	,	hạng thương gia 	,	n	,	/ˌfɜːst ˈklɑːs/
-fitness center	,	trung tâm thể hình 	,	n	,	/ˈfɪtnəs ˌsentə/
-fitting room 	,	phòng thử đồ 	,	n	,	/ˈfɪtɪŋ ruːm/
-fix	,	cố định 	,	v	,	/fɪks/
-flora	,	hệ thực vật 	,	n	,	/ˈflɔːrə/
-flight attendant	,	tiếp viên hàng không 	,	n	,	/ˈflaɪt əˌtendənt/
-fluent	,	thông thạo 	,	adj	,	/ˈfluːənt/
-focus	,	sự tập trung 	,	n	,	/ˈfəʊkəs/
-focus	,	tập trung 	,	v	,	/ˈfəʊkəs/
-food bank 	,	ngân hàng thực phẩm 	,	n	,	/ˈfuːd bæŋk/
-footwear	,	giày dép 	,	n	,	/ˈfʊtwɛə/
-forecast	,	dự báo 	,	n	,	/ˈfɔːkɑːst/
-foresee	,	biết trước	,	v	,	/fɔːˈsiː/
-forgive	,	tha thứ 	,	v	,	/fəˈɡɪv/
-formal	,	chính thức 	,	v	,	/ˈfɔːməl/
-fortunately	,	may mắn thay 	,	adj	,	/ˈfɔːtʃənətli/
-forward	,	chuyển tiếp , gửi 	,	adv	,	/ˈfɔːwəd/
-free	,	miễn phí  	,	v	,	/friː/
-frequency	,	tần suất 	,	adj	,	/ˈfriːkwənsi/
-frequent	,	thường xuyên 	,	adj	,	/ˈfriːkwənt/
-friendly 	,	thân thiện 	,	adj	,	/ˈfrendli/
-friendship 	,	tình hữu nghị 	,	n	,	/ˈfrendʃɪp/
-frighten	,	làm ai sợ hãi 	,	v	,	/ˈfraɪtn/
-frightening 	,	đáng sợ 	,	adj	,	/ˈfraɪtənɪŋ/
-frozen	,	đông cứng 	,	adj	,	/ˈfrəʊzən/
-frustrated	,	bực bội 	,	adj	,	/ˈfrʌstreɪtɪd/
-function 	,	chức năng 	,	n	,	/ˈfʌŋkʃən/
-furnished	,	có sẵn đồ đạc 	,	adj	,	/ˈfɜːnɪʃt/
-furnishings	,	đồ đạc , đồ dùng trong nhà 	,	n	,	/ˈfɜːnɪʃɪŋz/
-gadget	,	đồ dùng 	,	n	,	/ˈɡædʒɪt/
-gain 	,	đạt được 	,	v	,	/ɡeɪn/
-gallery	,	buổi triển lãm 	,	n	,	/ˈɡæləri/
-garage sale 	,	hội chợ đồ cũ 	,	n	,	/ˈɡærɑːʒ seɪl/
-gardening 	,	làm vườn 	,	n	,	/ˈɡɑːdnɪŋ/
-gather	,	tụ họp 	,	v	,	/ˈɡæðə/
-gathering 	,	buổi tụ họp 	,	n	,	/ˈɡæðərɪŋ/
-generally 	,	nhìn chung 	,	adv	,	/ˈdʒenrəli/
-generation 	,	thế hệ 	,	n	,	/ˌdʒenəˈreɪʃən/
-generous	,	hào phóng 	,	adj	,	/ˈdʒenərəs/
-gentleman	,	quí ông 	,	n	,	/ˈdʒentlmən/
-gesture	,	cử chỉ 	,	n	,	/ˈdʒestʃə/
-giant	,	khổng lồ 	,	adj	,	/ˈdʒaɪənt/
-gift shop	,	cửa hàng quà tặng 	,	n	,	/ˈɡɪft ʃɒp/
-glassware	,	sản phẩm thuỷ tinh 	,	n	,	/ˈɡlɑːsweə/
-global	,	toàn cầu 	,	adj	,	/ˈɡləʊbəl/
-glossary	,	bảng chú giải thuật ngữ	,	n	,	/ˈɡlɒsəri/
-glorious	,	vinh quang 	,	adj	,	/ˈɡlɔːriəs/
-golden age 	,	thời hoàng kim 	,	n	,	/ˌɡəʊldən ˈeɪdʒ/
-golden rule	,	nguyên tắc vàng 	,	n	,	/ˌɡəʊldən ˈruːl/
-goods	,	vật dụng 	,	n	,	/ɡʊdz/
-goodwill	,	thiện chí 	,	n	,	/ˌɡʊdˈwɪl/
-gorgeous	,	lộng lẫy 	,	adj	,	/ˈɡɔːdʒəs/
-government	,	chính phủ 	,	n	,	/ˈɡʌvənmənt/
-grab-and-go	,	mua sắm nhanh gọn 	,	adj	,	/ˈɡræb ən ˌɡəʊ/
-gradual	,	dần dần 	,	adj	,	/ˈɡrædʒuəl/
-graduate	,	người tốt nghiệp 	,	n	,	/ˈɡrædʒuət/
-graph	,	đồ thị 	,	n	,	/ɡrɑːf/
-graphic	,	đồ hoạ 	,	n	,	/ˈɡræfɪk/
-graphic designer	,	người thiết kế đồ hoạ 	,	n	,	/ˈɡræfɪk dɪˌzaɪnə/
-grateful 	,	biết ơn 	,	adj	,	/ˈɡreɪtfəl/
-ground floor	,	tầng trệt 	,	n	,	/ˌɡraʊnd ˈflɔː/
-growing	,	gia tăng 	,	adj	,	/ˈɡrəʊɪŋ/
-guarantee	,	bảo đảm 	,	v	,	/ˌɡærənˈtiː/
-guess	,	dự đoán 	,	n	,	/ɡes/
-guest house	,	nhà khách 	,	n	,	/ˈɡest haʊs/
-guide	,	hướng dẫn 	,	v	,	/ɡaɪd/
-haircut	,	cắt tóc	,	n	,	/ˈheəkʌt/
-hairdresser	,	người cắt tóc	,	n	,	/ˈheədresə/
-hairdryer	,	máy sấy 	,	n	,	/ˈheədraɪə/
-hairstyle	,	kiểu tóc	,	n	,	/ˈheəstaɪl/
-hand	,	đưa	,	v	,	/hænd/
-handicraft	,	đồ thủ công 	,	n	,	/ˈhændɪkrɑːft/
-handkerchief	,	khăn tay 	,	n	,	/ˈhæŋkətʃɪf/
-handle	,	xử lí 	,	v	,	/ˈhændl/
-happiness	,	niềm hạnh phúc	,	n	,	/ˈhæpinəs/
-harbour	,	cảng 	,	n	,	/ˈhɑːbə/
-hardly 	,	hiếm khi 	,	adv	,	/ˈhɑːdli/
-hardware	,	phần cứng 	,	n	,	/ˈhɑːdweə/
-hazard	,	mối nguy hiểm 	,	n	,	/ˈhæzəd/
-head	,	dẫn đầu 	,	v	,	/hed/
-headline	,	tiêu đề 	,	n	,	/ˈhedlaɪn/
-heart attack	,	đau tim 	,	n	,	/ˈhɑːt əˌtæk/
-heartbeat	,	nhịp tim 	,	n	,	/ˈhɑːtbiːt/
-heating 	,	hệ thống sưởi 	,	n	,	/ˈhiːtɪŋ/
-heavily 	,	nặng nề 	,	adv	,	/ˈhevlɪ/ 
-height	,	 chiều cao 	,	n	,	/haɪt/
-heighten	,	tăng cường 	,	v	,	/ˈhaɪtən/
-helpful 	,	hữu ích 	,	adj	,	/ˈhelpfəl/
-heritage	,	di sản 	,	n	,	/ˈherɪtɪdʒ/
-hesitate	,	do dự 	,	v	,	/ˈhezɪteɪt/
-herb	,	thảo mộc 	,	n	,	/hɜːb/
-hidden	,	ẩn khuất 	,	adj	,	/ˈhɪdn/
-hide	,	giấu	,	v	,	/haɪd/
-high-end	,	cao cấp	,	adj	,	/ˌhaɪ ˈend/
-highway	,	quốc lộ	,	n	,	/ˈhaɪweɪ/
-hilarious	,	hài hước	,	adj	,	/hɪˈleəriəs/
-hire	,	thuê	,	v	,	/ˈhaɪə/
-holidaymaker	,	du khách 	,	n	,	/ˈhɒlədeɪˌmeɪkə/
-historical	,	thuộc về lịch sử 	,	adj	,	/hɪˈstɒrɪkəl/
-honeymoon	,	tuần trăng mật 	,	n	,	/ˈhʌnimuːn/
-horror	,	thật đáng sợ 	,	n	,	/ˈhɒrə/
-host	,	tổ chức 	,	v	,	/həʊst/
-host 	,	chủ nhà 	,	n	,	/həʊst/
-hostel	,	nhà trọ 	,	n	,	/ˈhɒstəl/
-huge	,	to lớn 	,	adj	,	/hjuːdʒ/
-human	,	thuộc về con người 	,	adj	,	/ˈhjuːmən/
-hunger	,	cơn đói 	,	n	,	/ˈhʌŋɡə/
-hunt	,	săn bắt 	,	v	,	/hʌnt/
-hurricane	,	cơn bão 	,	n	,	/ˈhʌrɪkən/
-hurry	,	sự vội vàng 	,	n	,	/ˈhʌri/
-ignore	,	phất lờ 	,	v	,	/ɪɡˈnɔː/
-illegal	,	bất hợp pháp 	,	adj	,	/ɪˈliːɡəl/
-image	,	hình ảnh 	,	n	,	/ˈɪmɪdʒ/
-imagination	,	trí tưởng tuownghj 	,	n	,	/ɪˌmædʒɪˈneɪʃən/
-imagine	,	tưởng tượng 	,	v	,	/ɪˈmædʒɪn/
-immediate	,	ngay lập tức	,	adj	,	/ɪˈmiːdiət/
-imperative	,	cấp thiết 	,	adj	,	/ɪmˈperətɪv/ 
-impolite 	,	bất lịch sự 	,	adj 	,	/ˌɪmpəˈlaɪt/
-importance	,	tầm quan trọng 	,	n 	,	/ɪmˈpɔːtəns/
-importantly 	,	quan trọng là 	,	adv	,	/ɪmˈpɔːtəntli/
-impossible 	,	bất khả thi 	,	adj	,	/ɪmˈpɒsəbl/
-improvement	,	sự cải thiện 	,	n	,	/ɪmˈpruːvmənt/
-income	,	thu nhập 	,	n	,	/ˈɪnkʌm/
-incorrect	,	không đúng	,	adj	,	/ˌɪnkəˈrekt/
-increased	,	tăng   	,	adj	,	/ɪnˈkriːst/
-incredible	,	tuyệt vời 	,	adj	,	/ɪnˈkredəbl/
-independent	,	độc lập 	,	adj	,	/ˌɪndɪˈpendənt/
-indifferent	,	thờ ơ 	,	adj	,	/ɪnˈdɪfrənt/
-indirect	,	gián tiếp 	,	adj	,	/ˌɪndəˈrekt/
-indicate	,	chỉ ra 	,	v	,	/ˈɪndɪkeɪt/
-indicator	,	chỉ báo 	,	n	,	/ˈɪndɪkeɪtə/
-indirectly 	,	một cách gián tiếp 	,	adv	,	/ˌɪndəˈrektli/
-indoor	,	trong nhà 	,	adj	,	/ˈɪndɔː/
-inform 	,	thông báo 	,	v	,	/ɪnˈfɔːm/
-ingredient	,	nguyên liệu 	,	n	,	/ɪnˈɡriːdiənt/
-initial	,	lúc đầu 	,	adj	,	/ɪˈnɪʃəl/
-in-house	,	nội bộ 	,	adj	,	/ˌɪn ˈhaʊs/
-install	,	cài đặt 	,	v	,	/ɪnˈstɔːl/
-installation 	,	sự cài đặt 	,	n	,	/ˌɪnstəˈleɪʃən/
-intelligence	,	thông minh 	,	n	,	/ɪnˈtelɪdʒəns/
-intend	,	có ý định 	,	v	,	/ɪnˈtend/
-interupt	,	gián đoán	,	v	,	/ˌɪntəˈrʌpt/
-invent	,	phát minh 	,	v	,	/ɪnˈvent/
-invention 	,	sự phát minh 	,	n	,	/ɪnˈvenʃən/
-invest	,	đầu tư 	,	v	,	/ɪnˈvest/
-investigate	,	điều tra 	,	v	,	/ɪnˈvestɪɡeɪt/
-investment	,	sự đầu tư 	,	n	,	/ɪnˈvestmənt/
-invitation	,	lời mời 	,	n	,	/ˌɪnvɪˈteɪʃən/
-involve	,	đòi hỏi 	,	v	,	/ɪnˈvɒlv/ 
-ironing 	,	việc là ủi 	,	n	,	/ˈaɪənɪŋ/
-issue	,	vấn đề 	,	n	,	/ˈɪʃuː/
-irrelevant	,	không liên quan 	,	adj	,	/ɪˈreləvənt/
-irritate	,	chọc tức	,	v	,	/ˈɪrɪteɪt/
-jealous	,	ghen tị 	,	adj	,	/ˈdʒeləs/
-jet lag	,	hội chứng lệch múi giờ 	,	n	,	/ˈdʒet læɡ/
-jewellery	,	trang sức	,	n	,	/ˈdʒuːəlri/
-job description 	,	mô tả công viêc 	,	n	,	/ˈdʒɒb dɪˌskrɪpʃən/
-job-hunt	,	tìm việc 	,	v	,	/ˈdʒɒb hʌnt/
-job seeker	,	người tìm việc 	,	n	,	/ˈdʒɒb ˌsiːkə/
-journalism	,	báo chí 	,	n	,	/ˈdʒɜːnəlɪzəm/
-journalist 	,	nhà báo 	,	n	,	/ˈdʒɜːnəlɪst/
-judge	,	đánh giá 	,	v	,	/dʒʌdʒ/
-judgement	,	sự đánh giá 	,	n	,	/ˈdʒʌdʒmənt/
-junk mail 	,	tin rác	,	n	,	/ˈdʒʌŋk meɪl/
-key 	,	then chốt 	,	adj	,	/kiː/ 
-kick off	,	bắt đầu	,	phv 	,	/ˈkɪk ɒf/
-kind-hearted	,	tốt bụng 	,	adj	,	/ˌkaɪnd ˈhɑːtɪd/
-king-size	,	cỡ lớn 	,	adj	,	/ˌkɪŋ ˈsaɪz/
-kitchenware	,	đồ dùng nhà bếp 	,	n	,	/ˈkɪtʃənweə/
-knowledge	,	kiến thức	,	n	,	/ˈnɒlɪdʒ/
-knowledgeable	,	hiểu biết nhiều 	,	n	,	/ˈnɒlɪdʒəbl/
-label 	,	nhãn 	,	n	,	/ˈleɪbəl/
-laboratory 	,	phòng thí nghiệm 	,	n	,	/ləˈbɒrətri/
-lack 	,	thiếu 	,	n	,	/læk/
-laid-back	,	thư thái 	,	adj	,	/ˌleɪd ˈbæk/
-land	,	hạ cánh 	,	v	,	/lænd/
-landscape	,	phong cảnh 	,	n	,	/ˈlændskeɪp/
-large-scale	,	quy mô lớn 	,	adj	,	/ˌlɑːdʒ ˈskeɪl/
-lasting 	,	bền vững	,	adj	,	/ˈlɑːstɪŋ/
-latest	,	mới nhất 	,	n	,	/ˈleɪtɪst/
-launch	,	khai trương 	,	v	,	/lɔːntʃ/
-law	,	luật lệ 	,	n	,	/lɔː/
-leave	,	thời gian nghỉ phép 	,	n	,	/liːv/
-lecture	,	giảng dạy 	,	v	,	/ˈlektʃə/
-lecturer	,	người giảng dạy 	,	n	,	/ˈlektʃərə/
-legitimate	,	hợp pháp 	,	adj	,	/lɪˈdʒɪtɪmət/
-leisure	,	thời gian rảnh rỗi 	,	n	,	/ˈleʒə/
-length	,	chiều dài 	,	n	,	/leŋθ/
-lengthen	,	kéo dài 	,	v	,	/ˈleŋθən/
-lengthy 	,	dài dòng 	,	adj	,	/ˈleŋθi/
-license	,	giấy phép 	,	n	,	/ˈlaɪsəns/
-lie	,	nói dối 	,	v	,	/laɪ/
-link 	,	kết nối 	,	v	,	/lɪŋk/
-liquid	,	chất lỏng 	,	n	,	/ˈlɪkwɪd/
-list 	,	liệt kê	,	v	,	/lɪst/
-listener	,	người nghe	,	n	,	/ˈlɪsənə/
-literature	,	văn học 	,	n	,	/ˈlɪtərətʃə/
-livelihood	,	kế sinh nhai 	,	n	,	/ˈlaɪvlihʊd/
-lively 	,	sống động 	,	adj	,	/ˈlaɪvli/
-loan	,	khoản vay 	,	n	,	/ləʊn/
-local 	,	địa phương 	,	adj	,	/ˈləʊkəl/
-locate	,	đặt tại 	,	v	,	/ləʊˈkeɪt/
-located	,	toạ lạc 	,	adj	,	/ləʊˈkeɪtɪd/
-location	,	địa điểm 	,	n	,	/ləʊˈkeɪʃən/
-long-distance	,	đường dài 	,	adj	,	/ˌlɒŋ ˈdɪstəns/
-long-term	,	lâu dài 	,	adj	,	/ˌlɒŋ ˈtɜːm/
-loose	,	rộng (quần áo )	,	adj	,	/luːs/
-loss	,	thiệt hại 	,	n	,	/lɒs/
-lower	,	giảm	,	v	,	/ˈləʊə/
-loyal	,	trung thành 	,	adj	,	/ˈlɔɪəl/
-loyalty	,	sự trung thành 	,	n	,	/ˈlɔɪəlti/
-luxury	,	sang trọng 	,	n	,	/ˈlʌkʃəri/
-loser	,	người thua cuộc	,	n	,	/ˈluːzə/
-magical	,	thần kì 	,	adj	,	/ˈmædʒɪkəl/
-main 	,	chính 	,	adj	,	/meɪn/
-mainly 	,	chủ yếu 	,	adv	,	/ˈmeɪnli/
-maintain 	,	duy trì 	,	v	,	/meɪnˈteɪn/
-maintenance	,	sự duy trì 	,	n	,	/ˈmeɪntənəns/
-major	,	quan trọng 	,	adj	,	/ˈmeɪdʒə/
-mall	,	trung tâm mua sắm 	,	n	,	/mɔːl/
-manage	,	quản lý 	,	v	,	/ˈmænɪdʒ/
-management	,	sự quản lý 	,	n	,	/ˈmænɪdʒmənt/
-manual	,	thủ công 	,	adj	,	/ˈmænjʊəl/
-manufacture	,	sản xuất 	,	v	,	/ˌmænjuˈfæktʃə/
-manufacturer	,	nhà sản xuất 	,	n	,	/ˌmænjuˈfæktʃərə/
-market	,	chợ 	,	n	,	/ˈmɑːkɪt/
-material	,	chất liệu 	,	n	,	/məˈtɪəriəl/
-meaningful 	,	có ý nghĩa	,	adj	,	/ˈmiːnɪŋfəl/
-meanwhile	,	trong khi đó 	,	adv	,	/ˈmiːnwaɪl/
-medical	,	thuộc về y tế 	,	adj	,	/ˈmedɪkəl/
-medium 	,	trung bình 	,	adj	,	/ˈmiːdiəm/
-membership 	,	tư cách thành viên 	,	n	,	/ˈmembəʃɪp/
-mend	,	sửa chữa 	,	v	,	/mend/
-memorize	,	ghi nhớ 	,	v	,	/ˈmeməraɪz/
-memory 	,	trí nhớ 	,	n	,	/ˈmeməri/
-mention 	,	đề cập đến 	,	v	,	/ˈmenʃən/
-mess	,	sự lộn xộn 	,	n	,	/mes/
-merge	,	hợp nhất 	,	v	,	/mɜːdʒ/
-mindset	,	tư duy 	,	n	,	/ˈmaɪndset/
-method	,	phương pháp 	,	n	,	/ˈmeθəd/
-mineral 	,	khoáng chất 	,	n	,	/ˈmɪnərəl/
-minimal 	,	tối thiểu 	,	adj	,	/ˈmɪnɪməl/
-minimize	,	giảm thiểu 	,	v	,	/ˈmɪnɪmaɪz/
-minimum 	,	tối thiểu 	,	adj	,	/ˈmɪnɪməm/
-minor 	,	nhỏ 	,	adj	,	/ˈmaɪnə/
-miserable	,	khổ sở	,	adj	,	/ˈmɪzərəbl/
-misinform 	,	báo tin sai 	,	v	,	/ˌmɪsɪnˈfɔːm/
-mission	,	sứ mệnh 	,	n	,	/ˈmɪʃən/
-mistaken 	,	nhầm lẫn 	,	adj	,	/mɪˈsteɪkən/
-misunderstand	,	hiểu lầm 	,	v	,	/ˌmɪsʌndəˈstænd/
-misunderstanding 	,	sự hiểu nhầm 	,	n	,	/ˌmɪsʌndəˈstændɪŋ/
-moderate	,	vừa phải 	,	adj	,	/ˈmɒdərət/
-modern 	,	hiện đại 	,	adj	,	/ˈmɒdən/
-modest 	,	khiêm tốn 	,	adj	,	/ˈmɒdɪst/
-modify 	,	chỉnh sửa 	,	v	,	/ˈmɒdɪfaɪ/
-monthly	,	hàng tháng 	,	adj	,	/ˈmʌnθli/
-mood	,	tâm trạng 	,	n	,	/muːd/
-motivate	,	tạo động lực 	,	v	,	/ˈməʊtɪveɪt/
-motivation 	,	động lực	,	n	,	/ˌməʊtɪˈveɪʃən/
-multicultural 	,	đa văn hoá 	,	adj	,	/ˌmʌltiˈkʌltʃərəl/
-multipurpose	,	đa chức năng 	,	adj	,	/ˌmʌltiˈpɜːpəs/
+advise 	,	Lời Khuyên 	,	v	,	/ədˈvaɪz/	,	on / about / against
+adviser 	,	Cố Vấn 	,	n	,	/ədˈvaɪzə/	,	to / on
+agency 	,	Đại lí 	,	n	,	/ˈeɪdʒənsi/	,	for / of
+agenda	,	Nhãn Hàng 	,	n	,	/əˈdʒendə/	,	for / on
+air fare 	,	Vé máy bay 	,	n	,	/ˈeə feə/	,	none
+airsick	,	say máy bay 	,	adj	,	/ˈeə sɪk/	,	none
+airsickness	,	Sự say máy bay 	,	n	,	/ˈeə ˌsɪknəs/	,	none
+alarming	,	cảnh báo 	,	adj	,	/əˈlɑːmɪŋ/	,	to
+alternative	,	có thể thay thế	,	adj	,	/ɔːlˈtɜːnətɪv/	,	to
+amazed 	,	kinh ngạc 	,	adj	,	/əˈmeɪzd/	,	at / by
+ambution 	,	tham vọng 	,	adj	,	/æmˈbɪʃən/	,	for / of
+ambutiously	,	đày tham vọng 	,	n	,	/æmˈbɪʃəsli/	,	none
+amusing	,	vui nhộn 	,	adv	,	/əˈmjuːzɪŋ/	,	to
+analyse	,	phân tích 	,	v	,	/ˈænəlaɪz/	,	none
+analysis	,	Sự phân tích 	,	n	,	/əˈnæləsɪs/	,	of
+angle	,	Góc độ 	,	n	,	/ˈæŋɡl/	,	at / from
+abbreviation	,	Viết vắn tắt 	,	n	,	/əˌbriːviˈeɪʃən/	,	for / of
+absent	,	vắng mặt 	,	adj	,	/ˈæbsənt/	,	from
+absolute	,	tuyệt đối 	,	adj	,	/ˈæbsəluːt/	,	none
+accelerate	,	tăng tốc 	,	v	,	/əkˈseləreɪt/	,	none
+access	,	truy cập 	,	n	,	/ˈækses/	,	to
+accommodation	,	chỗ ở 	,	n	,	/əˌkɒməˈdeɪʃən/	,	for
+accompany 	,	đồng hành 	,	v	,	/əˈkʌmpəni/	,	by / with
+accountant	,	kế toán 	,	n	,	/əˈkaʊntənt/	,	for
+accurate	,	chính xác 	,	adj	,	/ˈækjərət/	,	in / at
+achieve 	,	thành tựu 	,	v	,	/əˈtʃiːv/	,	none
+achievement	,	thành tựu 	,	n	,	/əˈtʃiːvmənt/	,	in / of
+adapt	,	thích nghi 	,	v	,	/əˈdæpt/	,	to / for
+adjustment	,	sự thay đổi 	,	n	,	/əˈdʒʌstmənt/	,	to
+advanced 	,	tiên tiến 	,	adj	,	/ədˈvɑːnst/	,	in
+advertise 	,	quảng cáo 	,	v	,	/ˈædvətaɪz/	,	for
+advertising agency 	,	công ty quảng cáo 	,	n	,	/ˈædvətaɪzɪŋ ˈeɪdʒənsi/	,	none
+anouncement	,	thông báo	,	n	,	/əˈnaʊnsmənt/	,	of / about
+annual	,	hằng năm 	,	adj	,	/ˈænjuəl/	,	none
+annoyed 	,	bực bội 	,	dj	,	/əˈnɔɪd/	,	with / at / about
+antique	,	đồ cổ 	,	n	,	/ænˈtiːk/	,	none
+apart from 	,	ngoại trừ 	,	v	,	/əˈpɑːt frəm/	,	from
+apologize	,	xin lỗi 	,	v	,	/əˈpɒlədʒaɪz/	,	to / for
+apology	,	lời xin lỗi 	,	n	,	/əˈpɒlədʒi/	,	for / to
+application 	,	đơn ứng tuyển 	,	n	,	/ˌæplɪˈkeɪʃən/	,	for / to
+approach 	,	tiếp cận 	,	n	,	/əˈprəʊtʃ/	,	to
+approximately 	,	xấp xi	,	adj	,	/əˈprɒksɪmətli/	,	none
+argue	,	tranh luận 	,	v	,	/ɑːɡjuː/	,	with / about / for / against
+argument 	,	sự tranh cãi 	,	n	,	/ˈɑːɡjumənt/	,	with / about / for / against
+arrangement	,	sự sắp xếp 	,	n	,	/əˈreɪndʒmənt/	,	for / with
+arrival 	,	sự đến 	,	n	,	/əˈraɪvəl/	,	at / in
+artefact	,	đồ tạo tác	,	n	,	/ˈɑːtɪfækt/	,	from / of
+astronaut	,	phi hành gia 	,	n	,	/ˈæstrənɔːt/	,	none
+atmosphere 	,	bầu không khí 	,	n	,	/ˈætməsfɪə/	,	of
+attach 	,	đính kèm 	,	v	,	/əˈtætʃ/	,	to
+attachment 	,	vật đính kèm 	,	n	,	/əˈtætʃmənt/	,	to
+attitude 	,	thái độ 	,	n	,	/ˈætɪtjuːd/	,	to / towards
+attraction 	,	sự thu hút 	,	n	,	/əˈtrækʃən/	,	to / for
+authentic	,	chính hãng 	,	adj 	,	/ɔːˈθentɪk/	,	none
+award 	,	trao thưởng 	,	v	,	/əˈwɔːd/	,	for / to
+babysitter	,	trông trẻ 	,	n	,	/ˈbeɪbisɪtə/	,	for
+backache 	,	đau lưng 	,	n	,	/ˈbækeɪk/	,	none
+backbone 	,	cột sống 	,	n	,	/ˈbækbəʊn/	,	of
+background 	,	bối cảnh 	,	n	,	/ˈbækɡraʊnd/	,	to / of / in
+backpack 	,	balo 	,	n	,	/ˈbækpæk/	,	none
+backpacker 	,	người đi buik 	,	n	,	/ˈbækpækə/	,	none
+backup 	,	dự phòng 	,	n	,	/ˈbækʌp/	,	for / to
+bakery 	,	tiệm bánh 	,	n	,	/ˈbeɪkəri/	,	none
+balance 	,	cân bằng 	,	n	,	/ˈbæləns/	,	between / of
+bank 	,	gửi tiền ngân hàng 	,	v	,	/bæŋk/	,	none
+bargain 	,	trả giá 	,	v	,	/ˈbɑːɡɪn/	,	with / for
+base 	,	cơ sở 	,	n	,	/beɪs/	,	on / at
+basic	,	cơ bản 	,	adj	,	/ˈbeɪsɪk/	,	to
+basis	,	nền tảng 	,	n	,	/ˈbeɪsɪs/	,	for / of / on
+basket 	,	rổ	,	n	,	/ˈbɑːskɪt/	,	of
+bathrope 	,	khăn tắm 	,	n	,	/ˈbɑːθrəʊb/	,	none
+battery 	,	pin 	,	n	,	/ˈbætəri/	,	for
+battle 	,	gây gổ 	,	v	,	/ˈbætəl/	,	with / against / for / over
+bay 	,	vịnh 	,	n	,	/beɪ/	,	none
+beauty 	,	vẻ đẹp 	,	n	,	/ˈbjuːti/	,	of
+bed 	,	giường 	,	n	,	/bed/	,	in
+beginer 	,	người mới bắt đầu 	,	n	,	/bɪˈɡɪnə/	,	at / in
+behave 	,	hành vi 	,	v	,	/bɪˈheɪv/	,	towards
+belong 	,	thuộc về 	,	v	,	/bɪˈlɒŋ/	,	to
+benefit	,	lợi ích 	,	n	,	/ˈbenɪfɪt/	,	from / of
+bestseller 	,	sản phẩm bán chạy 	,	n	,	/ˈbestsɛlə/	,	by
+best-selling 	,	bán chạy 	,	adj	,	/ˌbestˈselɪŋ/	,	none
+biannual 	,	2 năm 1 lần 	,	adj	,	/baɪˈænjuəl/	,	none
+big screen 	,	màn hình to 	,	n	,	/ˌbɪɡ ˈskriːn/	,	none
+blame	,	đổ lỗi 	,	v	,	/bleɪm/	,	for / on
+blend 	,	trộn 	,	v	,	/blend/	,	with / into
+blogger 	,	người viết blog 	,	n	,	/ˈblɒɡə/	,	none
+blogging 	,	viết blog 	,	n	,	/ˈblɒɡɪŋ/	,	none
+blow	,	thổi 	,	v	,	/bləʊ/ 	,	none
+board 	,	lên tàu 	,	v	,	/bɔːd/	,	on
+body-language 	,	ngôn ngữ cơ thể 	,	n	,	/ˈbɒdi ˌlæŋɡwɪdʒ/	,	none
+bold 	,	táo bạo 	,	adj	,	/bəʊld/	,	none
+booking 	,	đặt vé 	,	n	,	/ˈbʊkɪŋ/	,	for
+booking office	,	phòng vé 	,	n	,	/ˈbʊkɪŋ ˌɒfɪs/	,	none
+booklet 	,	cuốn sổ nhỏ 	,	n	,	/ˈbʊklət/	,	on / about
+boost 	,	thúc đẩy	,	v	,	/buːst/	,	to
+border 	,	giới hạn 	,	n	,	/ˈbɔːdə/	,	on / with
+branch 	,	chi nhánh 	,	n	,	/brɑːntʃ/	,	of
+brand 	,	thương hiệu 	,	n	,	/brænd/	,	none
+brave 	,	dũng cảm 	,	adj	,	/breɪv/	,	none
+breath 	,	hơi thở 	,	n	,	/breθ/	,	of
+breathe	,	thở	,	v	,	/briːð/	,	none
+breathing 	,	việc hít thở	,	n	,	/ˈbriːðɪŋ/	,	none
+breath taking 	,	hấp dẫn , ngoạn mục 	,	adj	,	/ˈbreθ ˌteɪkɪŋ/	,	none
+brief  	,	ngắn gọn 	,	adj	,	/briːf/	,	on / about
+briefly 	,	ngắn gọn 	,	adv	,	/ˈbriːfli/	,	none
+brochure 	,	sách hưỡng dẫn 	,	n	,	/brəʊˈʃʊə/	,	on / about
+bubble gum 	,	kẹo cao su 	,	n	,	/ˈbʌbəl ɡʌm/	,	none
+buffet	,	tiệc đứng 	,	n	,	/ˈbʊfeɪ/	,	none
+burglar 	,	trộm 	,	n	,	/ˈbɜːɡlə/	,	none
+burglar alarm 	,	cánh báo trộm 	,	n	,	/ˈbɜːɡlə əˌlɑːm/	,	none
+burnout 	,	kiệt sức 	,	n	,	/ˈbɜːnaʊt/	,	from
+business card 	,	danh thiếp 	,	n	,	/ˈbɪznəs kɑːd/	,	none
+business class	,	hạng thương gia 	,	n	,	/ˈbɪznəs klɑːs/	,	none
+businessman 	,	thương gia 	,	n	,	/ˈbɪznəsmən/	,	none
+buyer 	,	người mua 	,	n	,	/ˈbaɪə/	,	none
+cabin crew 	,	tiếp viên 	,	n	,	/ˈkæbɪn kruː/	,	none
+call center 	,	trunng tâm chăm sóc	,	n	,	/ˈkɔːl ˌsentə/	,	none
+cameraman 	,	nhân viên quay phim 	,	n	,	/ˈkæmrəmæn/	,	none
+callous 	,	nhẫn tâm	,	adj	,	/ˈkæləs/	,	to / about
+cameo 	,	diễn viên phụ 	,	n	,	/ˈkæmiəʊ/	,	in
+campaign	,	chiến dịch	,	n	,	/kæmˈpeɪn/	,	for / against
+campfire	,	lửa trại 	,	n	,	/ˈkæmpfaɪə/	,	none
+campsite	,	nơi cắm trại	,	n	,	/ˈkæmpsaɪt/	,	none
+canal	,	con kênh 	,	n	,	/kəˈnæl/	,	none
+cancel	,	huỷ 	,	v	,	/ˈkænsəl/	,	none
+candidate	,	ứng viên 	,	n	,	/ˈkændɪdət/	,	for
+capacity	,	 Sức chứa	,	n	,	/kəˈpæsɪti/	,	for / of
+careless	,	bất cẩn 	,	adj	,	/ˈkeələs/	,	with / about
+cashback	,	hoàn tiền 	,	n	,	/ˈkæʃbæk/	,	none
+casual 	,	bình thường	,	adj	,	/ˈkæʒuəl/	,	none
+cater 	,	phục vụ 	,	v	,	/ˈkeɪtə/	,	for
+celebration	,	lễ kỉ niệm 	,	n	,	/ˌselɪˈbreɪʃən/	,	of
+central	,	trung tâm 	,	adj	,	/ˈsentrəl/	,	to
+centre around	,	ngồi xung quanh	,	v	,	/ˈsentə əˌraʊnd/	,	on / around
+certain	,	chắc chắn 	,	adj	,	/ˈsɜːtən/	,	of / about
+chain	,	dãy 	,	n	,	/tʃeɪn/	,	of
+certificate	,	chứng chỉ 	,	n	,	/səˈtɪfɪkət/	,	of
+challenge	,	thử thách 	,	n	,	/ˈtʃælɪndʒ/	,	to / for
+challenging	,	thách thức	,	adj	,	/ˈtʃælɪndʒɪŋ/	,	to / for
+champion	,	quán quân 	,	n	,	/ˈtʃæmpiən/	,	of / for
+championship	,	giải đấu 	,	n	,	/ˈtʃæmpiənʃɪp/	,	of
+coal  	,	than 	,	n	,	/kəʊl/	,	none
+coastline	,	bờ biển 	,	n	,	/ˈkəʊstlaɪn/	,	none
+coincide	,	xảy ra đồng thời 	,	v	,	/ˌkəʊɪnˈsaɪd/	,	with
+coincidence	,	sự trùng hợp 	,	n	,	/kəʊˈɪnsɪdəns/	,	with
+colourful	,	đầy màu sắc	,	adj	,	/ˈkʌləfəl/	,	none
+combine	,	kết hợp 	,	v	,	/kəmˈbaɪn/	,	with
+comfort	,	thoải mái 	,	n	,	/ˈkʌmfət/	,	in / of
+comment	,	bình luận 	,	n	,	/ˈkɒment/	,	on / about
+communication	,	giao tiếp 	,	n	,	/kəˌmjuːnɪˈkeɪʃən/	,	with / between
+compete	,	cạnh tranh 	,	v	,	/kəmˈpiːt/	,	with / against / for
+competitor	,	đối thủ 	,	n	,	/kəmˈpetɪtə/	,	for / in
+complaint	,	phàn nàn	,	n	,	/kəmˈpleɪnt/	,	about / against
+concentrate	,	tập trung 	,	v	,	/ˈkɒnsəntreɪt/	,	on
+conclusion	,	kê luận 	,	n	,	/kənˈkluːʒən/	,	to / of
+conference	,	hội nghị 	,	n	,	/ˈkɒnfərəns/	,	on / about
+confidence	,	tự tin 	,	adj	,	/ˈkɒnfɪdəns/	,	in
+chapter 	,	chương 	,	n	,	/ˈtʃæptə/	,	of
+charming 	,	hấp dẫn , ngoạn mục 	,	adj	,	/ˈtʃɑːmɪŋ/	,	none
+check-in 	,	làm thủ tục 	,	v	,	/ˈtʃek ɪn/	,	at
+checklist 	,	danh sách 	,	n	,	/ˈtʃeklɪst/	,	of
+check-up 	,	kiểm tra sức khoẻ 	,	n	,	/ˈtʃek ʌp/	,	none
+cheerful 	,	vui vẻ 	,	adj	,	/ˈtʃɪəfəl/	,	about
+childcare	,	chăm sóc trẻ em 	,	n	,	/ˈtʃaɪldkeə/	,	none
+childhood 	,	tuổi thơ 	,	n	,	/ˈtʃaɪldhʊd/	,	none
+circumstance	,	tình huống 	,	n	,	/ˈsɜːkəmstəns/	,	under / in
+citizen 	,	cư dân 	,	n	,	/ˈsɪtɪzən/	,	of
+claim 	,	yêu cầu 	,	v	,	/kleɪm/	,	to / on
+clarify 	,	sáng tỏ 	,	v	,	/ˈklærɪfaɪ/	,	none
+climate change 	,	thay đổi thời tiết 	,	n	,	/ˈklaɪmət tʃeɪndʒ/	,	none
+clinic	,	phòng khám 	,	n	,	/ˈklɪnɪk/	,	none
+closing date 	,	hết hạn 	,	n	,	/ˈkləʊzɪŋ deɪt/	,	for
+cloth 	,	vải 	,	n	,	/klɒθ/	,	none
+confuse	,	gây nhầm lẫn 	,	v	,	/kənˈfjuːz/	,	with / about
+confused	,	lúng túng 	,	adj	,	/kənˈfjuːzd/	,	about / by
+congratulate	,	chúc mừng 	,	v	,	/kənˈɡrætʃʊleɪt/	,	on
+connection	,	sự kết nối 	,	n	,	/kəˈnekʃən/	,	with / between
+consumer 	,	khách hàng 	,	n	,	/kənˈsjuːmə/	,	of
+contact	,	sự liên lạc 	,	n	,	/ˈkɒntækt/	,	with
+container	,	thùng đựng hàng 	,	n	,	/kənˈteɪnə/	,	for / of
+content	,	hài lòng 	,	adj	,	/ˈkɒntent/	,	with
+context	,	bối cảnh 	,	n	,	/ˈkɒntekst/	,	of
+contract	,	hợp đồng 	,	n	,	/ˈkɒntrækt/	,	with / for
+contradict 	,	mâu thuẫn 	,	v	,	/ˌkɒntrəˈdɪkt/ 	,	none
+convenience	,	sự thuận tiện 	,	n	,	/kənˈviːniəns/	,	of
+convince	,	thuyết phục 	,	v	,	/kənˈvɪns/	,	of / about
+cookbook 	,	sách nấu ăn 	,	n	,	/ˈkʊkbʊk/	,	none
+cookery 	,	nghệ thuật nấu ăn 	,	n	,	/ˈkʊkəri/	,	none
+cool	,	điềm tĩnh 	,	adj	,	/kuːl/	,	none
+cooperate	,	hợp tác	,	v	,	/kəʊˈɒpəreɪt/	,	with
+correct	,	chỉnh sửa 	,	v	,	/kəˈrekt/	,	none
+custume	,	trang phục 	,	n	,	/ˈkɒstjuːm/	,	none
+council	,	hội đồng 	,	n	,	/ˈkaʊnsəl/	,	none
+countdown	,	đếm ngược 	,	n	,	/ˈkaʊntdaʊn/	,	to
+courage	,	can đảm 	,	n	,	/ˈkʌrɪdʒ/	,	none
+cover letter 	,	thư ứng tuyển	,	n	,	/ˈkʌvə ˌletə/	,	for
+co-worker 	,	đồng nghiệp 	,	n	,	/ˌkəʊˈwɜːkə/	,	with
+creative	,	sáng tạo 	,	adj	,	/kriˈeɪtɪv/	,	with / in
+creator	,	người sáng tạo 	,	n	,	/kriˈeɪtə/	,	of
+crime	,	kẻ trộm 	,	n	,	/kraɪm/	,	none
+criminal 	,	tội phạm 	,	n	,	/ˈkrɪmɪnəl/	,	none
+critical 	,	quan trọng 	,	adj	,	/ˈkrɪtɪkəl/	,	of / about
+cross	,	tức giận 	,	adj	,	/krɒs/	,	with
+crucial 	,	quantrongj 	,	adj	,	/ˈkruːʃəl/	,	to / for
+cultural	,	thuộc về văn hoá 	,	adj	,	/ˈkʌltʃərəl/	,	none
+culture	,	văn hoá 	,	n	,	/ˈkʌltʃə/	,	of
+curious	,	tò mò 	,	adj	,	/ˈkjʊəriəs/	,	about
+currency 	,	tiền tệ 	,	n	,	/ˈkʌrənsi/	,	none
+currenly	,	hiện tại 	,	adv	,	/ˈkʌrəntli/	,	none
+curriculum vitea	,	sơ yếu lí lịch 	,	n	,	/kəˌrɪkjʊləm ˈviːtaɪ/	,	none
+custom 	,	phong tục 	,	n	,	/ˈkʌstəm/	,	of
+customize	,	thay đổi theo yêu cầu 	,	v	,	/ˈkʌstəmaɪz/	,	for
+custom-made	,	thiết kế riêng 	,	n	,	/ˌkʌstəm ˈmeɪd/	,	none
+cutting-edge	,	hiện đại 	,	adj	,	/ˌkʌtɪŋ ˈedʒ/	,	none
+cycle	,	chu kì 	,	n	,	/ˈsaɪkəl/	,	none
+deal	,	thương lượng 	,	n	,	/diːl/	,	with / in
+decorate	,	trang trí 	,	v	,	/ˈdekəreɪt/	,	with
+define	,	định nghĩa 	,	v	,	/dɪˈfaɪn/	,	as
+defining 	,	có tính quyết định 	,	adj	,	/dɪˈfaɪnɪŋ/	,	none
+definite	,	chắc chắn 	,	adj	,	/ˈdefɪnət/	,	about
+definition 	,	sự định nghĩa 	,	n 	,	/ˌdefɪˈnɪʃən/	,	of
+disapprove 	,	không tán thành,phảnđói 	,	v	,	/ˌdɪsəˈpruːv/	,	of
+disconnect 	,	mất kết nối 	,	v	,	/ˌdɪskəˈnekt/	,	from
+discouranged	,	nản lòng 	,	adj	,	/dɪsˈkʌrɪdʒd/	,	by / at / with
+display 	,	trưng bày 	,	v	,	/dɪˈspleɪ/	,	of
+divide	,	phân chia 	,	v	,	/dɪˈvaɪd/	,	into / by
+domestic	,	trong nước	,	adj	,	/dəˈmestɪk/	,	none
+donate	,	quyên góp 	,	v	,	/dəʊˈneɪt/	,	to
+double 	,	tăng gấp đôi 	,	v	,	/ˈdʌbəl/	,	none
+doubt	,	sự nghi ngờ	,	n	,	/daʊt/	,	about / as to
+dramatic	,	kịch tính 	,	adj	,	/drəˈmætɪk/	,	in
+drastic	,	quyết liệt 	,	adj	,	/ˈdræstɪk/	,	none
+drawback 	,	nhược điểm	,	n	,	/ˈdrɔːbæk/	,	of/to
+drop	,	sự giảm 	,	n	,	/drɒp/	,	in/of/from/to
+dress code	,	qui định trang phục 	,	n	,	/ˈdres kəʊd/	,	none
+due	,	dự kiến 	,	adj	,	/djuː/	,	to/for
+duty 	,	nhiệm vu 	,	n	,	/ˈdjuːti/	,	of/to/on
+development	,	sự phát triển 	,	n	,	/dɪˈveləpmənt/	,	of/in
+diagram	,	biểu đồ 	,	n	,	/ˈdaɪəɡræm/	,	of
+dialogue	,	cuộc hội thoại 	,	n	,	/ˈdaɪəlɒɡ/	,	with/between/on/about
+dieter	,	người ăn kiêng 	,	n	,	/ˈdaɪətə/	,	none
+difficulty 	,	khó khăn 	,	n	,	/ˈdɪfɪkəlti/	,	in/with
+direct	,	trực tiếp 	,	adj	,	/dəˈrekt/	,	to/at/towards
+direction 	,	sự chỉ đạo 	,	n	,	/dəˈrekʃən/	,	of/in
+directly 	,	mottj cách trực tiếp 	,	adv	,	/dəˈrektli/	,	to/from
+director	,	người giám đốc	,	n	,	/dəˈrektə/	,	of
+disability 	,	khuyết tật 	,	n	,	/ˌdɪsəˈbɪləti/	,	none
+disavantage	,	bất lợi 	,	n	,	/ˌdɪsədˈvɑːntɪdʒ/	,	of/to
+disagreement	,	sự bất đồng 	,	n	,	/ˌdɪsəˈɡriːmənt/	,	with/about/over/between
+disappoint 	,	làm thất vọng 	,	v	,	/ˌdɪsəˈpɔɪnt/	,	none
+disappointed	,	thất vọng 	,	adj	,	/ˌdɪsəˈpɔɪntɪd/	,	with/by/at/in
+disappointing 	,	đáng thất vọng 	,	adj	,	/ˌdɪsəˈpɔɪntɪŋ/	,	to
+disappointment	,	sự thất vọng 	,	n	,	/ˌdɪsəˈpɔɪntmənt/	,	to/with/at/in
+degrade	,	làm suy thoái 	,	v	,	/dɪˈɡreɪd/	,	into
+delete	,	xoá bỏ 	,	v	,	/dɪˈliːt/	,	from
+deliver	,	giao hàng 	,	v	,	/dɪˈlɪvə/	,	to/from
+delivery	,	sự phân phát 	,	n	,	/dɪˈlɪvəri/	,	of/to
+demand	,	nhu cầu 	,	n	,	/dɪˈmɑːnd/	,	for/on
+demonstrate	,	chứng minh 	,	v	,	/ˈdemənstreɪt/	,	to/against
+deny	,	phủ nhận 	,	v	,	/dɪˈnaɪ/	,	none
+depart	,	khởi hành 	,	v	,	/dɪˈpɑːt/	,	from/for
+departure	,	sự khởi hành 	,	n	,	/dɪˈpɑːtʃə/	,	from/for
+deposit 	,	tiền đặt cọc 	,	n	,	/dɪˈpɒzɪt/	,	on/into
+depressed	,	trầm cảm 	,	adj	,	/dɪˈprest/	,	about/by
+design	,	mẫu thiết kế 	,	n	,	/dɪˈzaɪn/ 	,	for
+desirable	,	đáng ao ước	,	adj	,	/dɪˈzaɪərəbl/	,	for/to
+destination	,	điểm đến 	,	n	,	/ˌdestɪˈneɪʃən/	,	for
+destroy	,	phá huỷ 	,	v	,	/dɪˈstrɔɪ/	,	none
+determine	,	xác nhận 	,	v	,	/dɪˈtɜːmɪn/	,	none
+engineering	,	kỹ thuật 	,	n	,	/ˌendʒɪˈnɪərɪŋ/	,	none
+enjoyable	,	thú vị 	,	adj	,	/ɪnˈdʒɔɪəbl/	,	for/to
+entertain 	,	giải trí 	,	v	,	/ˌentəˈteɪn/	,	with/by
+entertainment	,	sự giải trí 	,	n	,	/ˌentəˈteɪnmənt/	,	for
+entry 	,	lối vào 	,	n	,	/ˈentri/	,	to/into
+environment	,	môi trường 	,	n	,	/ɪnˈvaɪrənmənt/	,	for
+environmental 	,	thuộc về môi trường 	,	adj	,	/ɪnˌvaɪrənˈmentəl/	,	none
+envision	,	hình dung 	,	v	,	/ɪnˈvɪʒən/	,	as
+equip	,	trang bị 	,	v	,	/ɪˈkwɪp/	,	with
+essential	,	thiết yêu 	,	adj	,	/ɪˈsenʃəl/	,	to/for
+establish	,	thành lập 	,	v	,	/ɪˈstæblɪʃ/	,	as/in
+examine	,	kiểm tra   	,	v	,	/ɪɡˈzæmɪn/	,	for
+except	,	ngoại trừ 	,	v	,	/ɪkˈsept/	,	for
+exception 	,	ngoại lệ 	,	n	,	/ɪkˈsepʃən/	,	to/of
+exceed	,	vượt quá 	,	v	,	/ɪkˈsiːd/	,	by
+excess	,	vượt qua s	,	adj	,	/ɪkˈses/	,	of
+exhibition 	,	buổi triển lãm 	,	n	,	/ˌeksɪˈbɪʃən/	,	of/at
+exist	,	tồn tại 	,	v	,	/ɪɡˈzɪst/	,	in/on/with
+expand	,	mở rộng 	,	v	,	/ɪkˈspænd/	,	into/on
+expectation 	,	kỳ vọng 	,	b	,	/ˌekspekˈteɪʃən/	,	of/from
+expect 	,	trông đợi 	,	v	,	/ɪkˈspekt/	,	from/of
+expedition 	,	chuyến thám hiểm 	,	n	,	/ˌekspəˈdɪʃən/	,	to
+expense	,	chi phí 	,	n	,	/ɪkˈspens/	,	of/at
+experienced	,	kinh nghiệm 	,	adj	,	/ɪkˈspɪəriənst/	,	in/at
+experiment	,	thí nghiệm 	,	n	,	/ɪkˈsperɪmənt/	,	on/with
+expert	,	chuyên gia 	,	n	,	/ˈekspɜːt/	,	in/at/on
+expire	,	hết hạn 	,	v	,	/ɪkˈspaɪə/	,	on/in
+explannation	,	lời giải thích 	,	n	,	/ˌekspləˈneɪʃən/	,	for/of
+exploit	,	khai thaccs 	,	v	,	/ɪkˈsplɔɪt/	,	none
+explore	,	khám phá 	,	v	,	/ɪkˈsplɔː/	,	none
+export 	,	xuất khẩu 	,	v	,	/ɪkˈspɔːt/	,	to/from
+election 	,	cuộc bầu cử 	,	n	,	/ɪˈlekʃən/	,	to/for/of
+electrical	,	thuộc về điện 	,	adj	,	/ɪˈlektrɪkəl/	,	none
+element	,	yếu tố cơ bản 	,	n	,	/ˈelɪmənt/	,	of/in
+elementary	,	cơ bản 	,	adj	,	/ˌelɪˈmentəri/	,	none
+embarrassed	,	lúng túng , xấu hổ 	,	adj	,	/ɪmˈbærəst/	,	about/by/at
+emergency 	,	khẩn cấp 	,	n	,	/ɪˈmɜːdʒənsi/	,	none
+emotion 	,	cảm xúc	,	n	,	/ɪˈməʊʃən/	,	none
+employment	,	việc làm 	,	n	,	/ɪmˈplɔɪmənt/	,	in/of
+empty 	,	làm trống rỗng 	,	v	,	/ˈempti/	,	of/into
+enclose	,	đính kèm 	,	v	,	/ɪnˈkləʊz/	,	with/in
+encourage	,	động viên 	,	v	,	/ɪnˈkʌrɪdʒ/	,	to/in
+endangered	,	bị đe doạ 	,	adj	,	/ɪnˈdeɪndʒəd/	,	none
+endeavour	,	sự cố gắng 	,	n	,	/ɪnˈdevə/	,	to/in
+endurance	,	sức chịu đựng 	,	n	,	/ɪnˈdjʊərəns/	,	of
+enemy	,	đối thủ 	,	n	,	/ˈenəmi/	,	to/of
+ease	,	sự dễ dàng 	,	n	,	/iːz/	,	of/with/at
+economic	,	thuộc kinh tế	,	adj	,	/ˌiːkəˈnɒmɪk/	,	none
+economical 	,	tiết kiệm	,	adj	,	/ˌiːkəˈnɒmɪkəl/	,	none
+economy	,	kinh tế	,	n	,	/ɪˈkɒnəmi/	,	of
+economy class	,	hạng phổ thông 	,	n	,	/ɪˈkɒnəmi klɑːs/	,	none
+ecosystem 	,	hệ sinh thái 	,	n	,	/ˈiːkəʊˌsɪstəm/	,	none
+editor	,	biên tập viên	,	n	,	/ˈedɪtə/	,	of
+educate	,	giáo dục 	,	v	,	/ˈedjʊkeɪt/	,	in/about
+educated	,	được giáo dục	,	adj	,	/ˈedjʊkeɪtɪd/	,	in/at
+educational	,	thuộc về giáo dục 	,	adj	,	/ˌedjʊˈkeɪʃənəl/	,	none
+effective	,	hiệu quả 	,	adj	,	/ɪˈfektɪv/	,	in/at
+efficient	,	có hiệu quả 	,	adj	,	/ɪˈfɪʃənt/	,	in/at
+effort	,	cố gắng 	,	n	,	/ˈefət/	,	in/to
+elaborate	,	công phu , tỉ mỉ 	,	adj	,	/ɪˈlæbəreɪt/	,	on/upon
+elastic	,	co giãn 	,	adj	,	/ɪˈlæstɪk/	,	none
+elasticity	,	tính co giãn 	,	n	,	/ˌelæˈstɪsɪti/	,	of
+extend	,	mở rộng 	,	v	,	/ɪkˈstend/	,	to/for
+face	,	đối mặt 	,	v	,	/feɪs/	,	up/with/to
+facility	,	cơ sở vật chất 	,	n	,	/fəˈsɪləti/	,	for/of
+fair	,	chợ 	,	n	,	/feə/	,	to/on
+fair 	,	công bằng 	,	adj	,	/feə/	,	to/on
+familiar	,	quen thuộc 	,	adj	,	/fəˈmɪliə/	,	with/to
+fancy	,	muốn , mong ước	,	v	,	/ˈfænsi/	,	none
+fantastic	,	tuyệt vời 	,	adj	,	/fænˈtæstɪk/	,	none
+fare	,	giá vé	,	n	,	/feə/	,	none
+fascinate	,	thu hút , lôi cuốn 	,	v	,	/ˈfæsɪneɪt/	,	by/with
+fascinating	,	lôi cuốn 	,	adj	,	/ˈfæsɪneɪtɪŋ/	,	for/to
+fashion	,	thời trang 	,	n	,	/ˈfæʃən/	,	for/in
+fashion designer	,	nhà thiết kế	,	n	,	/ˈfæʃən dɪˌzaɪnə/	,	none
+fashionable	,	hợp thời trang 	,	adj	,	/ˈfæʃənəbl/	,	none
+fasten	,	thắt , cài 	,	v	,	/ˈfɑːsən/	,	to
+fatigue	,	sự mệt mỏi 	,	n	,	/fəˈtiːɡ/ 	,	from/with
+favour	,	sự ủng hộ , giúp đỡ	,	n	,	/ˈfeɪvə/	,	of/for
+favourite	,	ưa thích 	,	adj	,	/ˈfeɪvərɪt/	,	none
+fertilizer	,	phân bón 	,	n	,	/ˈfɜːtəlaɪzə/	,	none
+feature	,	đặc trưng	,	n	,	/ˈfiːtʃə/	,	of
+feedback	,	phản hồi 	,	n	,	/ˈfiːdbæk/	,	on/about
+figure	,	con số 	,	n	,	/ˈfɪɡə/	,	for/of
+finance	,	tài chính 	,	n	,	/faɪˈnæns/	,	none
+financial	,	thuộc về tài chính 	,	adj	,	/faɪˈnænʃəl/	,	none
+fire	,	sa thải 	,	v	,	/faɪə/	,	at/on
+firework	,	pháo hoa	,	n	,	/ˈfaɪəwɜːk/	,	none
+first class	,	hạng thương gia 	,	n	,	/ˌfɜːst ˈklɑːs/	,	none
+fitness center	,	trung tâm thể hình 	,	n	,	/ˈfɪtnəs ˌsentə/	,	none
+fitting room 	,	phòng thử đồ 	,	n	,	/ˈfɪtɪŋ ruːm/	,	none
+fix	,	cố định 	,	v	,	/fɪks/	,	none
+flora	,	hệ thực vật 	,	n	,	/ˈflɔːrə/	,	none
+flight attendant	,	tiếp viên hàng không 	,	n	,	/ˈflaɪt əˌtendənt/	,	none
+fluent	,	thông thạo 	,	adj	,	/ˈfluːənt/	,	none
+focus	,	sự tập trung 	,	n	,	/ˈfəʊkəs/	,	in
+focus	,	tập trung 	,	v	,	/ˈfəʊkəs/	,	on
+food bank 	,	ngân hàng thực phẩm 	,	n	,	/ˈfuːd bæŋk/	,	on
+footwear	,	giày dép 	,	n	,	/ˈfʊtwɛə/	,	none
+forecast	,	dự báo 	,	n	,	/ˈfɔːkɑːst/	,	none
+foresee	,	biết trước	,	v	,	/fɔːˈsiː/	,	for/of
+forgive	,	tha thứ 	,	v	,	/fəˈɡɪv/	,	none
+formal	,	chính thức 	,	v	,	/ˈfɔːməl/	,	for
+fortunately	,	may mắn thay 	,	adj	,	/ˈfɔːtʃənətli/	,	none
+forward	,	chuyển tiếp , gửi 	,	adv	,	/ˈfɔːwəd/	,	none
+free	,	miễn phí  	,	v	,	/friː/	,	to
+frequency	,	tần suất 	,	adj	,	/ˈfriːkwənsi/	,	of/from
+frequent	,	thường xuyên 	,	adj	,	/ˈfriːkwənt/	,	of
+friendly 	,	thân thiện 	,	adj	,	/ˈfrendli/	,	none
+friendship 	,	tình hữu nghị 	,	n	,	/ˈfrendʃɪp/	,	with/to
+frighten	,	làm ai sợ hãi 	,	v	,	/ˈfraɪtn/	,	with
+frightening 	,	đáng sợ 	,	adj	,	/ˈfraɪtənɪŋ/	,	by/with/at
+frozen	,	đông cứng 	,	adj	,	/ˈfrəʊzən/	,	to/for
+frustrated	,	bực bội 	,	adj	,	/ˈfrʌstreɪtɪd/	,	none
+function 	,	chức năng 	,	n	,	/ˈfʌŋkʃən/	,	with/at
+furnished	,	có sẵn đồ đạc 	,	adj	,	/ˈfɜːnɪʃt/	,	as/of
+furnishings	,	đồ đạc , đồ dùng trong nhà 	,	n	,	/ˈfɜːnɪʃɪŋz/	,	with
+gadget	,	đồ dùng 	,	n	,	/ˈɡædʒɪt/	,	none
+gain 	,	đạt được 	,	v	,	/ɡeɪn/	,	none
+gallery	,	buổi triển lãm 	,	n	,	/ˈɡæləri/	,	in/from
+garage sale 	,	hội chợ đồ cũ 	,	n	,	/ˈɡærɑːʒ seɪl/	,	none
+gardening 	,	làm vườn 	,	n	,	/ˈɡɑːdnɪŋ/	,	none
+gather	,	tụ họp 	,	v	,	/ˈɡæðə/	,	none
+gathering 	,	buổi tụ họp 	,	n	,	/ˈɡæðərɪŋ/	,	round/at/from
+generally 	,	nhìn chung 	,	adv	,	/ˈdʒenrəli/	,	of
+generation 	,	thế hệ 	,	n	,	/ˌdʒenəˈreɪʃən/	,	none
+generous	,	hào phóng 	,	adj	,	/ˈdʒenərəs/	,	of
+gentleman	,	quí ông 	,	n	,	/ˈdʒentlmən/	,	with/to/in
+gesture	,	cử chỉ 	,	n	,	/ˈdʒestʃə/	,	none
+giant	,	khổng lồ 	,	adj	,	/ˈdʒaɪənt/	,	of/to/towards
+gift shop	,	cửa hàng quà tặng 	,	n	,	/ˈɡɪft ʃɒp/	,	none
+glassware	,	sản phẩm thuỷ tinh 	,	n	,	/ˈɡlɑːsweə/	,	none
+global	,	toàn cầu 	,	adj	,	/ˈɡləʊbəl/	,	none
+glossary	,	bảng chú giải thuật ngữ	,	n	,	/ˈɡlɒsəri/	,	none
+glorious	,	vinh quang 	,	adj	,	/ˈɡlɔːriəs/	,	none
+golden age 	,	thời hoàng kim 	,	n	,	/ˌɡəʊldən ˈeɪdʒ/	,	of
+golden rule	,	nguyên tắc vàng 	,	n	,	/ˌɡəʊldən ˈruːl/	,	none
+goods	,	vật dụng 	,	n	,	/ɡʊdz/	,	of
+goodwill	,	thiện chí 	,	n	,	/ˌɡʊdˈwɪl/	,	of
+gorgeous	,	lộng lẫy 	,	adj	,	/ˈɡɔːdʒəs/	,	none
+government	,	chính phủ 	,	n	,	/ˈɡʌvənmənt/	,	of/towards
+grab-and-go	,	mua sắm nhanh gọn 	,	adj	,	/ˈɡræb ən ˌɡəʊ/	,	none
+gradual	,	dần dần 	,	adj	,	/ˈɡrædʒuəl/	,	of
+graduate	,	người tốt nghiệp 	,	n	,	/ˈɡrædʒuət/	,	none
+graph	,	đồ thị 	,	n	,	/ɡrɑːf/	,	none
+graphic	,	đồ hoạ 	,	n	,	/ˈɡræfɪk/	,	from/in
+graphic designer	,	người thiết kế đồ hoạ 	,	n	,	/ˈɡræfɪk dɪˌzaɪnə/	,	of
+grateful 	,	biết ơn 	,	adj	,	/ˈɡreɪtfəl/	,	none
+ground floor	,	tầng trệt 	,	n	,	/ˌɡraʊnd ˈflɔː/	,	none
+growing	,	gia tăng 	,	adj	,	/ˈɡrəʊɪŋ/	,	to/for
+guarantee	,	bảo đảm 	,	v	,	/ˌɡærənˈtiː/	,	on
+guess	,	dự đoán 	,	n	,	/ɡes/	,	none
+guest house	,	nhà khách 	,	n	,	/ˈɡest haʊs/	,	against/to/for
+guide	,	hướng dẫn 	,	v	,	/ɡaɪd/	,	at/about
+haircut	,	cắt tóc	,	n	,	/ˈheəkʌt/	,	none
+hairdresser	,	người cắt tóc	,	n	,	/ˈheədresə/	,	to/through
+hairdryer	,	máy sấy 	,	n	,	/ˈheədraɪə/	,	none
+hairstyle	,	kiểu tóc	,	n	,	/ˈheəstaɪl/	,	none
+hand	,	đưa	,	v	,	/hænd/	,	none
+handicraft	,	đồ thủ công 	,	n	,	/ˈhændɪkrɑːft/	,	none
+handkerchief	,	khăn tay 	,	n	,	/ˈhæŋkətʃɪf/	,	none
+handle	,	xử lí 	,	v	,	/ˈhændl/	,	to/over/with
+happiness	,	niềm hạnh phúc	,	n	,	/ˈhæpinəs/	,	none
+harbour	,	cảng 	,	n	,	/ˈhɑːbə/	,	none
+hardly 	,	hiếm khi 	,	adv	,	/ˈhɑːdli/	,	none
+hardware	,	phần cứng 	,	n	,	/ˈhɑːdweə/	,	at/of/in
+hazard	,	mối nguy hiểm 	,	n	,	/ˈhæzəd/	,	none
+head	,	dẫn đầu 	,	v	,	/hed/	,	none
+headline	,	tiêu đề 	,	n	,	/ˈhedlaɪn/	,	none
+heart attack	,	đau tim 	,	n	,	/ˈhɑːt əˌtæk/	,	to
+heartbeat	,	nhịp tim 	,	n	,	/ˈhɑːtbiːt/	,	for/of/to
+heating 	,	hệ thống sưởi 	,	n	,	/ˈhiːtɪŋ/	,	in/on
+heavily 	,	nặng nề 	,	adv	,	/ˈhevlɪ/ 	,	none
+height	,	 chiều cao 	,	n	,	/haɪt/	,	of/in/at
+heighten	,	tăng cường 	,	v	,	/ˈhaɪtən/	,	none
+helpful 	,	hữu ích 	,	adj	,	/ˈhelpfəl/	,	to/for
+heritage	,	di sản 	,	n	,	/ˈherɪtɪdʒ/	,	of
+hesitate	,	do dự 	,	v	,	/ˈhezɪteɪt/	,	about/over
+herb	,	thảo mộc 	,	n	,	/hɜːb/	,	none
+hidden	,	ẩn khuất 	,	adj	,	/ˈhɪdn/	,	from
+hide	,	giấu	,	v	,	/haɪd/	,	from
+high-end	,	cao cấp	,	adj	,	/ˌhaɪ ˈend/	,	none
+highway	,	quốc lộ	,	n	,	/ˈhaɪweɪ/	,	none
+hilarious	,	hài hước	,	adj	,	/hɪˈleəriəs/	,	none
+hire	,	thuê	,	v	,	/ˈhaɪə/	,	as/for
+holidaymaker	,	du khách 	,	n	,	/ˈhɒlədeɪˌmeɪkə/	,	none
+historical	,	thuộc về lịch sử 	,	adj	,	/hɪˈstɒrɪkəl/	,	none
+honeymoon	,	tuần trăng mật 	,	n	,	/ˈhʌnimuːn/	,	none
+horror	,	thật đáng sợ 	,	n	,	/ˈhɒrə/	,	of
+host	,	tổ chức 	,	v	,	/həʊst/	,	to
+host 	,	chủ nhà 	,	n	,	/həʊst/	,	of
+hostel	,	nhà trọ 	,	n	,	/ˈhɒstəl/	,	none
+huge	,	to lớn 	,	adj	,	/hjuːdʒ/	,	none
+human	,	thuộc về con người 	,	adj	,	/ˈhjuːmən/	,	none
+hunger	,	cơn đói 	,	n	,	/ˈhʌŋɡə/	,	for
+hunt	,	săn bắt 	,	v	,	/hʌnt/	,	for
+hurricane	,	cơn bão 	,	n	,	/ˈhʌrɪkən/	,	none
+hurry	,	sự vội vàng 	,	n	,	/ˈhʌri/	,	up/with
+ignore	,	phất lờ 	,	v	,	/ɪɡˈnɔː/	,	none
+illegal	,	bất hợp pháp 	,	adj	,	/ɪˈliːɡəl/	,	for
+image	,	hình ảnh 	,	n	,	/ˈɪmɪdʒ/	,	of
+imagination	,	trí tưởng tuownghj 	,	n	,	/ɪˌmædʒɪˈneɪʃən/	,	none
+imagine	,	tưởng tượng 	,	v	,	/ɪˈmædʒɪn/	,	none
+immediate	,	ngay lập tức	,	adj	,	/ɪˈmiːdiət/	,	none
+imperative	,	cấp thiết 	,	adj	,	/ɪmˈperətɪv/ 	,	on/for
+impolite 	,	bất lịch sự 	,	adj 	,	/ˌɪmpəˈlaɪt/	,	to
+importance	,	tầm quan trọng 	,	n 	,	/ɪmˈpɔːtəns/	,	of/to
+importantly 	,	quan trọng là 	,	adv	,	/ɪmˈpɔːtəntli/	,	none
+impossible 	,	bất khả thi 	,	adj	,	/ɪmˈpɒsəbl/	,	for
+improvement	,	sự cải thiện 	,	n	,	/ɪmˈpruːvmənt/	,	in/to
+income	,	thu nhập 	,	n	,	/ˈɪnkʌm/	,	of/from
+incorrect	,	không đúng	,	adj	,	/ˌɪnkəˈrekt/	,	none
+increased	,	tăng   	,	adj	,	/ɪnˈkriːst/	,	by/in
+incredible	,	tuyệt vời 	,	adj	,	/ɪnˈkredəbl/	,	none
+independent	,	độc lập 	,	adj	,	/ˌɪndɪˈpendənt/	,	of/from
+indifferent	,	thờ ơ 	,	adj	,	/ɪnˈdɪfrənt/	,	to/towards
+indirect	,	gián tiếp 	,	adj	,	/ˌɪndəˈrekt/	,	to/from
+indicate	,	chỉ ra 	,	v	,	/ˈɪndɪkeɪt/	,	to/of
+indicator	,	chỉ báo 	,	n	,	/ˈɪndɪkeɪtə/	,	of
+indirectly 	,	một cách gián tiếp 	,	adv	,	/ˌɪndəˈrektli/	,	none
+indoor	,	trong nhà 	,	adj	,	/ˈɪndɔː/	,	none
+inform 	,	thông báo 	,	v	,	/ɪnˈfɔːm/	,	of/about
+ingredient	,	nguyên liệu 	,	n	,	/ɪnˈɡriːdiənt/	,	of/for
+initial	,	lúc đầu 	,	adj	,	/ɪˈnɪʃəl/	,	none
+in-house	,	nội bộ 	,	adj	,	/ˌɪn ˈhaʊs/	,	none
+install	,	cài đặt 	,	v	,	/ɪnˈstɔːl/	,	in/on
+installation 	,	sự cài đặt 	,	n	,	/ˌɪnstəˈleɪʃən/	,	of
+intelligence	,	thông minh 	,	n	,	/ɪnˈtelɪdʒəns/	,	none
+intend	,	có ý định 	,	v	,	/ɪnˈtend/	,	to
+interupt	,	gián đoán	,	v	,	/ˌɪntəˈrʌpt/	,	with
+invent	,	phát minh 	,	v	,	/ɪnˈvent/	,	none
+invention 	,	sự phát minh 	,	n	,	/ɪnˈvenʃən/	,	of
+invest	,	đầu tư 	,	v	,	/ɪnˈvest/	,	in
+investigate	,	điều tra 	,	v	,	/ɪnˈvestɪɡeɪt/	,	into
+investment	,	sự đầu tư 	,	n	,	/ɪnˈvestmənt/	,	of/in
+invitation	,	lời mời 	,	n	,	/ˌɪnvɪˈteɪʃən/	,	to
+involve	,	đòi hỏi 	,	v	,	/ɪnˈvɒlv/ 	,	in
+ironing 	,	việc là ủi 	,	n	,	/ˈaɪənɪŋ/	,	none
+issue	,	vấn đề 	,	n	,	/ˈɪʃuː/	,	of
+irrelevant	,	không liên quan 	,	adj	,	/ɪˈreləvənt/	,	to
+irritate	,	chọc tức	,	v	,	/ˈɪrɪteɪt/	,	by
+jealous	,	ghen tị 	,	adj	,	/ˈdʒeləs/	,	of
+jet lag	,	hội chứng lệch múi giờ 	,	n	,	/ˈdʒet læɡ/	,	none
+jewellery	,	trang sức	,	n	,	/ˈdʒuːəlri/	,	none
+job description 	,	mô tả công viêc 	,	n	,	/ˈdʒɒb dɪˌskrɪpʃən/	,	none
+job-hunt	,	tìm việc 	,	v	,	/ˈdʒɒb hʌnt/	,	none
+job seeker	,	người tìm việc 	,	n	,	/ˈdʒɒb ˌsiːkə/	,	none
+journalism	,	báo chí 	,	n	,	/ˈdʒɜːnəlɪzəm/	,	none
+journalist 	,	nhà báo 	,	n	,	/ˈdʒɜːnəlɪst/	,	for
+judge	,	đánh giá 	,	v	,	/dʒʌdʒ/	,	by
+judgement	,	sự đánh giá 	,	n	,	/ˈdʒʌdʒmənt/	,	on/of
+junk mail 	,	tin rác	,	n	,	/ˈdʒʌŋk meɪl/	,	none
+key 	,	then chốt 	,	adj	,	/kiː/ 	,	to
+kick off	,	bắt đầu	,	phv 	,	/ˈkɪk ɒf/	,	with
+kind-hearted	,	tốt bụng 	,	adj	,	/ˌkaɪnd ˈhɑːtɪd/	,	none
+king-size	,	cỡ lớn 	,	adj	,	/ˌkɪŋ ˈsaɪz/	,	none
+kitchenware	,	đồ dùng nhà bếp 	,	n	,	/ˈkɪtʃənweə/	,	none
+knowledge	,	kiến thức	,	n	,	/ˈnɒlɪdʒ/	,	of
+knowledgeable	,	hiểu biết nhiều 	,	n	,	/ˈnɒlɪdʒəbl/	,	about
+label 	,	nhãn 	,	n	,	/ˈleɪbəl/	,	as
+laboratory 	,	phòng thí nghiệm 	,	n	,	/ləˈbɒrətri/	,	none
+lack 	,	thiếu 	,	n	,	/læk/	,	of
+laid-back	,	thư thái 	,	adj	,	/ˌleɪd ˈbæk/	,	none
+land	,	hạ cánh 	,	v	,	/lænd/	,	in/on
+landscape	,	phong cảnh 	,	n	,	/ˈlændskeɪp/	,	of
+large-scale	,	quy mô lớn 	,	adj	,	/ˌlɑːdʒ ˈskeɪl/	,	none
+lasting 	,	bền vững	,	adj	,	/ˈlɑːstɪŋ/	,	none
+latest	,	mới nhất 	,	n	,	/ˈleɪtɪst/	,	on
+launch	,	khai trương 	,	v	,	/lɔːntʃ/	,	of
+law	,	luật lệ 	,	n	,	/lɔː/	,	for
+leave	,	thời gian nghỉ phép 	,	n	,	/liːv/	,	of/for/to
+lecture	,	giảng dạy 	,	v	,	/ˈlektʃə/	,	on/at
+lecturer	,	người giảng dạy 	,	n	,	/ˈlektʃərə/	,	to/for
+legitimate	,	hợp pháp 	,	adj	,	/lɪˈdʒɪtɪmət/	,	in
+leisure	,	thời gian rảnh rỗi 	,	n	,	/ˈleʒə/	,	none
+length	,	chiều dài 	,	n	,	/leŋθ/	,	none
+lengthen	,	kéo dài 	,	v	,	/ˈleŋθən/	,	of
+lengthy 	,	dài dòng 	,	adj	,	/ˈleŋθi/	,	none
+license	,	giấy phép 	,	n	,	/ˈlaɪsəns/	,	none
+lie	,	nói dối 	,	v	,	/laɪ/	,	for
+link 	,	kết nối 	,	v	,	/lɪŋk/	,	to/about/with
+liquid	,	chất lỏng 	,	n	,	/ˈlɪkwɪd/	,	to/between/with
+list 	,	liệt kê	,	v	,	/lɪst/	,	none
+listener	,	người nghe	,	n	,	/ˈlɪsənə/	,	of
+literature	,	văn học 	,	n	,	/ˈlɪtərətʃə/	,	to
+livelihood	,	kế sinh nhai 	,	n	,	/ˈlaɪvlihʊd/	,	none
+lively 	,	sống động 	,	adj	,	/ˈlaɪvli/	,	of
+loan	,	khoản vay 	,	n	,	/ləʊn/	,	to
+local 	,	địa phương 	,	adj	,	/ˈləʊkəl/	,	in
+locate	,	đặt tại 	,	v	,	/ləʊˈkeɪt/	,	at/in
+located	,	toạ lạc 	,	adj	,	/ləʊˈkeɪtɪd/	,	of
+location	,	địa điểm 	,	n	,	/ləʊˈkeɪʃən/	,	none
+long-distance	,	đường dài 	,	adj	,	/ˌlɒŋ ˈdɪstəns/	,	to
+long-term	,	lâu dài 	,	adj	,	/ˌlɒŋ ˈtɜːm/	,	to
+loose	,	rộng (quần áo )	,	adj	,	/luːs/	,	in
+loss	,	thiệt hại 	,	n	,	/lɒs/	,	none
+lower	,	giảm	,	v	,	/ˈləʊə/	,	of
+loyal	,	trung thành 	,	adj	,	/ˈlɔɪəl/	,	none
+loyalty	,	sự trung thành 	,	n	,	/ˈlɔɪəlti/	,	to
+luxury	,	sang trọng 	,	n	,	/ˈlʌkʃəri/	,	to/for
+loser	,	người thua cuộc	,	n	,	/ˈluːzə/	,	of
+magical	,	thần kì 	,	adj	,	/ˈmædʒɪkəl/	,	to
+main 	,	chính 	,	adj	,	/meɪn/	,	none
+mainly 	,	chủ yếu 	,	adv	,	/ˈmeɪnli/	,	none
+maintain 	,	duy trì 	,	v	,	/meɪnˈteɪn/	,	of
+maintenance	,	sự duy trì 	,	n	,	/ˈmeɪntənəns/	,	none
+major	,	quan trọng 	,	adj	,	/ˈmeɪdʒə/	,	in
+mall	,	trung tâm mua sắm 	,	n	,	/mɔːl/	,	none
+manage	,	quản lý 	,	v	,	/ˈmænɪdʒ/	,	none
+management	,	sự quản lý 	,	n	,	/ˈmænɪdʒmənt/	,	of
+manual	,	thủ công 	,	adj	,	/ˈmænjʊəl/	,	for
+manufacture	,	sản xuất 	,	v	,	/ˌmænjuˈfæktʃə/	,	of
+manufacturer	,	nhà sản xuất 	,	n	,	/ˌmænjuˈfæktʃərə/	,	of
+market	,	chợ 	,	n	,	/ˈmɑːkɪt/	,	for
+material	,	chất liệu 	,	n	,	/məˈtɪəriəl/	,	for
+meaningful 	,	có ý nghĩa	,	adj	,	/ˈmiːnɪŋfəl/	,	to
+meanwhile	,	trong khi đó 	,	adv	,	/ˈmiːnwaɪl/	,	none
+medical	,	thuộc về y tế 	,	adj	,	/ˈmedɪkəl/	,	none
+medium 	,	trung bình 	,	adj	,	/ˈmiːdiəm/	,	for/of
+membership 	,	tư cách thành viên 	,	n	,	/ˈmembəʃɪp/	,	of
+mend	,	sửa chữa 	,	v	,	/mend/	,	none
+memorize	,	ghi nhớ 	,	v	,	/ˈmeməraɪz/	,	none
+memory 	,	trí nhớ 	,	n	,	/ˈmeməri/	,	of
+mention 	,	đề cập đến 	,	v	,	/ˈmenʃən/	,	of/to
+mess	,	sự lộn xộn 	,	n	,	/mes/	,	of/with
+merge	,	hợp nhất 	,	v	,	/mɜːdʒ/	,	with/into
+mindset	,	tư duy 	,	n	,	/ˈmaɪndset/	,	of
+method	,	phương pháp 	,	n	,	/ˈmeθəd/	,	of/for
+mineral 	,	khoáng chất 	,	n	,	/ˈmɪnərəl/	,	none
+minimal 	,	tối thiểu 	,	adj	,	/ˈmɪnɪməl/	,	to
+minimize	,	giảm thiểu 	,	v	,	/ˈmɪnɪmaɪz/	,	none
+minimum 	,	tối thiểu 	,	adj	,	/ˈmɪnɪməm/	,	of
+minor 	,	nhỏ 	,	adj	,	/ˈmaɪnə/	,	in/to
+miserable	,	khổ sở	,	adj	,	/ˈmɪzərəbl/	,	about
+misinform 	,	báo tin sai 	,	v	,	/ˌmɪsɪnˈfɔːm/	,	about
+mission	,	sứ mệnh 	,	n	,	/ˈmɪʃən/	,	of/to
+mistaken 	,	nhầm lẫn 	,	adj	,	/mɪˈsteɪkən/	,	for/about
+misunderstand	,	hiểu lầm 	,	v	,	/ˌmɪsʌndəˈstænd/	,	none
+misunderstanding 	,	sự hiểu nhầm 	,	n	,	/ˌmɪsʌndəˈstændɪŋ/	,	between/of
+moderate	,	vừa phải 	,	adj	,	/ˈmɒdərət/	,	in
+modern 	,	hiện đại 	,	adj	,	/ˈmɒdən/	,	none
+modest 	,	khiêm tốn 	,	adj	,	/ˈmɒdɪst/	,	about/in
+modify 	,	chỉnh sửa 	,	v	,	/ˈmɒdɪfaɪ/	,	none
+monthly	,	hàng tháng 	,	adj	,	/ˈmʌnθli/	,	none
+mood	,	tâm trạng 	,	n	,	/muːd/	,	for/of
+motivate	,	tạo động lực 	,	v	,	/ˈməʊtɪveɪt/	,	to
+motivation 	,	động lực	,	n	,	/ˌməʊtɪˈveɪʃən/	,	for/of
+multicultural 	,	đa văn hoá 	,	adj	,	/ˌmʌltiˈkʌltʃərəl/	,	none
+multipurpose	,	đa chức năng 	,	adj	,	/ˌmʌltiˈpɜːpəs/	,	none
