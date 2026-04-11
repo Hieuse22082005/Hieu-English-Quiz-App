@@ -192,6 +192,8 @@ elif menu == "💎 Flashcard":
             st.rerun()
 
 # --- 3. KIỂM TRA ---
+# --- 3. KIỂM TRA ---
+# --- 3. KIỂM TRA ---
 elif menu == "📝 Kiểm tra":
     st.title("📝 Kiểm tra trình độ")
     if len(df_current) < 4:
@@ -215,7 +217,11 @@ elif menu == "📝 Kiểm tra":
 
             with st.form("exam_form"):
                 for i, it in enumerate(st.session_state.ex_list):
-                    st.markdown(f"**Câu {i+1}: {it['Từ']}** ({it['Loại']})")
+                    # Đưa Word + Prep lên phần tiêu đề câu hỏi
+                    display_word = f"{it['Từ']} + {it['Giới từ']}" if it['Giới từ'] else it['Từ']
+                    st.markdown(f"**Câu {i+1}: {display_word}**")
+                    st.caption(f"({it['Loại']}) | {it['Phát âm']}")
+                    
                     st.session_state.ans[i] = st.radio("Chọn nghĩa đúng:", it['opts'], index=None, key=f"q_{i}", disabled=st.session_state.submitted_d1)
                     if st.session_state.submitted_d1:
                         if st.session_state.ans.get(i) == it['Nghĩa']: st.success(f"✨ Chính xác")
@@ -231,10 +237,14 @@ elif menu == "📝 Kiểm tra":
                 others = df_current[df_current['Nghĩa'] != target['Nghĩa']]['Nghĩa'].unique().tolist()
                 opts = [target['Nghĩa']] + random.sample(others, min(len(others), 3))
                 random.shuffle(opts)
-                st.session_state.q2 = {'w':target['Từ'], 'ans':target['Nghĩa'], 'opts':opts, 'done':False, 'ipa':target['Phát âm'], 'type':target['Loại'], 'correct': False}
+                st.session_state.q2 = {'w':target['Từ'], 'ans':target['Nghĩa'], 'opts':opts, 'done':False, 'ipa':target['Phát âm'], 'type':target['Loại'], 'prep':target['Giới từ'], 'correct': False}
             
             q = st.session_state.q2
-            st.info(f"Từ vựng: **{q['w']}** ({q['type']})")
+            # Hiển thị Word + Prep ngay trong khung thông tin
+            display_q = f"{q['w']} + {q['prep']}" if q['prep'] else q['w']
+            st.info(f"Từ vựng: **{display_q}**")
+            st.markdown(f"<p style='color:#8b949e;'>({q['type']}) | {q['ipa']}</p>", unsafe_allow_html=True)
+
             for opt in q['opts']:
                 if st.button(opt, use_container_width=True, disabled=q['done']):
                     q['done'] = True
@@ -245,18 +255,18 @@ elif menu == "📝 Kiểm tra":
                 else: st.error(f"Sai rồi! Đáp án là: **{q['ans']}**"); play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
                 if st.button("Câu tiếp theo ➡️"): del st.session_state.q2; st.rerun()
 
-        else: # DẠNG 3 (WRITING)
+        else: # Dạng 3 (Writing)
             st.subheader("✍️ Thử thách ghi nhớ")
             if 'q3' not in st.session_state:
                 target = df_current.sample(n=1).iloc[0]
                 st.session_state.q3 = {'w': target['Từ'], 'ans': target['Nghĩa'], 'ipa': target['Phát âm'], 'type': target['Loại'], 'prep': target['Giới từ'], 'submitted': False, 'user_input': ""}
             
             q = st.session_state.q3
+            # Gợi ý viết từ dựa trên nghĩa và cấu trúc giới từ
             st.info(f"Hãy viết từ tiếng Anh có nghĩa là: **{q['ans']}**")
-            prep_hint = f" | Giới từ đi kèm: **{q['prep']}**" if q['prep'] else ""
-            st.caption(f"Gợi ý: ({q['type']}) | {q['ipa']}{prep_hint}")
+            writing_hint = f"Cấu trúc: **... + {q['prep']}**" if q['prep'] else "Nhập từ tương ứng"
+            st.caption(f"Gợi ý: ({q['type']}) | {q['ipa']} | {writing_hint}")
             
-            # Key động giúp tự động xóa nội dung khi đổi câu hỏi
             user_word = st.text_input("Câu trả lời của bạn:", placeholder="Nhập từ...", key=f"input_{q['w']}", disabled=q['submitted']).strip()
             
             if not q['submitted'] and st.button("🔍 KIỂM TRA", use_container_width=True):
@@ -268,10 +278,11 @@ elif menu == "📝 Kiểm tra":
             
             if q['submitted']:
                 if q['user_input'].lower() == q['w'].lower():
-                    st.success(f"Chính xác! ✨ Từ đúng là: **{q['w']}**")
+                    final_struct = f"{q['w']} + {q['prep']}" if q['prep'] else q['w']
+                    st.success(f"Chính xác! ✨ Cấu trúc: **{final_struct}**")
                     play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3"); st.balloons()
                 else:
-                    st.error(f"Sai rồi! Bạn nhập: '{q['user_input']}'. Đáp án đúng là: **{q['w']}**")
+                    st.error(f"Sai rồi! Đáp án đúng là: **{q['w']}**")
                     play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
                 if st.button("Câu tiếp theo ➡️", use_container_width=True):
                     del st.session_state.q3
