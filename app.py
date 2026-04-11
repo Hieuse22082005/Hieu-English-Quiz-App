@@ -27,10 +27,12 @@ st.markdown("""
         --text-color: #ffffff;
     }
 
-    .stApp { background-color: #0d1117 !important; color: #ffffff !important; }
-    [data-testid="stSidebar"] { background-color: #161b22 !important; border-right: 1px solid #30363d;}
-    input, select, textarea, [data-baseweb="select"] { color: white !important; background-color: #0d1117 !important; }
-    label, p, span { color: #ffffff !important; }
+    .stApp {
+        background-image: url("https://autopro8.mediacdn.vn/2021/6/9/192512984102214077220020009018985261205554951n-16231958391591109567842.jpeg") !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-attachment: fixed !important;
+    }
 
     .vocab-card {
         background: rgba(28, 33, 40, 0.8) !important;
