@@ -3,7 +3,19 @@ import pandas as pd
 import os
 import random
 import streamlit.components.v1 as components
+import time
+from datetime import datetime
 
+# Khởi tạo thời gian bắt đầu nếu chưa có
+if 'start_time' not in st.session_state:
+    st.session_state.start_time = time.time()
+
+def get_study_time():
+    # Tính số giây đã trôi qua
+    duration_seconds = int(time.time() - st.session_state.start_time)
+    minutes = duration_seconds // 60
+    seconds = duration_seconds % 60
+    return f"{minutes}p {seconds}s"
 # 1. Cấu hình trang
 st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wide")
 
@@ -20,6 +32,34 @@ def play_sound(url):
 # --- CSS CUSTOM ---
 st.markdown("""
     <style>
+    /* Làm đẹp Sidebar */
+    [data-testid="stSidebar"] {
+        background-color: rgba(22, 27, 34, 0.7) !important;
+        backdrop-filter: blur(15px);
+        border-right: 1px solid rgba(88, 166, 255, 0.2);
+    }
+
+    /* Đổi màu tiêu đề và icon trong Sidebar */
+    [data-testid="stSidebar"] h1, [data-testid="stSidebar"] .st-emotion-cache-17l2puu {
+        color: #58a6ff !important;
+        font-weight: bold;
+    }
+
+    /* Hiệu ứng cho các lựa chọn Radio Button */
+    [data-testid="stSidebar"] .stRadio div[role="radiogroup"] label {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 5px;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+    }
+
+    [data-testid="stSidebar"] .stRadio div[role="radiogroup"] label:hover {
+        border-color: #58a6ff;
+        background: rgba(88, 166, 255, 0.1);
+        transform: translateX(5px);
+    }
     :root {
         --primary-color: #58a6ff;
         --background-color: #0d1117;
@@ -105,8 +145,101 @@ def save_all(df):
             f.write(f"{row['Từ']},{row['Nghĩa']},{row['Loại']},{row['Phát âm']},{row['Giới từ']}\n")
 
 # --- GIAO DIỆN ---
+# --- 1. Load dữ liệu trước ---
 df_current = load_data()
-menu = st.sidebar.radio("⚡ ĐIỀU KHIỂN", ["⚙️ Dashboard Quản lý", "💎 Flashcard", "📝 Kiểm tra"])
+
+# --- SIDEBAR CẢI TIẾN (PHIÊN BẢN HOÀN THIỆN) ---
+# --- SIDEBAR CẢI TIẾN (PHIÊN BẢN HOÀN THIỆN) ---
+with st.sidebar:
+    # 1. Ảnh đại diện và Tiêu đề
+    st.markdown(f"""
+        <div style="text-align: center; padding: 10px 0;">
+            <img src="https://cdn-icons-png.flaticon.com/512/3898/3898082.png" width="80">
+            <h1 style='color: #58a6ff; margin-top: 10px;'>Hieu's Hub</h1>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    # 2. Menu chính
+    menu = st.radio(
+        "⚡ ĐIỀU KHIỂN", 
+        ["⚙️ Dashboard Quản lý", "💎 Flashcard", "📝 Kiểm tra"],
+        key="main_navigation"
+    )
+    
+    st.divider() 
+    
+    # 3. Nút bấm Trợ lý AI (Gemini)
+    st.markdown("### 🤖 Trợ lý AI")
+    st.markdown(f"""
+        <a href="https://gemini.google.com/app" target="_blank" style="text-decoration: none;">
+            <div style="
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                padding: 12px;
+                background: linear-gradient(135deg, #4285F4, #1D5BBF);
+                color: white;
+                border-radius: 12px;
+                cursor: pointer;
+                border: 1px solid rgba(255,255,255,0.2);
+                transition: all 0.3s ease;
+                font-weight: bold;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            " onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(66, 133, 244, 0.4)';" 
+               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.3)';" >
+                <img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d473530437e922919e517.svg" 
+                     width="25" height="25">
+                <span>Gemini AI Assistant</span>
+                <span style="margin-left: auto; font-size: 0.8em; opacity: 0.8;">🚀</span>
+            </div>
+        </a>
+    """, unsafe_allow_html=True)
+
+    st.divider()
+
+    # --- 4. BỘ ĐẾM THỜI GIAN ---
+    st.markdown("### ⏱️ Thời gian học")
+    study_time = get_study_time()
+    
+    st.markdown(f"""
+        <div style="
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #00ffcc;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+        ">
+            <span style="color: #8b949e; font-size: 0.9em;">Phiên học hiện tại</span><br>
+            <span style="color: #00ffcc; font-size: 1.8em; font-weight: bold; font-family: 'Courier New', Courier, monospace;">
+                {study_time}
+            </span>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    if st.button("Update Time 🔄", use_container_width=True):
+        st.rerun()
+    
+    st.divider()
+    
+    # 5. Thống kê & Quote
+    st.markdown("### 📊 Thống kê")
+    total_words = len(df_current)
+    st.markdown(f"""
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 10px; border: 1px solid rgba(88, 166, 255, 0.2); text-align: center;">
+            <p style="margin: 0; color: #8b949e; font-size: 0.9em;">Từ vựng đã nạp</p>
+            <h2 style="margin: 0; color: #58a6ff;">{total_words}</h2>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    st.write("")
+    quotes = [
+        "Knowledge is power. 🚀",
+        "Keep moving forward. 🔥",
+        "Practice makes perfect. ✨",
+        "Don't stop until you're proud. 🏆"
+    ]
+    st.markdown(f"<p style='text-align: center; color: #8b949e; font-style: italic; font-size: 0.9em;'>\"{random.choice(quotes)}\"</p>", unsafe_allow_html=True)
 
 # --- 1. DASHBOARD QUẢN LÝ ---
 if menu == "⚙️ Dashboard Quản lý":
@@ -196,16 +329,20 @@ elif menu == "💎 Flashcard":
 # --- 3. KIỂM TRA ---
 # --- 3. KIỂM TRA ---
 # --- 3. KIỂM TRA ---
+# --- 3. KIỂM TRA (CẬP NHẬT 5 DẠNG) ---
+# --- 3. KIỂM TRA (CẬP NHẬT ĐẦY ĐỦ THÔNG TIN ĐỀ BÀI) ---
+# --- 3. KIỂM TRA (BẢN FULL FIX LỖI & ĐỔI MÀU) ---
 elif menu == "📝 Kiểm tra":
     st.title("📝 Kiểm tra trình độ")
     if len(df_current) < 4:
         st.warning("Cần tối thiểu 4 từ để tạo bài kiểm tra.")
     else:
         mode = st.radio("Chọn dạng kiểm tra:", 
-                        ["Dạng 1 (Trắc nghiệm tập trung)", "Dạng 2 (Làm đâu biết đó)", "Dạng 3 (Thử thách viết từ)"], 
+                        ["Dạng 1 (Trắc nghiệm)", "Dạng 2 (Làm đâu biết đó)", "Dạng 3 (Viết từ)", "Dạng 4 (Loại từ)", "Dạng 5 (Giới từ)"], 
                         horizontal=True)
         
-        if mode == "Dạng 1 (Trắc nghiệm tập trung)":
+        # --- DẠNG 1: TRẮC NGHIỆM TỔNG HỢP ---
+        if mode == "Dạng 1 (Trắc nghiệm)":
             num = st.slider("Số lượng câu hỏi:", 5, 50, 10)
             if st.button("🔄 TẠO ĐỀ MỚI") or 'ex_list' not in st.session_state:
                 st.session_state.ex_list = df_current.sample(n=min(len(df_current), num)).to_dict('records')
@@ -218,21 +355,30 @@ elif menu == "📝 Kiểm tra":
                 st.session_state.submitted_d1 = False
 
             with st.form("exam_form"):
+                score = 0
                 for i, it in enumerate(st.session_state.ex_list):
-                    # Đưa Word + Prep lên phần tiêu đề câu hỏi
-                    display_word = f"{it['Từ']} + {it['Giới từ']}" if it['Giới từ'] else it['Từ']
-                    st.markdown(f"**Câu {i+1}: {display_word}**")
-                    st.caption(f"({it['Loại']}) | {it['Phát âm']}")
+                    prep_info = f" + {it['Giới từ']}" if it['Giới từ'] else ""
+                    st.markdown(f"**Câu {i+1}: {it['Từ']}{prep_info}**")
+                    st.caption(f"Loại: {it['Loại']} | IPA: {it['Phát âm']}")
                     
-                    st.session_state.ans[i] = st.radio("Chọn nghĩa đúng:", it['opts'], index=None, key=f"q_{i}", disabled=st.session_state.submitted_d1)
+                    st.session_state.ans[i] = st.radio(f"Chọn nghĩa:", it['opts'], index=None, key=f"q1_{i}", disabled=st.session_state.submitted_d1)
+                    
                     if st.session_state.submitted_d1:
-                        if st.session_state.ans.get(i) == it['Nghĩa']: st.success(f"✨ Chính xác")
-                        else: st.error(f"❌ Đáp án đúng: {it['Nghĩa']}")
+                        if st.session_state.ans.get(i) == it['Nghĩa']:
+                            st.success("✨ Đúng"); score += 1
+                        else: st.error(f"❌ Đáp án: {it['Nghĩa']}")
                     st.divider()
+                
                 if st.form_submit_button("📤 NỘP BÀI"):
                     st.session_state.submitted_d1 = True
                     st.rerun()
 
+            if st.session_state.submitted_d1:
+                total_q = len(st.session_state.ex_list)
+                st.markdown(f"### 📊 Kết quả: `{score}/{total_q}` câu đúng ({(score/total_q)*100:.0f}%)")
+                if score == total_q: st.balloons()
+
+        # --- DẠNG 2: LÀM ĐÂU BIẾT ĐÓ ---
         elif mode == "Dạng 2 (Làm đâu biết đó)":
             if 'q2' not in st.session_state:
                 target = df_current.sample(n=1).iloc[0]
@@ -242,50 +388,113 @@ elif menu == "📝 Kiểm tra":
                 st.session_state.q2 = {'w':target['Từ'], 'ans':target['Nghĩa'], 'opts':opts, 'done':False, 'ipa':target['Phát âm'], 'type':target['Loại'], 'prep':target['Giới từ'], 'correct': False}
             
             q = st.session_state.q2
-            # Hiển thị Word + Prep ngay trong khung thông tin
-            display_q = f"{q['w']} + {q['prep']}" if q['prep'] else q['w']
-            st.info(f"Từ vựng: **{display_q}**")
-            st.markdown(f"<p style='color:#8b949e;'>({q['type']}) | {q['ipa']}</p>", unsafe_allow_html=True)
-
+            prep_info = f" + {q['prep']}" if q['prep'] else ""
+            st.markdown(f"""
+                <div style="background: rgba(0,0,0,0.7); padding: 15px; border-radius: 10px; border-left: 5px solid #fffd75; margin-bottom: 20px;">
+                    <h3 style="color: #fffd75; margin: 0;">Từ vựng: {q['w']}{prep_info}</h3>
+                    <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Loại: <b>{q['type']}</b> | IPA: <i>{q['ipa']}</i></p>
+                </div>
+            """, unsafe_allow_html=True)
+            
             for opt in q['opts']:
-                if st.button(opt, use_container_width=True, disabled=q['done']):
+                if st.button(opt, key=f"btn2_{opt}", use_container_width=True, disabled=q['done']):
                     q['done'] = True
                     if opt == q['ans']: q['correct'] = True
                     st.rerun()
+            
             if q['done']:
-                if q['correct']: st.success("Chính xác! 🎉"); play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3"); st.balloons()
-                else: st.error(f"Sai rồi! Đáp án là: **{q['ans']}**"); play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
+                if q['correct']: 
+                    st.success("Chính xác! 🎉"); play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
+                else: 
+                    st.error(f"Sai rồi! Đáp án là: {q['ans']}"); play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
                 if st.button("Câu tiếp theo ➡️"): del st.session_state.q2; st.rerun()
 
-        else: # Dạng 3 (Writing)
-            st.subheader("✍️ Thử thách ghi nhớ")
+        # --- DẠNG 3: VIẾT TỪ ---
+        elif mode == "Dạng 3 (Viết từ)":
             if 'q3' not in st.session_state:
                 target = df_current.sample(n=1).iloc[0]
                 st.session_state.q3 = {'w': target['Từ'], 'ans': target['Nghĩa'], 'ipa': target['Phát âm'], 'type': target['Loại'], 'prep': target['Giới từ'], 'submitted': False, 'user_input': ""}
             
             q = st.session_state.q3
-            # Gợi ý viết từ dựa trên nghĩa và cấu trúc giới từ
-            st.info(f"Hãy viết từ tiếng Anh có nghĩa là: **{q['ans']}**")
-            writing_hint = f"Cấu trúc: **... + {q['prep']}**" if q['prep'] else "Nhập từ tương ứng"
-            st.caption(f"Gợi ý: ({q['type']}) | {q['ipa']} | {writing_hint}")
+            prep_hint = f"Cấu trúc: + {q['prep']}" if q['prep'] else "Không giới từ"
+            st.markdown(f"""
+                <div style="background: rgba(0,0,0,0.7); padding: 15px; border-radius: 10px; border-left: 5px solid #00ffcc; margin-bottom: 20px;">
+                    <h3 style="color: #00ffcc; margin: 0;">Nghĩa: {q['ans']}</h3>
+                    <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Gợi ý: {q['type']} | {q['ipa']} | {prep_hint}</p>
+                </div>
+            """, unsafe_allow_html=True)
             
-            user_word = st.text_input("Câu trả lời của bạn:", placeholder="Nhập từ...", key=f"input_{q['w']}", disabled=q['submitted']).strip()
-            
+            user_word = st.text_input("Nhập từ tiếng Anh:", key=f"input3_{q['w']}", disabled=q['submitted']).strip()
             if not q['submitted'] and st.button("🔍 KIỂM TRA", use_container_width=True):
-                if user_word:
-                    q['user_input'] = user_word
-                    q['submitted'] = True
-                    st.rerun()
-                else: st.warning("Bạn chưa nhập gì cả!")
+                q['user_input'] = user_word
+                q['submitted'] = True
+                st.rerun()
             
             if q['submitted']:
                 if q['user_input'].lower() == q['w'].lower():
-                    final_struct = f"{q['w']} + {q['prep']}" if q['prep'] else q['w']
-                    st.success(f"Chính xác! ✨ Cấu trúc: **{final_struct}**")
-                    play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3"); st.balloons()
+                    st.success("✨ Chính xác!"); play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
                 else:
-                    st.error(f"Sai rồi! Đáp án đúng là: **{q['w']}**")
-                    play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
-                if st.button("Câu tiếp theo ➡️", use_container_width=True):
-                    del st.session_state.q3
+                    st.error(f"❌ Đáp án đúng là: {q['w']}"); play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
+                if st.button("Câu tiếp theo ➡️"): del st.session_state.q3; st.rerun()
+
+        # --- DẠNG 4: LOẠI TỪ ---
+        elif mode == "Dạng 4 (Loại từ)":
+            if 'q4' not in st.session_state:
+                target = df_current.sample(n=1).iloc[0]
+                st.session_state.q4 = {'w': target['Từ'], 'ans': target['Loại'], 'meaning': target['Nghĩa'], 'ipa': target['Phát âm'], 'prep': target['Giới từ'], 'done': False, 'user_choice': None}
+            
+            q = st.session_state.q4
+            prep_info = f" + {q['prep']}" if q['prep'] else ""
+            st.markdown(f"""
+                <div style="background: rgba(0,0,0,0.7); padding: 15px; border-radius: 10px; border-left: 5px solid #ffa500; margin-bottom: 20px;">
+                    <h3 style="color: #ffa500; margin: 0;">Từ vựng: {q['w']}{prep_info}</h3>
+                    <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Nghĩa: {q['meaning']} | IPA: {q['ipa']}</p>
+                </div>
+            """, unsafe_allow_html=True)
+            
+            btns = st.columns(5)
+            types = ["n", "v", "adj", "adv", "phr"]
+            for idx, t in enumerate(types):
+                if btns[idx].button(t.upper(), key=f"btn4_{t}", use_container_width=True, disabled=q['done']):
+                    q['user_choice'] = t
+                    q['done'] = True
                     st.rerun()
+            
+            if q['done']:
+                if q['user_choice'] == q['ans']:
+                    st.success(f"Đúng! {q['w']} là {q['ans']}"); play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
+                else:
+                    st.error(f"Sai! Đáp án: {q['ans']}"); play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
+                if st.button("Câu tiếp theo ➡️"): del st.session_state.q4; st.rerun()
+
+        # --- DẠNG 5: GIỚI TỪ ---
+        elif mode == "Dạng 5 (Giới từ)":
+            if 'q5' not in st.session_state:
+                target = df_current.sample(n=1).iloc[0]
+                st.session_state.q5 = {'w': target['Từ'], 'meaning': target['Nghĩa'], 'ipa': target['Phát âm'], 'type': target['Loại'], 'ans': target['Giới từ'].strip().lower() if target['Giới từ'] else "none", 'done': False, 'user_choice': None}
+            
+            q = st.session_state.q5
+            st.markdown(f"""
+                <div style="background: rgba(0,0,0,0.7); padding: 15px; border-radius: 10px; border-left: 5px solid #ff7b72; margin-bottom: 20px;">
+                    <h3 style="color: #ff7b72; margin: 0;">Cấu trúc của từ: {q['w']}</h3>
+                    <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Nghĩa: {q['meaning']} | Loại: {q['type']} | IPA: {q['ipa']}</p>
+                </div>
+            """, unsafe_allow_html=True)
+            
+            prep_options = ["none", "to", "from", "of", "with", "in", "on", "at", "for", "about", "be"]
+            if q['ans'] not in prep_options: prep_options.append(q['ans'])
+            
+            cols = st.columns(4)
+            for i, p_opt in enumerate(prep_options):
+                with cols[i % 4]:
+                    if st.button(p_opt.upper(), key=f"btn5_{p_opt}", use_container_width=True, disabled=q['done']):
+                        q['done'] = True
+                        q['user_choice'] = p_opt
+                        st.rerun()
+            
+            if q['done']:
+                if q['user_choice'] == q['ans']:
+                    st.success(f"Đúng! Kết quả: {q['w']} {q['ans'] if q['ans'] != 'none' else ''}"); play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
+                else:
+                    st.error(f"Sai! Giới từ đúng: {q['ans'].upper()}")
+                if st.button("Câu tiếp theo ➡️"): del st.session_state.q5; st.rerun()
