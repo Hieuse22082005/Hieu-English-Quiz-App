@@ -12,17 +12,30 @@ st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wi
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 def load_data():
-    # Chỉ định đích danh worksheet tên là "Trang_tính1"
-    df = conn.read(worksheet="Trang_tính1", ttl=0) 
-    df = df.fillna("")
-    df.columns = [str(c).strip() for c in df.columns]
-    return df
+    # 1. Mã ID file của bạn (lấy từ link trình duyệt)
+    sheet_id = "1Cryecd2kF8cmpXGfhsKFenMT89XHhyaMJyx7wkeUxa4"
+    # 2. Link export ra CSV để App đọc nhanh mà không cần mật khẩu
+    # Gid=1604492918 là mã cái tab "Trang_tính1" của bạn
+    csv_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid=1604492918"
+    
+    try:
+        # Đọc dữ liệu từ Sheets
+        df = pd.read_csv(csv_url)
+        # Làm sạch dữ liệu
+        df = df.fillna("")
+        df.columns = [str(c).strip() for c in df.columns]
+        return df
+    except Exception as e:
+        st.error(f"⚠️ Không thể kết nối với Google Sheets: {e}")
+        return pd.DataFrame()
 
-def save_to_gsheets(df):
-    # Ghi đè vào đúng tab "Trang_tính1"
-    conn.update(worksheet="Trang_tính1", data=df)
+# Nạp dữ liệu vào App
+df_current = load_data()
+
+# Nút bấm để người dùng ép app load lại từ mới ngay lập tức
+if st.sidebar.button("🔄 Cập nhật từ mới từ Sheets"):
     st.cache_data.clear()
-
+    st.rerun()
 # --- LOGIC THỜI GIAN ---
 if 'start_time' not in st.session_state:
     st.session_state.start_time = time.time()
