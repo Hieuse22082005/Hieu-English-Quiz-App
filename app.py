@@ -5,35 +5,29 @@ import streamlit.components.v1 as components
 import time
 from streamlit_gsheets import GSheetsConnection
 
-# 1. Cấu hình trang
 st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wide")
-
-
-def load_data():
-    # 1. Mã ID file của bạn (lấy từ link trình duyệt)
-    sheet_id = "1Cryecd2kF8cmpXGfhsKFenMT89XHhyaMJyx7wkeUxa4"
-    # 2. Link export ra CSV để App đọc nhanh mà không cần mật khẩu
-    # Gid=1604492918 là mã cái tab "Trang_tính1" của bạn
-    csv_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid=1604492918"
-    
+@st.cache_data(ttl=600) 
+def load_data(sheet_url):
+    if not sheet_url:
+        return pd.DataFrame()
     try:
-        # Đọc dữ liệu từ Sheets
+        # Chuyển đổi link thường thành link export CSV
+        if "/edit" in sheet_url:
+            base_url = sheet_url.split("/edit")[0]
+            csv_url = base_url + "/export?format=csv"
+            if "gid=" in sheet_url:
+                gid = sheet_url.split("gid=")[1].split("&")[0]
+                csv_url += f"&gid={gid}"
+        else:
+            csv_url = sheet_url
+            
         df = pd.read_csv(csv_url)
-        # Làm sạch dữ liệu
         df = df.fillna("")
         df.columns = [str(c).strip() for c in df.columns]
         return df
     except Exception as e:
-        st.error(f"⚠️ Không thể kết nối với Google Sheets: {e}")
         return pd.DataFrame()
 
-# Nạp dữ liệu vào App
-df_current = load_data()
-
-# Nút bấm để người dùng ép app load lại từ mới ngay lập tức
-if st.sidebar.button("🔄 Cập nhật từ mới từ Sheets"):
-    st.cache_data.clear()
-    st.rerun()
 # --- LOGIC THỜI GIAN ---
 if 'start_time' not in st.session_state:
     st.session_state.start_time = time.time()
@@ -47,7 +41,7 @@ def get_study_time():
 def play_sound(url):
     components.html(f'<audio autoplay style="display:none"><source src="{url}" type="audio/mp3"></audio>', height=0)
 
-# --- CSS CUSTOM ---
+# --- CSS CUSTOM (GIỮ NGUYÊN GIAO DIỆN CỦA HIẾU) ---
 st.markdown("""
     <style>
     [data-testid="stSidebar"] {
@@ -77,12 +71,27 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- NẠP DỮ LIỆU ---
-df_current = load_data()
-
-# --- SIDEBAR ---
+# --- SIDEBAR & CẤU HÌNH DỮ LIỆU ---
 with st.sidebar:
     st.markdown("<div style='text-align: center;'><img src='https://cdn-icons-png.flaticon.com/512/3898/3898082.png' width='80'><h1 style='color: #58a6ff;'>Hieu's Hub</h1></div>", unsafe_allow_html=True)
+    
+    st.markdown("### 🔗 Cấu hình Database")
+    db_mode = st.radio("Nguồn từ vựng:", ["Mẫu của Hieu", "Sheets cá nhân"], label_visibility="collapsed")
+    
+    if db_mode == "Mẫu của Hieu":
+        target_url = "https://docs.google.com/spreadsheets/d/1Cryecd2kF8cmpXGfhsKFenMT89XHhyaMJyx7wkeUxa4/edit#gid=1604492918"
+    else:
+        target_url = st.text_input("Dán link Sheets của bạn:", placeholder="https://docs.google.com/spreadsheets/d/...")
+        st.caption("⚠️ Yêu cầu: Share -> Anyone with the link (Viewer)")
+
+    # Nạp dữ liệu vào biến df_current
+    df_current = load_data(target_url)
+
+    if st.button("🔄 Cập nhật dữ liệu mới"):
+        st.cache_data.clear()
+        st.rerun()
+
+    st.divider()
     menu = st.radio("⚡ ĐIỀU KHIỂN", ["⚙️ Dashboard Quản lý", "💎 Flashcard", "📝 Kiểm tra"], key="main_nav")
     
     st.divider()
@@ -90,8 +99,7 @@ with st.sidebar:
     if st.button("Update Time 🔄"): st.rerun()
     
     st.divider()
-    st.metric("Tổng số từ trên Cloud", len(df_current))
-
+    st.metric("Tổng số từ hiện tại", len(df_current))
 # --- 1. DASHBOARD QUẢN LÝ ---
 if menu == "⚙️ Dashboard Quản lý":
     st.title("⚙️ Quản lý Từ vựng Cloud")
