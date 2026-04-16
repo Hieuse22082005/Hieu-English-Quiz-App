@@ -8,8 +8,6 @@ from streamlit_gsheets import GSheetsConnection
 # 1. Cấu hình trang
 st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wide")
 
-# --- KẾT NỐI GOOGLE SHEETS ---
-conn = st.connection("gsheets", type=GSheetsConnection)
 
 def load_data():
     # 1. Mã ID file của bạn (lấy từ link trình duyệt)
