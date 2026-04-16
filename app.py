@@ -4,7 +4,7 @@ import random
 import streamlit.components.v1 as components
 import time
 from streamlit_gsheets import GSheetsConnection
-
+import streamlit.components.v1 as components
 st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wide")
 # --- HỆ THỐNG BẢO MẬT (LOGIN) ---
 def check_password():
@@ -429,3 +429,20 @@ elif menu == "📝 Kiểm tra":
                 if st.button("Câu tiếp theo ➡️"): 
                     del st.session_state.q6
                     st.rerun()
+GA_ID = "G-Y736MTG61T" 
+
+def inject_ga():
+    ga_code = f"""
+        <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){{dataLayer.push(arguments);}}
+            gtag('js', new Date());
+            gtag('config', '{GA_ID}');
+        </script>
+    """
+    # Dòng này giúp nhúng mã Google vào app mà không hiện ra giao diện
+    components.html(ga_code, height=0)
+
+# Gọi hàm này để nó luôn chạy ngầm
+inject_ga()
