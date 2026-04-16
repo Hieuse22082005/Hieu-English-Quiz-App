@@ -6,6 +6,39 @@ import time
 from streamlit_gsheets import GSheetsConnection
 
 st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wide")
+# --- HỆ THỐNG BẢO MẬT (LOGIN) ---
+def check_password():
+    """Trả về True nếu mật khẩu đúng, ngược lại hiện ô nhập mật khẩu."""
+    def password_entered():
+        # Kiểm tra mật khẩu (Bạn có thể đổi 'hieu123' thành mật khẩu bạn muốn)
+        if st.session_state["password"] == "hieu123":
+            st.session_state["password_correct"] = True
+            del st.session_state["password"]  # Xóa mật khẩu khỏi session để bảo mật
+        else:
+            st.session_state["password_correct"] = False
+
+    if "password_correct" not in st.session_state:
+        # Lần đầu truy cập: Hiện ô nhập mật khẩu
+        st.markdown("""
+            <div style='text-align: center; padding: 50px;'>
+                <h1 style='color: #58a6ff;'>🔒 Hieu's Hub Security</h1>
+                <p style='color: white;'>Vui lòng nhập mật khẩu để truy cập hệ thống.</p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            st.text_input("Mật khẩu:", type="password", on_change=password_entered, key="password")
+            if "password_correct" in st.session_state and not st.session_state["password_correct"]:
+                st.error("❌ Mật khẩu sai rồi Hiếu ơi!")
+        return False
+    else:
+        return st.session_state["password_correct"]
+
+# CHẶN TOÀN BỘ APP NẾU CHƯA ĐĂNG NHẬP
+if not check_password():
+    st.stop()  # Dừng mọi logic phía dưới nếu chưa đúng mật khẩu
+    
 @st.cache_data(ttl=600) 
 def load_data(sheet_url):
     if not sheet_url:
