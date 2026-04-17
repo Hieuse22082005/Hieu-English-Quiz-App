@@ -4,20 +4,7 @@ import random
 import streamlit.components.v1 as components
 import time
 from streamlit_gsheets import GSheetsConnection
-import streamlit.components.v1 as components
-import requests
-import datetime
 
-def get_visitor_details():
-    try:
-        # Sử dụng API để lấy IP thực tế qua lớp Proxy của Streamlit
-        res = requests.get('https://api.ipify.org?format=json', timeout=5)
-        ip = res.json()['ip']
-        return ip
-    except:
-        return "Unknown IP"
-    
-    
 st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wide")
 # --- HỆ THỐNG BẢO MẬT (LOGIN) ---
 def check_password():
@@ -47,21 +34,7 @@ def check_password():
         return False
     else:
         return st.session_state["password_correct"]
-# Khởi tạo danh sách log nếu chưa có
-if 'access_logs' not in st.session_state:
-    st.session_state.access_logs = []
 
-# Lấy thông tin người hiện tại
-current_ip = get_visitor_details()
-current_time = datetime.datetime.now().strftime("%H:%M:%S %d/%m/%Y")
-
-# Nếu IP này chưa có trong log của phiên này thì thêm vào
-if current_ip not in [log['ip'] for log in st.session_state.access_logs]:
-    st.session_state.access_logs.append({
-        "ip": current_ip,
-        "time": current_time
-    })
-        
 # CHẶN TOÀN BỘ APP NẾU CHƯA ĐĂNG NHẬP
 if not check_password():
     st.stop()  # Dừng mọi logic phía dưới nếu chưa đúng mật khẩu
@@ -160,20 +133,6 @@ with st.sidebar:
     
     st.divider()
     st.metric("Tổng số từ hiện tại", len(df_current))
-    
-    st.divider()
-    # Chỉ hiện mục này nếu Hiếu muốn (hoặc dùng mật khẩu admin riêng)
-    with st.expander("🛡️ Giám sát Hệ thống (Admin)"):
-        st.write(f"🟢 Đang trực tuyến: **{len(st.session_state.access_logs)}** thiết bị")
-        
-        # Hiển thị bảng danh sách IP
-        if st.session_state.access_logs:
-            df_logs = pd.DataFrame(st.session_state.access_logs)
-            st.table(df_logs) # Hiện bảng IP và Thời gian
-        
-        if st.button("🗑️ Xóa Log"):
-            st.session_state.access_logs = []
-            st.rerun()
 # --- 1. DASHBOARD QUẢN LÝ ---
 if menu == "⚙️ Dashboard Quản lý":
     st.title("⚙️ Quản lý Từ vựng Cloud")
@@ -470,20 +429,3 @@ elif menu == "📝 Kiểm tra":
                 if st.button("Câu tiếp theo ➡️"): 
                     del st.session_state.q6
                     st.rerun()
-GA_ID = "G-Y736MTG61T" 
-
-def inject_ga():
-    ga_code = f"""
-        <script async src="https://www.googletagmanager.com/gtag/js?id={GA_ID}"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){{dataLayer.push(arguments);}}
-            gtag('js', new Date());
-            gtag('config', '{GA_ID}');
-        </script>
-    """
-    # Dòng này giúp nhúng mã Google vào app mà không hiện ra giao diện
-    components.html(ga_code, height=0)
-
-# Gọi hàm này để nó luôn chạy ngầm
-inject_ga()
