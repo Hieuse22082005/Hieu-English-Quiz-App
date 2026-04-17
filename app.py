@@ -114,15 +114,27 @@ st.markdown("""
     }
 
     @keyframes slideIn {
-        0% {
-            opacity: 0;
-            transform: translateY(30px) scale(0.98);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
+    0% { opacity: 0; transform: translateY(20px); filter: blur(5px); }
+    100% { opacity: 1; transform: translateY(0); filter: blur(0); }
     }
+
+    @keyframes intenseEnter {
+    0% { 
+        opacity: 0; 
+        transform: scale(0.9) translateY(40px) rotate(-2deg); 
+    }
+    50% { 
+        transform: scale(1.05) translateY(-10px) rotate(1deg); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1) translateY(0) rotate(0deg); 
+    }
+}
+
+
+
+
 
     /* 3. SIDEBAR MỀM MẠI */
     /* 2. SIDEBAR - CHUYỂN THÀNH DẠNG MENU THẺ CAO CẤP */
@@ -220,7 +232,27 @@ st.markdown("""
             transform: translateX(0) rotate(0deg);
         }
     }
+    /* --- HIỆU ỨNG CHUYỂN DẠNG CANVA STYLE --- */
+    @keyframes slideUpFade {
+        0% {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
+    .quiz-container {
+        /* Hiệu ứng trượt mượt với đường cong cubic-bezier */
+        animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Hiệu ứng cho các nút trắc nghiệm khi hiện ra */
+    .stButton > button {
+        transition: all 0.2s ease-out !important;
+    }
     .flashcard-container {
         width: 100%;
         perspective: 1000px;
@@ -292,6 +324,7 @@ st.markdown("""
     /* Nút đang chọn */
     div.stButton > button[kind="primary"] {
         background: #00d4ff !important;
+        
         color: #0d1117 !important;
         border: 2px solid #ffffff !important;
         box-shadow: 0 0 20px rgba(0, 212, 255, 0.9) !important;
@@ -303,8 +336,78 @@ st.markdown("""
         background-color: #00d4ff !important;
         color: #0d1117 !important;
     }
+    /* --- HIỆU ỨNG LẬT TRANG (PAGE FLIP/SLIDE) --- */
+    /* --- HIỆU ỨNG LẬT TRANG 3D --- */
+    @keyframes flipPage {
+        0% {
+            opacity: 0;
+            transform: rotateY(-20deg) translateX(100px);
+            filter: blur(10px);
+        }
+        100% {
+            opacity: 1;
+            transform: rotateY(0deg) translateX(0);
+            filter: blur(0);
+        }
+    }
+
+    .page-flip-container {
+        /* Ép chạy animation mỗi khi phần tử xuất hiện */
+        animation: flipPage 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+        transform-origin: left center;
+        perspective: 1000px;
+    }
+
+    /* Hiệu ứng mượt cho các thẻ card khi lật trang */
+    .quiz-container {
+        overflow: hidden; /* Đảm bảo không bị hiện thanh cuộn khi đang chạy animation */
+    }
     </style>
     """, unsafe_allow_html=True)
+def add_keyboard_shortcuts():
+    # Đoạn script này sẽ lắng nghe phím Enter và mũi tên
+    components.html(
+        """
+        <script>
+        const doc = window.parent.document;
+        doc.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                // Tìm tất cả các nút và click vào nút có nội dung phù hợp
+                const buttons = Array.from(doc.querySelectorAll('button[kind="secondary"], button[kind="primary"]'));
+                const nextButton = buttons.find(el => el.innerText.includes('Sau ➡️') || el.innerText.includes('Câu tiếp theo ➡️') || el.innerText.includes('TIẾP THEO'));
+                if (nextButton) {
+                    nextButton.click();
+                }
+            }
+        });
+        </script>
+        """,
+        height=0,
+    )
+# --- TỰ ĐỘNG FOCUS VÀO Ô NHẬP LIỆU ---
+components.html(
+    """
+    <script>
+    const doc = window.parent.document;
+    // Hàm này sẽ tìm ô input và focus vào nó
+    function focusInput() {
+        const inputs = doc.querySelectorAll('input[type="text"]');
+        // Tìm ô input của Dạng 3 (thường là ô cuối cùng hoặc có placeholder cụ thể)
+        const targetInput = Array.from(inputs).find(el => el.getAttribute('aria-label') === "Câu trả lời của bạn:");
+        if (targetInput) {
+            targetInput.focus();
+        }
+    }
+    
+    // Chạy liên tục để bắt kịp tốc độ rerun của Streamlit
+    setTimeout(focusInput, 300);
+    setTimeout(focusInput, 500);
+    </script>
+    """,
+    height=0,
+)
+# Gọi hàm này ở đầu mỗi trang menu hoặc đầu app
+add_keyboard_shortcuts()
 
 # --- SIDEBAR & CẤU HÌNH DỮ LIỆU ---
 with st.sidebar:
@@ -475,338 +578,382 @@ elif menu == "💎 Flashcard":
 # --- 3. KIỂM TRA (BẢN FULL FIX LỖI & ĐỔI MÀU) ---
 elif menu == "📝 Kiểm tra":
     st.title("📝 Kiểm tra trình độ")
+    
     if len(df_current) < 4:
         st.warning("Cần tối thiểu 4 từ để tạo bài kiểm tra.")
     else:
+        # 1. Thanh chọn dạng bài
         mode = st.radio("Chọn dạng kiểm tra:", 
-                ["Dạng 1 (Trắc nghiệm)", "Dạng 2 (Làm đâu biết đó)", "Dạng 3 (Viết từ)", "Dạng 4 (Loại từ)", "Dạng 5 (Giới từ)", "Dạng 6 (Chọn từ)"], 
-                horizontal=True)
+                ["Dạng 1 (Trắc nghiệm)", "Dạng 2 (Làm đâu biết đó)", "Dạng 3 (Viết từ)", 
+                 "Dạng 4 (Loại từ)", "Dạng 5 (Giới từ)", "Dạng 6 (Chọn từ)"], 
+                horizontal=True, key="quiz_mode_selector")
+        
+        st.divider()
+
+        # 2. Tạo vùng chứa lật trang
+        # Key động {mode} cực kỳ quan trọng để CSS chạy lại mỗi lần đổi Tab
+        st.markdown(f'<div class="page-flip-animation" key="flip_{mode}">', unsafe_allow_html=True)
+        
+        quiz_area = st.container()
+        with quiz_area:
         
         # --- DẠNG 1: TRẮC NGHIỆM TỔNG HỢP ---
         # --- DẠNG 1: TRẮC NGHIỆM TỔNG HỢP (CẬP NHẬT ĐỦ THÔNG TIN) ---
-        if mode == "Dạng 1 (Trắc nghiệm)":
-            num = st.slider("Số lượng câu hỏi:", 5, 50, 10)
-            
-            if st.button("🔄 TẠO ĐỀ MỚI") or 'ex_list' not in st.session_state:
-                st.session_state.ex_list = df_current.sample(n=min(len(df_current), num)).to_dict('records')
-                for it in st.session_state.ex_list:
-                    others = df_current[df_current['Nghĩa'] != it['Nghĩa']]['Nghĩa'].unique().tolist()
-                    opts = [it['Nghĩa']] + random.sample(others, min(len(others), 3))
-                    random.shuffle(opts)
-                    it['opts'] = opts
-                st.session_state.ans = {} 
-                st.session_state.submitted_d1 = False
-
-            score = 0
-            for i, it in enumerate(st.session_state.ex_list):
-                prep_info = f" + {it['Giới từ']}" if it['Giới từ'] else ""
+            if mode == "Dạng 1 (Trắc nghiệm)":
+                num = st.slider("Số lượng câu hỏi:", 5, 50, 10)
                 
-                # HIỂN THỊ ĐẦY ĐỦ: TỪ - LOẠI - PHÁT ÂM
-                st.markdown(f"""
-                    <div style="background: rgba(88, 166, 255, 0.1); padding: 12px; border-radius: 10px; border-left: 5px solid #58a6ff; margin-top: 20px;">
-                        <span style="color: #8b949e; font-size: 0.9em;">Câu {i+1}:</span> 
-                        <b style="font-size: 1.3em; color: #58a6ff; margin-left: 5px;">{it['Từ']}{prep_info}</b>
-                        <div style="margin-top: 5px;">
-                            <span style="background: #238636; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; text-transform: uppercase;">{it['Loại']}</span>
-                            <span style="color: #8b949e; font-style: italic; font-size: 0.9em; margin-left: 10px;">{it['Phát âm']}</span>
+                if st.button("🔄 TẠO ĐỀ MỚI") or 'ex_list' not in st.session_state:
+                    st.session_state.ex_list = df_current.sample(n=min(len(df_current), num)).to_dict('records')
+                    for it in st.session_state.ex_list:
+                        others = df_current[df_current['Nghĩa'] != it['Nghĩa']]['Nghĩa'].unique().tolist()
+                        opts = [it['Nghĩa']] + random.sample(others, min(len(others), 3))
+                        random.shuffle(opts)
+                        it['opts'] = opts
+                    st.session_state.ans = {} 
+                    st.session_state.submitted_d1 = False
+
+                score = 0
+                for i, it in enumerate(st.session_state.ex_list):
+                    prep_info = f" + {it['Giới từ']}" if it['Giới từ'] else ""
+                    
+                    # HIỂN THỊ ĐẦY ĐỦ: TỪ - LOẠI - PHÁT ÂM
+                    st.markdown(f"""
+                        <div style="background: rgba(88, 166, 255, 0.1); padding: 12px; border-radius: 10px; border-left: 5px solid #58a6ff; margin-top: 20px;">
+                            <span style="color: #8b949e; font-size: 0.9em;">Câu {i+1}:</span> 
+                            <b style="font-size: 1.3em; color: #58a6ff; margin-left: 5px;">{it['Từ']}{prep_info}</b>
+                            <div style="margin-top: 5px;">
+                                <span style="background: #238636; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; text-transform: uppercase;">{it['Loại']}</span>
+                                <span style="color: #8b949e; font-style: italic; font-size: 0.9em; margin-left: 10px;">{it['Phát âm']}</span>
+                            </div>
                         </div>
+                    """, unsafe_allow_html=True)
+                    
+                    cols = st.columns(2)
+                    for idx, opt in enumerate(it['opts']):
+                        with cols[idx % 2]:
+                            button_key = f"q1_{i}_{idx}"
+                            is_selected = (st.session_state.ans.get(i) == opt)
+                            
+                            if not st.session_state.submitted_d1:
+                                if st.button(opt, key=button_key, use_container_width=True, type="primary" if is_selected else "secondary"):
+                                    st.session_state.ans[i] = opt
+                                    st.rerun() 
+                            else:
+                                # Trạng thái sau khi nộp bài
+                                if opt == it['Nghĩa']:
+                                    st.success(f"✓ {opt}")
+                                elif is_selected:
+                                    st.error(f"✗ {opt}")
+                                else:
+                                    st.button(opt, key=button_key, use_container_width=True, disabled=True)
+
+                    if st.session_state.submitted_d1 and st.session_state.ans.get(i) == it['Nghĩa']:
+                        score += 1
+                    st.divider()
+                
+                if not st.session_state.submitted_d1:
+                    if st.button("📤 NỘP BÀI & CHẤM ĐIỂM", use_container_width=True, type="primary"):
+                        st.session_state.submitted_d1 = True
+                        st.rerun()
+                else:
+                    st.markdown(f"### 📊 Kết quả: `{score}/{len(st.session_state.ex_list)}` câu đúng")
+                    if st.button("Làm đề mới 🔄"):
+                        del st.session_state.ex_list
+                        st.rerun()
+
+                if st.session_state.submitted_d1:
+                    total_q = len(st.session_state.ex_list)
+                    st.markdown(f"### 📊 Kết quả: `{score}/{total_q}` câu đúng ({(score/total_q)*100:.0f}%)")
+                    if score == total_q: st.balloons()
+
+            # --- DẠNG 2: LÀM ĐÂU BIẾT ĐÓ ---
+            # --- DẠNG 2: LÀM ĐÂU BIẾT ĐÓ (ANH -> VIỆT) ---
+            elif mode == "Dạng 2 (Làm đâu biết đó)":
+                if 'q2' not in st.session_state:
+                    target = df_current.sample(n=1).iloc[0]
+                    others = df_current[df_current['Nghĩa'] != target['Nghĩa']]['Nghĩa'].unique().tolist()
+                    opts = [target['Nghĩa']] + random.sample(others, min(len(others), 3))
+                    random.shuffle(opts)
+                    # FIX 1: Thêm 'user_choice' và thống nhất tên biến 'ans'
+                    st.session_state.q2 = {
+                        'w': target['Từ'], 
+                        'ans': target['Nghĩa'], 
+                        'opts': opts, 
+                        'done': False, 
+                        'ipa': target['Phát âm'], 
+                        'type': target['Loại'], 
+                        'prep': target['Giới từ'], 
+                        'correct': False,
+                        'user_choice': None # Cực kỳ quan trọng để đổi màu
+                    }
+                
+                q = st.session_state.q2
+                prep_info = f" + {q['prep']}" if q['prep'] else ""
+                st.markdown(f"""
+                    <div class="word-card" style="border-left: 5px solid #fffd75;">
+                        <h3 style="color: #fffd75; margin: 0;">Từ vựng: {q['w']}{prep_info}</h3>
+                        <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Loại: <b>{q['type']}</b> | IPA: <i>{q['ipa']}</i></p>
                     </div>
                 """, unsafe_allow_html=True)
                 
+                # FIX 2: Khai báo cols để không bị lỗi NameError
                 cols = st.columns(2)
-                for idx, opt in enumerate(it['opts']):
-                    with cols[idx % 2]:
-                        button_key = f"q1_{i}_{idx}"
-                        is_selected = (st.session_state.ans.get(i) == opt)
+                for i, opt in enumerate(q['opts']):
+                    with cols[i % 2]:
+                        # KIỂM TRA ĐỂ ĐỔI MÀU NEON
+                        is_selected = (q.get('user_choice') == opt)
                         
-                        if not st.session_state.submitted_d1:
-                            if st.button(opt, key=button_key, use_container_width=True, type="primary" if is_selected else "secondary"):
-                                st.session_state.ans[i] = opt
-                                st.rerun() 
-                        else:
-                            # Trạng thái sau khi nộp bài
-                            if opt == it['Nghĩa']:
-                                st.success(f"✓ {opt}")
-                            elif is_selected:
-                                st.error(f"✗ {opt}")
-                            else:
-                                st.button(opt, key=button_key, use_container_width=True, disabled=True)
-
-                if st.session_state.submitted_d1 and st.session_state.ans.get(i) == it['Nghĩa']:
-                    score += 1
-                st.divider()
-            
-            if not st.session_state.submitted_d1:
-                if st.button("📤 NỘP BÀI & CHẤM ĐIỂM", use_container_width=True, type="primary"):
-                    st.session_state.submitted_d1 = True
-                    st.rerun()
-            else:
-                st.markdown(f"### 📊 Kết quả: `{score}/{len(st.session_state.ex_list)}` câu đúng")
-                if st.button("Làm đề mới 🔄"):
-                    del st.session_state.ex_list
-                    st.rerun()
-
-            if st.session_state.submitted_d1:
-                total_q = len(st.session_state.ex_list)
-                st.markdown(f"### 📊 Kết quả: `{score}/{total_q}` câu đúng ({(score/total_q)*100:.0f}%)")
-                if score == total_q: st.balloons()
-
-        # --- DẠNG 2: LÀM ĐÂU BIẾT ĐÓ ---
-        # --- DẠNG 2: LÀM ĐÂU BIẾT ĐÓ (ANH -> VIỆT) ---
-        elif mode == "Dạng 2 (Làm đâu biết đó)":
-            if 'q2' not in st.session_state:
-                target = df_current.sample(n=1).iloc[0]
-                others = df_current[df_current['Nghĩa'] != target['Nghĩa']]['Nghĩa'].unique().tolist()
-                opts = [target['Nghĩa']] + random.sample(others, min(len(others), 3))
-                random.shuffle(opts)
-                # FIX 1: Thêm 'user_choice' và thống nhất tên biến 'ans'
-                st.session_state.q2 = {
-                    'w': target['Từ'], 
-                    'ans': target['Nghĩa'], 
-                    'opts': opts, 
-                    'done': False, 
-                    'ipa': target['Phát âm'], 
-                    'type': target['Loại'], 
-                    'prep': target['Giới từ'], 
-                    'correct': False,
-                    'user_choice': None # Cực kỳ quan trọng để đổi màu
-                }
-            
-            q = st.session_state.q2
-            prep_info = f" + {q['prep']}" if q['prep'] else ""
-            st.markdown(f"""
-                <div class="word-card" style="border-left: 5px solid #fffd75;">
-                    <h3 style="color: #fffd75; margin: 0;">Từ vựng: {q['w']}{prep_info}</h3>
-                    <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Loại: <b>{q['type']}</b> | IPA: <i>{q['ipa']}</i></p>
-                </div>
-            """, unsafe_allow_html=True)
-            
-            # FIX 2: Khai báo cols để không bị lỗi NameError
-            cols = st.columns(2)
-            for i, opt in enumerate(q['opts']):
-                with cols[i % 2]:
-                    # KIỂM TRA ĐỂ ĐỔI MÀU NEON
-                    is_selected = (q.get('user_choice') == opt)
+                        if st.button(
+                            opt, 
+                            key=f"btn2_{opt}_{i}", 
+                            use_container_width=True, 
+                            disabled=q['done'],
+                            type="primary" if is_selected else "secondary"
+                        ):
+                            q['user_choice'] = opt
+                            q['done'] = True
+                            # FIX 3: Sửa từ ans_vn thành ans cho khớp với bên trên
+                            if opt == q['ans']: 
+                                q['correct'] = True
+                            st.rerun()
+                
+                if q['done']:
+                    if q['correct']: 
+                        st.success("Chính xác! 🎉")
+                    else: 
+                        st.error(f"Sai rồi! Đáp án là: {q['ans']}")
                     
-                    if st.button(
-                        opt, 
-                        key=f"btn2_{opt}_{i}", 
-                        use_container_width=True, 
-                        disabled=q['done'],
-                        type="primary" if is_selected else "secondary"
-                    ):
-                        q['user_choice'] = opt
-                        q['done'] = True
-                        # FIX 3: Sửa từ ans_vn thành ans cho khớp với bên trên
-                        if opt == q['ans']: 
-                            q['correct'] = True
+                    # FIX LỖI DUPLICATE ID
+                    if st.button("Câu tiếp theo ➡️", key="next_q2_unique_btn"):
+                        del st.session_state.q2
                         st.rerun()
-            
-            if q['done']:
-                if q['correct']: 
-                    st.success("Chính xác! 🎉")
-                else: 
-                    st.error(f"Sai rồi! Đáp án là: {q['ans']}")
-                
-                # FIX LỖI DUPLICATE ID
-                if st.button("Câu tiếp theo ➡️", key="next_q2_unique_btn"):
-                    del st.session_state.q2
-                    st.rerun()
 
-        # --- DẠNG 3: VIẾT TỪ ---
-        elif mode == "Dạng 3 (Viết từ)":
-            if 'q3' not in st.session_state:
-                target = df_current.sample(n=1).iloc[0]
-                st.session_state.q3 = {'w': target['Từ'], 'ans': target['Nghĩa'], 'ipa': target['Phát âm'], 'type': target['Loại'], 'prep': target['Giới từ'], 'submitted': False, 'user_input': ""}
-            
-            q = st.session_state.q3
-            prep_hint = f"Cấu trúc: + {q['prep']}" if q['prep'] else "Không giới từ"
-            st.markdown(f"""
-                <div style="background: rgba(0,0,0,0.7); padding: 15px; border-radius: 10px; border-left: 5px solid #00ffcc; margin-bottom: 20px;">
-                    <h3 style="color: #00ffcc; margin: 0;">Nghĩa: {q['ans']}</h3>
-                    <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Gợi ý: {q['type']} | {q['ipa']} | {prep_hint}</p>
-                </div>
-            """, unsafe_allow_html=True)
-            
-            user_word = st.text_input("Nhập từ tiếng Anh:", key=f"input3_{q['w']}", disabled=q['submitted']).strip()
-            if not q['submitted'] and st.button("🔍 KIỂM TRA", use_container_width=True):
-                q['user_input'] = user_word
-                q['submitted'] = True
-                st.rerun()
-            
-            if q['submitted']:
-                if q['user_input'].lower() == q['w'].lower():
-                    st.success("✨ Chính xác!"); play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
-                else:
-                    st.error(f"❌ Đáp án đúng là: {q['w']}"); play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
-                if st.button("Câu tiếp theo ➡️"): del st.session_state.q3; st.rerun()
+            # --- DẠNG 3: VIẾT TỪ ---
+            # --- DẠNG 3: VIẾT TỪ (CẬP NHẬT TỐI ƯU PHÍM ENTER) ---
+            # --- DẠNG 3: VIẾT TỪ (FULL TỰ ĐỘNG FOCUS) ---
+            elif mode == "Dạng 3 (Viết từ)":
+                if 'q3' not in st.session_state:
+                    target = df_current.sample(n=1).iloc[0]
+                    st.session_state.q3 = {
+                        'w': target['Từ'], 
+                        'ans': target['Nghĩa'], 
+                        'ipa': target['Phát âm'], 
+                        'type': target['Loại'], 
+                        'prep': target['Giới từ'], 
+                        'submitted': False
+                    }
+                
+                q = st.session_state.q3
+                prep_hint = f"Cấu trúc: + {q['prep']}" if q['prep'] else "Không giới từ"
+                
+                st.markdown(f"""
+                    <div style="background: rgba(0,0,0,0.7); padding: 20px; border-radius: 15px; border-left: 5px solid #00ffcc; margin-bottom: 20px;">
+                        <h2 style="color: #00ffcc; margin: 0;">{q['ans']}</h2>
+                        <p style="color: #ffffff; margin: 10px 0 0 0; opacity: 0.8;">
+                            <span style="background: #238636; padding: 2px 8px; border-radius: 4px; font-size: 0.8em;">{q['type']}</span> 
+                            | <i>{q['ipa']}</i> | <span style="color: #58a6ff;">{prep_hint}</span>
+                        </p>
+                    </div>
+                """, unsafe_allow_html=True)
+                
+                # Form giúp bắt sự kiện Enter
+                with st.form(key="q3_form_focus", clear_on_submit=True):
+                    # Lưu ý: 'label' phải khớp với script JS ở trên để tự động focus
+                    user_val = st.text_input("Câu trả lời của bạn:", placeholder="Gõ từ và nhấn Enter...", key="input_action")
+                    submit_btn = st.form_submit_button("🔍 KIỂM TRA", use_container_width=True)
+                    
+                    if submit_btn and user_val:
+                        # Lưu kết quả vào session để hiển thị sau rerun
+                        st.session_state.q3['user_input'] = user_val.strip()
+                        st.session_state.q3['submitted'] = True
+                        st.rerun()
 
-        # --- DẠNG 4: LOẠI TỪ ---
-        # --- DẠNG 4: LOẠI TỪ (NOUN, VERB, ADJ...) ---
-        elif mode == "Dạng 4 (Loại từ)":
-            if 'q4' not in st.session_state:
-                target = df_current.sample(n=1).iloc[0]
-                st.session_state.q4 = {
-                    'w': target['Từ'], 
-                    'ans': target['Loại'], 
-                    'meaning': target['Nghĩa'], 
-                    'ipa': target['Phát âm'], 
-                    'prep': target['Giới từ'], 
-                    'done': False, 
-                    'user_choice': None # Lưu lựa chọn để đổi màu
-                }
-            
-            q = st.session_state.q4
-            prep_info = f" + {q['prep']}" if q['prep'] else ""
-            
-            # Hiển thị câu hỏi bằng Word Card
-            st.markdown(f"""
-                <div class="word-card" style="border-left: 5px solid #ffa500;">
-                    <h3 style="color: #ffa500; margin: 0;">Từ vựng: {q['w']}{prep_info}</h3>
-                    <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Nghĩa: {q['meaning']} | IPA: {q['ipa']}</p>
-                </div>
-            """, unsafe_allow_html=True)
-            
-            btns = st.columns(5)
-            types = ["n", "v", "adj", "adv", "phr"]
-            
-            for idx, t in enumerate(types):
-                with btns[idx]:
-                    # KIỂM TRA ĐỂ ĐỔI MÀU NEON
-                    is_selected = (q.get('user_choice') == t)
-                    
-                    if st.button(
-                        t.upper(), 
-                        key=f"btn4_{t}", 
-                        use_container_width=True, 
-                        disabled=q['done'],
-                        # Sáng đèn Neon nếu nút này được chọn
-                        type="primary" if is_selected else "secondary"
-                    ):
-                        q['user_choice'] = t
-                        q['done'] = True
-                        st.rerun()
-            
-            if q['done']:
-                if q['user_choice'] == q['ans']:
-                    st.success(f"✨ Đúng! **{q['w']}** là **{q['ans']}**")
-                    play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
-                else:
-                    st.error(f"❌ Sai rồi! Đáp án đúng là: **{q['ans']}**")
-                    play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
+                # Hiển thị kết quả
                 
-                # FIX LỖI DUPLICATE ID BẰNG KEY RIÊNG
-                if st.button("Câu tiếp theo ➡️", key="next_q4_unique"): 
-                    del st.session_state.q4
-                    st.rerun()
 
-        # --- DẠNG 5: GIỚI TỪ ---
-        # --- DẠNG 5: KIỂM TRA GIỚI TỪ (PREPOSITIONS) ---
-        elif mode == "Dạng 5 (Giới từ)":
-            if 'q5' not in st.session_state:
-                target = df_current.sample(n=1).iloc[0]
-                st.session_state.q5 = {
-                    'w': target['Từ'], 
-                    'meaning': target['Nghĩa'], 
-                    'ipa': target['Phát âm'], 
-                    'type': target['Loại'], 
-                    # Chuẩn hóa giới từ về chữ thường
-                    'ans': target['Giới từ'].strip().lower() if target['Giới từ'] else "none", 
-                    'done': False, 
-                    'user_choice': None # Lưu lựa chọn để đổi màu Neon
-                }
-            
-            q = st.session_state.q5
-            
-            # Hiển thị câu hỏi bằng Card đẹp hơn
-            st.markdown(f"""
-                <div class="word-card" style="border-left: 5px solid #ff7b72;">
-                    <h3 style="color: #ff7b72; margin: 0;">Cấu trúc của từ: {q['w']}</h3>
-                    <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Nghĩa: {q['meaning']} | Loại: {q['type']} | IPA: {q['ipa']}</p>
-                </div>
-            """, unsafe_allow_html=True)
-            
-            prep_options = ["none", "to", "from", "of", "with", "in", "on", "at", "for", "about", "be"]
-            if q['ans'] not in prep_options: prep_options.append(q['ans'])
-            
-            cols = st.columns(4)
-            for i, p_opt in enumerate(prep_options):
-                with cols[i % 4]:
-                    # KIỂM TRA ĐỂ ĐỔI MÀU NEON
-                    is_selected = (q.get('user_choice') == p_opt)
+                # 4. Hiển thị kết quả sau khi Submit
+                if q['submitted']:
+                    is_correct = q['user_input'].lower() == q['w'].lower()
                     
-                    if st.button(
-                        p_opt.upper(), 
-                        key=f"btn5_{p_opt}_{i}", # Thêm index vào key để tránh trùng ID nếu có trùng tên
-                        use_container_width=True, 
-                        disabled=q['done'],
-                        # Sáng đèn Neon nếu nút này được chọn
-                        type="primary" if is_selected else "secondary"
-                    ):
-                        q['done'] = True
-                        q['user_choice'] = p_opt
-                        st.rerun()
-            
-            if q['done']:
-                if q['user_choice'] == q['ans']:
-                    st.success(f"✨ Đúng! Kết quả: **{q['w']} {q['ans'] if q['ans'] != 'none' else ''}**")
-                    play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
-                else:
-                    st.error(f"❌ Sai rồi! Giới từ đúng phải là: **{q['ans'].upper()}**")
-                    play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
-                
-                # FIX LỖI DUPLICATE ID BẰNG KEY RIÊNG
-                if st.button("Câu tiếp theo ➡️", key="next_q5_unique"): 
-                    del st.session_state.q5
-                    st.rerun()
-                
-        # --- DẠNG 6: CHỌN TỪ (NGHĨA -> TỪ) ---
-        # --- DẠNG 6: CHỌN TỪ (NGHĨA -> TỪ) ---
-        elif mode == "Dạng 6 (Chọn từ)":
-            if 'q6' not in st.session_state:
-                target = df_current.sample(n=1).iloc[0]
-                others = df_current[df_current['Từ'] != target['Từ']]['Từ'].unique().tolist()
-                opts = [target['Từ']] + random.sample(others, min(len(others), 3))
-                random.shuffle(opts)
-                
-                st.session_state.q6 = {
-                    'ans_word': target['Từ'], 
-                    'meaning': target['Nghĩa'], 
-                    'opts': opts, 
-                    'done': False, 
-                    'ipa': target['Phát âm'], 
-                    'type': target['Loại'], 
-                    'prep': target['Giới từ'], 
-                    'user_choice': None # Thêm biến này để lưu lựa chọn
-                }
-            
-            q = st.session_state.q6
-            st.markdown(f'<div class="word-card"><h3>Nghĩa: {q["meaning"]}</h3></div>', unsafe_allow_html=True)
-            
-            cols = st.columns(2)
-            for i, opt in enumerate(q['opts']):
-                with cols[i % 2]:
-                    # KIỂM TRA ĐỂ ĐỔI MÀU NEON
-                    is_selected = (q.get('user_choice') == opt)
+                    if is_correct:
+                        st.success(f"✨ **Quá chuẩn Hiếu ơi!** Đáp án là: **{q['w']}**")
+                        play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
+                    else:
+                        st.error(f"❌ **Sai mất rồi!** Đáp án đúng phải là: **{q['w']}**")
+                        st.info(f"Bạn đã nhập: `{q['user_input']}`")
+                        play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
                     
-                    if st.button(
-                        opt, 
-                        key=f"btn6_{opt}_{i}", 
-                        use_container_width=True, 
-                        disabled=q['done'],
-                        type="primary" if is_selected else "secondary" # Dòng này giúp sáng đèn Neon
-                    ):
-                        q['user_choice'] = opt
-                        q['done'] = True
+                    # Nút "Tiếp theo" - Nhờ script JS ở đầu App, nhấn Enter sẽ tự click nút này
+                    if st.button("TIẾP THEO ➡️ (ENTER)", type="primary", use_container_width=True, key="next_q3_btn"):
+                        del st.session_state.q3
                         st.rerun()
-            
-            if q['done']:
-                if q['user_choice'] == q['ans_word']:
-                    st.success("Chính xác! 🎉")
-                else:
-                    st.error(f"Sai rồi! Đáp án là: {q['ans_word']}")
+            # --- DẠNG 4: LOẠI TỪ ---
+            # --- DẠNG 4: LOẠI TỪ (NOUN, VERB, ADJ...) ---
+            elif mode == "Dạng 4 (Loại từ)":
+                if 'q4' not in st.session_state:
+                    target = df_current.sample(n=1).iloc[0]
+                    st.session_state.q4 = {
+                        'w': target['Từ'], 
+                        'ans': target['Loại'], 
+                        'meaning': target['Nghĩa'], 
+                        'ipa': target['Phát âm'], 
+                        'prep': target['Giới từ'], 
+                        'done': False, 
+                        'user_choice': None # Lưu lựa chọn để đổi màu
+                    }
                 
-                # THÊM KEY RIÊNG BIỆT Ở ĐÂY ĐỂ FIX LỖI DUPLICATE ID
-                if st.button("Câu tiếp theo ➡️", key="next_q6_btn"): 
-                    del st.session_state.q6
-                    st.rerun()
+                q = st.session_state.q4
+                prep_info = f" + {q['prep']}" if q['prep'] else ""
+                
+                # Hiển thị câu hỏi bằng Word Card
+                st.markdown(f"""
+                    <div class="word-card" style="border-left: 5px solid #ffa500;">
+                        <h3 style="color: #ffa500; margin: 0;">Từ vựng: {q['w']}{prep_info}</h3>
+                        <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Nghĩa: {q['meaning']} | IPA: {q['ipa']}</p>
+                    </div>
+                """, unsafe_allow_html=True)
+                
+                btns = st.columns(5)
+                types = ["n", "v", "adj", "adv", "phr"]
+                
+                for idx, t in enumerate(types):
+                    with btns[idx]:
+                        # KIỂM TRA ĐỂ ĐỔI MÀU NEON
+                        is_selected = (q.get('user_choice') == t)
+                        
+                        if st.button(
+                            t.upper(), 
+                            key=f"btn4_{t}", 
+                            use_container_width=True, 
+                            disabled=q['done'],
+                            # Sáng đèn Neon nếu nút này được chọn
+                            type="primary" if is_selected else "secondary"
+                        ):
+                            q['user_choice'] = t
+                            q['done'] = True
+                            st.rerun()
+                
+                if q['done']:
+                    if q['user_choice'] == q['ans']:
+                        st.success(f"✨ Đúng! **{q['w']}** là **{q['ans']}**")
+                        play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
+                    else:
+                        st.error(f"❌ Sai rồi! Đáp án đúng là: **{q['ans']}**")
+                        play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
+                    
+                    # FIX LỖI DUPLICATE ID BẰNG KEY RIÊNG
+                    if st.button("Câu tiếp theo ➡️", key="next_q4_unique"): 
+                        del st.session_state.q4
+                        st.rerun()
+
+            # --- DẠNG 5: GIỚI TỪ ---
+            # --- DẠNG 5: KIỂM TRA GIỚI TỪ (PREPOSITIONS) ---
+            elif mode == "Dạng 5 (Giới từ)":
+                if 'q5' not in st.session_state:
+                    target = df_current.sample(n=1).iloc[0]
+                    st.session_state.q5 = {
+                        'w': target['Từ'], 
+                        'meaning': target['Nghĩa'], 
+                        'ipa': target['Phát âm'], 
+                        'type': target['Loại'], 
+                        # Chuẩn hóa giới từ về chữ thường
+                        'ans': target['Giới từ'].strip().lower() if target['Giới từ'] else "none", 
+                        'done': False, 
+                        'user_choice': None # Lưu lựa chọn để đổi màu Neon
+                    }
+                
+                q = st.session_state.q5
+                
+                # Hiển thị câu hỏi bằng Card đẹp hơn
+                st.markdown(f"""
+                    <div class="word-card" style="border-left: 5px solid #ff7b72;">
+                        <h3 style="color: #ff7b72; margin: 0;">Cấu trúc của từ: {q['w']}</h3>
+                        <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Nghĩa: {q['meaning']} | Loại: {q['type']} | IPA: {q['ipa']}</p>
+                    </div>
+                """, unsafe_allow_html=True)
+                
+                prep_options = ["none", "to", "from", "of", "with", "in", "on", "at", "for", "about", "be"]
+                if q['ans'] not in prep_options: prep_options.append(q['ans'])
+                
+                cols = st.columns(4)
+                for i, p_opt in enumerate(prep_options):
+                    with cols[i % 4]:
+                        # KIỂM TRA ĐỂ ĐỔI MÀU NEON
+                        is_selected = (q.get('user_choice') == p_opt)
+                        
+                        if st.button(
+                            p_opt.upper(), 
+                            key=f"btn5_{p_opt}_{i}", # Thêm index vào key để tránh trùng ID nếu có trùng tên
+                            use_container_width=True, 
+                            disabled=q['done'],
+                            # Sáng đèn Neon nếu nút này được chọn
+                            type="primary" if is_selected else "secondary"
+                        ):
+                            q['done'] = True
+                            q['user_choice'] = p_opt
+                            st.rerun()
+                
+                if q['done']:
+                    if q['user_choice'] == q['ans']:
+                        st.success(f"✨ Đúng! Kết quả: **{q['w']} {q['ans'] if q['ans'] != 'none' else ''}**")
+                        play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
+                    else:
+                        st.error(f"❌ Sai rồi! Giới từ đúng phải là: **{q['ans'].upper()}**")
+                        play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
+                    
+                    # FIX LỖI DUPLICATE ID BẰNG KEY RIÊNG
+                    if st.button("Câu tiếp theo ➡️", key="next_q5_unique"): 
+                        del st.session_state.q5
+                        st.rerun()
+                    
+            # --- DẠNG 6: CHỌN TỪ (NGHĨA -> TỪ) ---
+            # --- DẠNG 6: CHỌN TỪ (NGHĨA -> TỪ) ---
+            elif mode == "Dạng 6 (Chọn từ)":
+                if 'q6' not in st.session_state:
+                    target = df_current.sample(n=1).iloc[0]
+                    others = df_current[df_current['Từ'] != target['Từ']]['Từ'].unique().tolist()
+                    opts = [target['Từ']] + random.sample(others, min(len(others), 3))
+                    random.shuffle(opts)
+                    
+                    st.session_state.q6 = {
+                        'ans_word': target['Từ'], 
+                        'meaning': target['Nghĩa'], 
+                        'opts': opts, 
+                        'done': False, 
+                        'ipa': target['Phát âm'], 
+                        'type': target['Loại'], 
+                        'prep': target['Giới từ'], 
+                        'user_choice': None # Thêm biến này để lưu lựa chọn
+                    }
+                
+                q = st.session_state.q6
+                st.markdown(f'<div class="word-card"><h3>Nghĩa: {q["meaning"]}</h3></div>', unsafe_allow_html=True)
+                
+                cols = st.columns(2)
+                for i, opt in enumerate(q['opts']):
+                    with cols[i % 2]:
+                        # KIỂM TRA ĐỂ ĐỔI MÀU NEON
+                        is_selected = (q.get('user_choice') == opt)
+                        
+                        if st.button(
+                            opt, 
+                            key=f"btn6_{opt}_{i}", 
+                            use_container_width=True, 
+                            disabled=q['done'],
+                            type="primary" if is_selected else "secondary" # Dòng này giúp sáng đèn Neon
+                        ):
+                            q['user_choice'] = opt
+                            q['done'] = True
+                            st.rerun()
+                
+                if q['done']:
+                    if q['user_choice'] == q['ans_word']:
+                        st.success("Chính xác! 🎉")
+                    else:
+                        st.error(f"Sai rồi! Đáp án là: {q['ans_word']}")
+                    
+                    # THÊM KEY RIÊNG BIỆT Ở ĐÂY ĐỂ FIX LỖI DUPLICATE ID
+                    if st.button("Câu tiếp theo ➡️", key="next_q6_btn"): 
+                        del st.session_state.q6
+                        st.rerun()
+        st.markdown('</div>', unsafe_allow_html=True)
