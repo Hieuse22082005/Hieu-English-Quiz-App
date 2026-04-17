@@ -97,121 +97,200 @@ def play_sound(url):
 # --- CSS CUSTOM (GIỮ NGUYÊN GIAO DIỆN CỦA HIẾU) ---
 st.markdown("""
     <style>
-    /* 1. NHẬP FONT CHỮ & NỀN APP */
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600&display=swap');
+    /* 1. NHẬP FONT CHỮ & NỀN */
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
 
     .stApp {
-        background: linear-gradient(rgba(10, 12, 16, 0.9), rgba(10, 12, 16, 0.95)), 
+        background: linear-gradient(rgba(10, 12, 16, 0.92), rgba(10, 12, 16, 0.96)), 
                     url("https://wallpaperaccess.com/full/2454628.png") no-repeat center fixed;
         background-size: cover !important;
         font-family: 'Inter', sans-serif !important;
     }
 
-    /* 2. SIDEBAR - CHẾ ĐỘ NÚT BẤM (KHÔNG CHẤM TRÒN) */
-    [data-testid="stSidebar"] {
-        background-color: rgba(13, 17, 23, 0.98) !important;
-        border-right: 1px solid rgba(88, 166, 255, 0.1);
+    /* 2. HIỆU ỨNG CHUYỂN TRANG NHƯ CANVA (ANIMATION) */
+    /* Tạo hiệu ứng trượt và hiện dần cho toàn bộ nội dung chính */
+    .main .block-container {
+        animation: slideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* Ẩn triệt để radio mặc định */
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(30px) scale(0.98);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    /* 3. SIDEBAR MỀM MẠI */
+    /* 2. SIDEBAR - CHUYỂN THÀNH DẠNG MENU THẺ CAO CẤP */
+    [data-testid="stSidebar"] {
+        background-color: rgba(13, 17, 23, 0.98) !important;
+        border-right: 1px solid rgba(88, 166, 255, 0.05);
+    }
+
+    /* Ẩn các thành phần thừa của Radio mặc định */
+    [data-testid="stSidebar"] div[role="radiogroup"] {
+        padding-top: 1rem;
+    }
+
     [data-testid="stSidebar"] div[role="radiogroup"] [data-testid="stWidgetSelectionMarker"],
     [data-testid="stSidebar"] div[role="radiogroup"] input[type="radio"] {
         display: none !important;
     }
 
-    /* Biến Label thành Card */
+    /* Biến mỗi lựa chọn thành một tấm thẻ (Card) mỏng nhẹ */
     [data-testid="stSidebar"] div[role="radiogroup"] > label {
-        background: rgba(33, 38, 45, 0.4) !important;
-        border: 1px solid rgba(255, 255, 255, 0.05) !important;
-        padding: 15px !important;
-        border-radius: 12px !important;
-        margin-bottom: 10px !important;
-        transition: all 0.3s ease !important;
+        background: transparent !important; /* Để nền trong suốt */
+        border: 1px solid transparent !important;
+        padding: 14px 25px !important;
+        border-radius: 15px !important;
+        margin: 5px 10px !important;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
         display: flex !important;
-        justify-content: center !important;
         cursor: pointer !important;
+        position: relative;
     }
 
-    /* Chữ trong Sidebar */
+    /* Chữ trong Menu - mảnh và sang hơn */
     [data-testid="stSidebar"] div[role="radiogroup"] label p {
-        font-family: 'Orbitron', sans-serif !important;
-        font-size: 0.85rem !important;
+        font-family: 'Inter', sans-serif !important;
+        font-size: 0.95rem !important;
+        font-weight: 400 !important;
         color: #8b949e !important;
-        letter-spacing: 1px;
+        margin: 0 !important;
     }
 
-    /* Khi Sidebar được chọn hoặc Hover */
-    [data-testid="stSidebar"] div[role="radiogroup"] > label:hover,
+    /* Khi rê chuột qua (Hover): Sáng nhẹ viền */
+    [data-testid="stSidebar"] div[role="radiogroup"] > label:hover {
+        background: rgba(88, 166, 255, 0.05) !important;
+        border: 1px solid rgba(88, 166, 255, 0.2) !important;
+        transform: translateX(5px) !important; /* Nhích nhẹ sang phải */
+    }
+
+    /* KHI ĐƯỢC CHỌN: Sáng đèn và đổi màu chữ */
     [data-testid="stSidebar"] div[role="radiogroup"] > label[data-checked="true"] {
         background: rgba(88, 166, 255, 0.1) !important;
         border: 1px solid #58a6ff !important;
-        box-shadow: 0 0 15px rgba(88, 166, 255, 0.3) !important;
+        box-shadow: 0 4px 15px rgba(88, 166, 255, 0.15) !important;
     }
 
     [data-testid="stSidebar"] div[role="radiogroup"] label[data-checked="true"] p {
         color: #ffffff !important;
-        text-shadow: 0 0 10px rgba(88, 166, 255, 0.6) !important;
+        font-weight: 600 !important;
+        text-shadow: 0 0 8px rgba(88, 166, 255, 0.4) !important;
     }
 
-    /* 3. WORD CARDS (KHUNG TỪ VỰNG) */
+    /* Thêm một dấu vạch nhỏ bên cạnh khi được chọn cho tinh tế */
+    [data-testid="stSidebar"] div[role="radiogroup"] > label[data-checked="true"]::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 25%;
+        height: 50%;
+        width: 4px;
+        background: #58a6ff;
+        border-radius: 0 4px 4px 0;
+        box-shadow: 0 0 10px #58a6ff;
+    }
+
+    /* 4. WORD CARD (GLASSMORPHISM) */
     .word-card {
-        background: rgba(22, 27, 34, 0.7) !important;
-        backdrop-filter: blur(10px);
-        padding: 20px;
-        border-radius: 16px;
+        background: rgba(22, 27, 34, 0.5) !important;
+        backdrop-filter: blur(15px);
+        padding: 25px;
+        border-radius: 24px !important;
         border: 1px solid rgba(88, 166, 255, 0.1);
-        margin-bottom: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        transition: all 0.3s ease;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        /* Animation riêng cho từng card để nó hiện lên mượt hơn */
+        animation: fadeInCard 0.5s ease-out;
+    }
+    /* --- CSS CHO FLASHCARD 3D --- */
+    /* --- NÂNG CẤP HIỆU ỨNG FLASHCARD --- */
+    /* HIỆU ỨNG CHUYỂN CẢNH CHO TOÀN BỘ KHUNG THẺ */
+    @keyframes slideFromRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100px) rotate(5deg); /* Bay từ phải qua và hơi nghiêng */
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0) rotate(0deg);
+        }
     }
 
-    .word-card:hover {
-        border-color: #58a6ff;
-        transform: translateY(-2px);
-    }
-
-    /* 4. HỆ THỐNG NÚT BẤM NEON BLUE (QUIZ) */
-    div.stButton > button {
-        background: rgba(13, 17, 23, 0.8) !important;
-        color: #00d4ff !important;
-        border: 1.5px solid rgba(0, 212, 255, 0.3) !important;
-        border-radius: 8px !important;
-        font-family: 'Orbitron', sans-serif !important;
-        font-size: 0.9rem !important;
-        text-transform: uppercase !important;
-        letter-spacing: 1px;
-        transition: all 0.2s ease !important;
+    .flashcard-container {
         width: 100%;
-        padding: 10px !important;
+        perspective: 1000px;
+        /* Mỗi khi nội dung thay đổi, animation này sẽ chạy lại */
+        animation: slideFromRight 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
-    /* Hover nút */
+    .flip-card {
+        background-color: transparent;
+        width: 100%;
+        height: 350px;
+        margin-bottom: 25px;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 30px;
+        border: 1px solid rgba(0, 212, 255, 0.3);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        font-family: 'Inter', sans-serif !important;
+    }
+
+    .flip-card-front { background: rgba(22, 27, 34, 0.9); color: white; }
+    .flip-card-back { 
+        background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(13, 17, 23, 1));
+        color: #00d4ff; 
+        transform: rotateY(180deg); 
+    }
+
+    /* 5. NÚT BẤM DẠNG VIÊN THUỐC */
+    div.stButton > button {
+        background: rgba(255, 255, 255, 0.03) !important;
+        color: #00d4ff !important;
+        border: 1px solid rgba(0, 212, 255, 0.2) !important;
+        border-radius: 50px !important;
+        font-weight: 500 !important;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        padding: 10px 20px !important;
+    }
+
     div.stButton > button:hover {
-        border-color: #00d4ff !important;
-        box-shadow: 0 0 12px rgba(0, 212, 255, 0.4) !important;
-        transform: scale(1.02);
+        background: #00d4ff !important;
+        color: #0d1117 !important;
+        box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4) !important;
+        transform: translateY(-3px);
     }
 
-    /* TRẠNG THÁI ĐÃ CHỌN (PRIMARY) - GIỮ MÀU RỰC RỠ */
+    /* Nút đang chọn */
     div.stButton > button[kind="primary"] {
         background: #00d4ff !important;
         color: #0d1117 !important;
-        border: 1.5px solid #ffffff !important;
-        box-shadow: 0 0 20px rgba(0, 212, 255, 0.8) !important;
-        opacity: 1 !important;
-    }
-
-    /* Khi nộp bài xong bị khóa (Disabled) */
-    div.stButton > button:disabled {
-        cursor: not-allowed !important;
-    }
-
-    /* 5. THÔNG BÁO (SUCCESS/ERROR) */
-    div[data-testid="stNotification"] {
-        background: rgba(13, 17, 23, 0.9) !important;
-        border: 1px solid rgba(0, 212, 255, 0.2) !important;
-        border-radius: 10px !important;
-        color: white !important;
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.5) !important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -327,24 +406,54 @@ if menu == "⚙️ Dashboard Quản lý":
                         st.rerun()
 # --- 2. FLASHCARD ---
 elif menu == "💎 Flashcard":
-    st.title("💎 Thẻ ghi nhớ")
     if not df_current.empty:
         if 'idx' not in st.session_state: st.session_state.idx = 0
         if 'flip' not in st.session_state: st.session_state.flip = False
-        row = df_current.iloc[st.session_state.idx % len(df_current)]
         
-        display = f"<h1>{row['Từ']}</h1><p>{row['Phát âm']}</p>" if not st.session_state.flip else f"<h1 style='color:#58a6ff'>{row['Nghĩa']}</h1>"
-        st.markdown(f"<div style='background:rgba(28,33,40,0.9); border:1px solid #58a6ff; border-radius:20px; height:350px; display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center;'>{display}</div>", unsafe_allow_html=True)
+        total = len(df_current)
+        row = df_current.iloc[st.session_state.idx % total]
         
-        c1, c2 = st.columns(2)
-        if c1.button("🔄 LẬT THẺ", use_container_width=True):
+        # UI: Thanh tiến độ mỏng
+        st.write(f"Từ thứ {st.session_state.idx + 1} trên tổng {total}")
+        st.progress((st.session_state.idx + 1) / total)
+
+        # MẸO: Thêm key={st.session_state.idx} vào container để ép Animation chạy lại cả bối cảnh
+        with st.container(border=False):
+            rotation = "180deg" if st.session_state.flip else "0deg"
+            
+            # Bao bọc toàn bộ bằng class flashcard-container để nhận hiệu ứng slideFromRight
+            st.markdown(f"""
+                <div class="flashcard-container" key="fc_{st.session_state.idx}">
+                    <div class="flip-card">
+                        <div class="flip-card-inner" style="transform: rotateY({rotation});">
+                            <div class="flip-card-front">
+                                <p style="color:#58a6ff; font-size:0.8rem; letter-spacing:2px;">ENGLISH</p>
+                                <h1 style="font-size:3.5rem; margin:10px 0;">{row['Từ']}</h1>
+                                <p style="font-size:1.2rem; color:#8b949e;">{row['Phát âm']}</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <p style="color:#8b949e; font-size:0.8rem; letter-spacing:2px;">VIETNAMESE</p>
+                                <h1 style="font-size:2.5rem; margin:10px 0;">{row['Nghĩa']}</h1>
+                                <p style="color:white; opacity:0.6;">{row['Loại']} • {row['Giới từ'] if row['Giới từ'] else "No Prep"}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            """, unsafe_allow_html=True)
+
+        # Nút điều khiển
+        c1, c2, c3 = st.columns([1, 2, 1])
+        if c1.button("⬅️ Trước", use_container_width=True):
+            st.session_state.idx -= 1
+            st.session_state.flip = False
+            st.rerun()
+        if c2.button("🔄 LẬT THẺ", type="primary", use_container_width=True):
             st.session_state.flip = not st.session_state.flip
             st.rerun()
-        if c2.button("TIẾP THEO ➡️", use_container_width=True):
+        if c3.button("Sau ➡️", use_container_width=True):
             st.session_state.idx += 1
             st.session_state.flip = False
             st.rerun()
-
 
 
 # --- 3. KIỂM TRA ---
