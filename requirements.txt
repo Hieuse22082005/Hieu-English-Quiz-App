@@ -1,4 +1,6 @@
 streamlit
 pandas
-st-gsheets-connection
+streamlit-gsheets-connection
 streamlit-analytics
+setuptools
+google-cloud-firestore
