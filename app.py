@@ -270,27 +270,38 @@ st.markdown("""
 
     /* 5. NÚT BẤM DẠNG VIÊN THUỐC */
     div.stButton > button {
-        background: rgba(255, 255, 255, 0.03) !important;
+        background: rgba(13, 17, 23, 0.8) !important;
         color: #00d4ff !important;
-        border: 1px solid rgba(0, 212, 255, 0.2) !important;
+        border: 1.5px solid rgba(0, 212, 255, 0.3) !important;
         border-radius: 50px !important;
-        font-weight: 500 !important;
-        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        padding: 10px 20px !important;
+        transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1) !important; /* Giảm xuống 0.1s */
+        width: 100%;
     }
-
     div.stButton > button:hover {
         background: #00d4ff !important;
         color: #0d1117 !important;
         box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4) !important;
         transform: translateY(-3px);
     }
-
+    div.stButton > button:active {
+        background-color: #00d4ff !important;
+        color: #0d1117 !important;
+        transition: none !important; /* Triệt tiêu mọi độ trễ chuyển động */
+        transform: scale(0.95) !important;
+    }
     /* Nút đang chọn */
     div.stButton > button[kind="primary"] {
         background: #00d4ff !important;
         color: #0d1117 !important;
-        box-shadow: 0 0 20px rgba(0, 212, 255, 0.5) !important;
+        border: 2px solid #ffffff !important;
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.9) !important;
+        opacity: 1 !important;
+    }
+    div.stButton > button:focus:not(:disabled) {
+        border-color: #ffffff !important;
+        box-shadow: 0 0 25px rgba(0, 212, 255, 1) !important;
+        background-color: #00d4ff !important;
+        color: #0d1117 !important;
     }
     </style>
     """, unsafe_allow_html=True)
