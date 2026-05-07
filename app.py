@@ -616,15 +616,10 @@ elif menu == "📝 Kiểm tra":
                 for i, it in enumerate(st.session_state.ex_list):
                     prep_info = f" + {it['Giới từ']}" if it['Giới từ'] else ""
                     
-                    # HIỂN THỊ ĐẦY ĐỦ: TỪ - LOẠI - PHÁT ÂM
                     st.markdown(f"""
                         <div style="background: rgba(88, 166, 255, 0.1); padding: 12px; border-radius: 10px; border-left: 5px solid #58a6ff; margin-top: 20px;">
                             <span style="color: #8b949e; font-size: 0.9em;">Câu {i+1}:</span> 
                             <b style="font-size: 1.3em; color: #58a6ff; margin-left: 5px;">{it['Từ']}{prep_info}</b>
-                            <div style="margin-top: 5px;">
-                                <span style="background: #238636; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75em; text-transform: uppercase;">{it['Loại']}</span>
-                                <span style="color: #8b949e; font-style: italic; font-size: 0.9em; margin-left: 10px;">{it['Phát âm']}</span>
-                            </div>
                         </div>
                     """, unsafe_allow_html=True)
                     
@@ -632,23 +627,27 @@ elif menu == "📝 Kiểm tra":
                     for idx, opt in enumerate(it['opts']):
                         with cols[idx % 2]:
                             button_key = f"q1_{i}_{idx}"
-                            is_selected = (st.session_state.ans.get(i) == opt)
+                            # Làm sạch dữ liệu để so sánh chính xác
+                            is_selected = (str(st.session_state.ans.get(i)).strip() == str(opt).strip())
                             
                             if not st.session_state.submitted_d1:
                                 if st.button(opt, key=button_key, use_container_width=True, type="primary" if is_selected else "secondary"):
                                     st.session_state.ans[i] = opt
                                     st.rerun() 
                             else:
-                                # Trạng thái sau khi nộp bài
-                                if opt == it['Nghĩa']:
+                                if str(opt).strip() == str(it['Nghĩa']).strip():
                                     st.success(f"✓ {opt}")
                                 elif is_selected:
                                     st.error(f"✗ {opt}")
                                 else:
                                     st.button(opt, key=button_key, use_container_width=True, disabled=True)
 
-                    if st.session_state.submitted_d1 and st.session_state.ans.get(i) == it['Nghĩa']:
-                        score += 1
+                    # Tính điểm dựa trên dữ liệu đã được làm sạch
+                    if st.session_state.submitted_d1:
+                        u_ans = str(st.session_state.ans.get(i, "")).strip()
+                        c_ans = str(it['Nghĩa']).strip()
+                        if u_ans == c_ans:
+                            score += 1
                     st.divider()
                 
                 if not st.session_state.submitted_d1:
@@ -656,7 +655,8 @@ elif menu == "📝 Kiểm tra":
                         st.session_state.submitted_d1 = True
                         st.rerun()
                 else:
-                    st.markdown(f"### 📊 Kết quả: `{score}/{len(st.session_state.ex_list)}` câu đúng")
+                    total = len(st.session_state.ex_list)
+                    st.markdown(f"### 📊 Kết quả: `{score}/{total}` câu đúng ({(score/total)*100:.0f}%)")
                     if st.button("Làm đề mới 🔄"):
                         del st.session_state.ex_list
                         st.rerun()
@@ -773,7 +773,10 @@ elif menu == "📝 Kiểm tra":
 
                 # 4. Hiển thị kết quả sau khi Submit
                 if q['submitted']:
-                    is_correct = q['user_input'].lower() == q['w'].lower()
+                    user_final = q['user_input'].strip().lower()
+                    correct_final = q['w'].strip().lower()
+                    
+                    is_correct = user_final == correct_final
                     
                     if is_correct:
                         st.success(f"✨ **Quá chuẩn Hiếu ơi!** Đáp án là: **{q['w']}**")
