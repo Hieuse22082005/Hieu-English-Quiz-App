@@ -4,41 +4,54 @@ import random
 import streamlit.components.v1 as components
 import time
 from streamlit_gsheets import GSheetsConnection
-
+import google.generativeai as genai
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+# Thử đổi dòng này
+model = genai.GenerativeModel('gemini-2.5-flash')
 st.set_page_config(page_title="Hieu's English Hub", page_icon="🧩", layout="wide")
 # --- HỆ THỐNG BẢO MẬT (LOGIN) ---
 def check_password():
-    """Trả về True nếu mật khẩu đúng, ngược lại hiện ô nhập mật khẩu."""
-    def password_entered():
-        # Kiểm tra mật khẩu (Bạn có thể đổi 'hieu123' thành mật khẩu bạn muốn)
-        if st.session_state["password"] == "hieu123":
-            st.session_state["password_correct"] = True
-            del st.session_state["password"]  # Xóa mật khẩu khỏi session để bảo mật
-        else:
-            st.session_state["password_correct"] = False
+    """Xác thực người dùng và đảm bảo phiên làm việc sẽ bị hủy nếu mật khẩu hệ thống thay đổi."""
+    
+    # 1. Lấy mật khẩu hiện tại từ Secrets (để bạn đổi mật khẩu mà không cần sửa code)
+    # Nếu không tìm thấy trong secrets, nó sẽ mặc định là 'hieu123'
+    current_system_password = st.secrets.get("APP_PASSWORD", "hieu123")
 
-    if "password_correct" not in st.session_state:
-        # Lần đầu truy cập: Hiện ô nhập mật khẩu
-        st.markdown("""
-            <div style='text-align: center; padding: 50px;'>
-                <h1 style='color: #58a6ff;'>🔒 Hieu's Hub Security</h1>
-                <p style='color: white;'>Vui lòng nhập mật khẩu để truy cập hệ thống.</p>
-            </div>
-        """, unsafe_allow_html=True)
-        
-        col1, col2, col3 = st.columns([1, 2, 1])
-        with col2:
-            st.text_input("Mật khẩu:", type="password", on_change=password_entered, key="password")
-            if "password_correct" in st.session_state and not st.session_state["password_correct"]:
-                st.error("❌ Mật khẩu sai rồi Hiếu ơi!")
-        return False
-    else:
-        return st.session_state["password_correct"]
+    def password_entered():
+        """Hàm xử lý khi người dùng nhập mật khẩu."""
+        if st.session_state["pwd_input"] == current_system_password:
+            # QUAN TRỌNG: Lưu chính mật khẩu này vào Session của người dùng
+            st.session_state["session_password"] = current_system_password
+            st.session_state["pwd_input"] = "" # Xóa input sau khi nhập
+        else:
+            st.session_state["password_wrong"] = True
+
+    # 2. KIỂM TRA PHIÊN (SESSION CHECK):
+    # Nếu mật khẩu người dùng đã nhập (lưu trong session) khớp với mật khẩu hệ thống hiện tại
+    if st.session_state.get("session_password") == current_system_password:
+        return True
+
+    # 3. GIAO DIỆN ĐĂNG NHẬP (Chỉ hiện nếu chưa đăng nhập hoặc mật khẩu hệ thống đã đổi)
+    st.markdown("""
+        <div style='text-align: center; padding: 50px;'>
+            <h1 style='color: #58a6ff;'>🔒 Hieu's Hub Security</h1>
+            <p style='color: white;'>Vui lòng nhập mật khẩu để truy cập hệ thống.</p>
+        </div>
+    """, unsafe_allow_html=True)
+    
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        st.text_input("Nhập mật khẩu:", type="password", on_change=password_entered, key="pwd_input")
+        if st.session_state.get("password_wrong"):
+            st.error("❌ Mật khẩu không chính xác!")
+            # Reset lại trạng thái lỗi để người dùng nhập lại
+            st.session_state["password_wrong"] = False
+            
+    return False
 
 # CHẶN TOÀN BỘ APP NẾU CHƯA ĐĂNG NHẬP
 if not check_password():
-    st.stop()  # Dừng mọi logic phía dưới nếu chưa đúng mật khẩu
-    
+    st.stop()
 @st.cache_data(ttl=600) 
 def load_data(sheet_url):
     if not sheet_url:
@@ -430,7 +443,7 @@ with st.sidebar:
         st.rerun()
 
     st.divider()
-    menu = st.radio("⚡ ĐIỀU KHIỂN", ["⚙️ Dashboard Quản lý", "💎 Flashcard", "📝 Kiểm tra"], key="main_nav")
+    menu = st.radio("⚡ ĐIỀU KHIỂN", ["⚙️ Dashboard Quản lý", "💎 Flashcard", "📝 Kiểm tra", "🤖 Trợ lý AI"], key="main_nav")
     
     st.divider()
     st.markdown(f"### ⏱️ Học được: `{get_study_time()}`")
@@ -960,3 +973,57 @@ elif menu == "📝 Kiểm tra":
                         del st.session_state.q6
                         st.rerun()
         st.markdown('</div>', unsafe_allow_html=True)
+elif menu == "🤖 Trợ lý AI":
+    st.title("🤖 Hieu's English AI Assistant")
+    st.info("Trợ lý này có thể giúp bạn giải thích từ vựng, đặt câu ví dụ hoặc luyện giao tiếp.")
+
+    # Khởi tạo lịch sử chat trong session_state
+    if "messages" not in st.session_state:
+        st.session_state.messages = []
+
+    # Hiển thị các tin nhắn đã có
+    for msg in st.session_state.messages:
+        with st.chat_message(msg["role"]):
+            st.markdown(msg["content"])
+
+    # Xử lý nhập liệu từ người dùng
+    if prompt := st.chat_input("Hỏi AI về từ vựng..."):
+        # 1. Hiển thị tin nhắn người dùng
+        st.session_state.messages.append({"role": "user", "content": prompt})
+        with st.chat_message("user"):
+            st.markdown(prompt)
+
+        # 2. Gọi API Gemini
+        with st.chat_message("assistant"):
+            with st.spinner("AI đang suy nghĩ..."):
+                try:
+                    # Thiết lập vai trò cho AI để nó hỗ trợ tốt nhất cho việc học tiếng Anh
+                    system_instruction = "Bạn là trợ lý học tiếng Anh thông minh trong ứng dụng Hieu's Hub. Hãy giải thích ngắn gọn, dễ hiểu và cung cấp ví dụ thực tế."
+                    response = model.generate_content(f"{system_instruction}\n\nUser: {prompt}")
+                    
+                    full_response = response.text
+                    st.markdown(full_response)
+                    
+                    # Lưu vào lịch sử
+                    st.session_state.messages.append({"role": "assistant", "content": full_response})
+                except Exception as e:
+                    st.error(f"Lỗi kết nối AI: {e}")
+def generate_quiz_from_ai(word_list):
+    # Prompt yêu cầu trả về JSON để máy tính đọc được
+    prompt = f"""
+    Bạn là một chuyên gia soạn đề thi TOEIC. 
+    Dựa vào danh sách từ vựng sau: {word_list}, hãy tạo 5 câu hỏi điền vào chỗ trống.
+    
+    Yêu cầu trả về DUY NHẤT định dạng JSON theo cấu trúc mảng sau:
+    [
+      {{
+        "question": "Sentence with ___",
+        "options": ["A", "B", "C", "D"],
+        "answer": "Correct Word",
+        "explanation": "Giải thích ngắn gọn bằng tiếng Việt"
+      }}
+    ]
+    """
+    
+    response = model.generate_content(prompt)
+    return response.text
