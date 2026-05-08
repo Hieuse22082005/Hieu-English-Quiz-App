@@ -996,7 +996,7 @@ elif menu == "🤖 Trợ lý AI":
             with st.spinner("AI đang suy nghĩ..."):
                 try:
                     # Thiết lập vai trò cho AI để nó hỗ trợ tốt nhất cho việc học tiếng Anh
-                    system_instruction = "Bạn là trợ lý học tiếng Anh thông minh trong ứng dụng Hieu's Hub. Hãy giải thích ngắn gọn, dễ hiểu và cung cấp ví dụ thực tế."
+                    system_instruction = "Bạn là trợ lý học tiếng Anh thông minh trong ứng dụng Hieu's Hub. Hãy giải thích ngắn gọn, dễ hiểu và cung cấp ví dụ thực tế bám sát với toeic nhất ."
                     response = model.generate_content(f"{system_instruction}\n\nUser: {prompt}")
                     
                     full_response = response.text
