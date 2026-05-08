@@ -454,34 +454,34 @@ with st.sidebar:
 # --- 1. DASHBOARD QUẢN LÝ ---
 if menu == "⚙️ Dashboard Quản lý":
     st.title("⚙️ Quản lý Từ vựng Cloud")
-    /* with tab1:
-        with st.form("add_form", clear_on_submit=True):
-            c1, c2, c3, c4, c5 = st.columns([2, 3, 1, 2, 1.5])
-            w = c1.text_input("Từ (Word)")
-            m = c2.text_input("Nghĩa (Meaning)")
-            t = c3.selectbox("Loại", ["n", "v", "adj", "adv", "phr"])
-            p = c4.text_input("Phát âm (IPA)")
-            pr = c5.text_input("Giới từ (Prep)")
-            submitted = st.form_submit_button("LƯU LÊN GOOGLE SHEETS", use_container_width=True)
+     # with tab1:
+     #    with st.form("add_form", clear_on_submit=True):
+     #        c1, c2, c3, c4, c5 = st.columns([2, 3, 1, 2, 1.5])
+     #        w = c1.text_input("Từ (Word)")
+     #        m = c2.text_input("Nghĩa (Meaning)")
+     #        t = c3.selectbox("Loại", ["n", "v", "adj", "adv", "phr"])
+     #        p = c4.text_input("Phát âm (IPA)")
+     #        pr = c5.text_input("Giới từ (Prep)")
+     #        submitted = st.form_submit_button("LƯU LÊN GOOGLE SHEETS", use_container_width=True)
             
-            if submitted:
-                if w and m:  
-                    new_entry = {
-                        "Từ": w,
-                        "Nghĩa": m,
-                        "Loại": t,
-                        "Phát âm": p,
-                        "Giới từ": pr
-                    }
+     #        if submitted:
+     #            if w and m:  
+     #                new_entry = {
+     #                    "Từ": w,
+     #                    "Nghĩa": m,
+     #                    "Loại": t,
+     #                    "Phát âm": p,
+     #                    "Giới từ": pr
+     #                }
                     
-                    with st.spinner("Đang đồng bộ lên Cloud..."):
-                        if save_to_gsheets(new_entry):
-                            st.success(f"🚀 Đã thêm thành công từ: {w}")
-                            st.cache_data.clear() 
-                            time.sleep(1)
-                            st.rerun()
-                else:
-                    st.warning("Hiếu ơi, điền thiếu Từ hoặc Nghĩa rồi kìa!") */
+     #                with st.spinner("Đang đồng bộ lên Cloud..."):
+     #                    if save_to_gsheets(new_entry):
+     #                        st.success(f"🚀 Đã thêm thành công từ: {w}")
+     #                        st.cache_data.clear() 
+     #                        time.sleep(1)
+     #                        st.rerun()
+     #            else:
+     #                st.warning("Hiếu ơi, điền thiếu Từ hoặc Nghĩa rồi kìa!") 
 
     with tab2:
         txt = st.text_area("Định dạng: Từ, Nghĩa, Loại, Phát âm, Giới từ", placeholder="Depend, Phụ thuộc, v, /dɪˈpend/, on")
