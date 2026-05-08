@@ -454,53 +454,7 @@ with st.sidebar:
 # --- 1. DASHBOARD QUẢN LÝ ---
 if menu == "⚙️ Dashboard Quản lý":
     st.title("⚙️ Quản lý Từ vựng Cloud")
-    tab1, tab2 = st.tabs(["✨ Thêm từ đơn", "📦 Thêm hàng loạt"])
     
-    with tab1:
-        with st.form("add_form", clear_on_submit=True):
-            c1, c2, c3, c4, c5 = st.columns([2, 3, 1, 2, 1.5])
-            w = c1.text_input("Từ (Word)")
-            m = c2.text_input("Nghĩa (Meaning)")
-            t = c3.selectbox("Loại", ["n", "v", "adj", "adv", "phr"])
-            p = c4.text_input("Phát âm (IPA)")
-            pr = c5.text_input("Giới từ (Prep)")
-            submitted = st.form_submit_button("LƯU LÊN GOOGLE SHEETS", use_container_width=True)
-            
-            if submitted:
-                if w and m:  
-                    new_entry = {
-                        "Từ": w,
-                        "Nghĩa": m,
-                        "Loại": t,
-                        "Phát âm": p,
-                        "Giới từ": pr
-                    }
-                    
-                    with st.spinner("Đang đồng bộ lên Cloud..."):
-                        if save_to_gsheets(new_entry):
-                            st.success(f"🚀 Đã thêm thành công từ: {w}")
-                            st.cache_data.clear() 
-                            time.sleep(1)
-                            st.rerun()
-                else:
-                    st.warning("Hiếu ơi, điền thiếu Từ hoặc Nghĩa rồi kìa!")
-
-    with tab2:
-        txt = st.text_area("Định dạng: Từ, Nghĩa, Loại, Phát âm, Giới từ", placeholder="Depend, Phụ thuộc, v, /dɪˈpend/, on")
-        if st.button("🚀 NẠP HÀNG LOẠT", use_container_width=True):
-            if txt:
-                try:
-                    # Tách dòng và tách dấu phẩy
-                    new_items = [[i.strip() for i in l.split(',')] for l in txt.strip().split('\n') if ',' in l]
-                    if new_items:
-                        new_df = pd.DataFrame(new_items, columns=["Từ", "Nghĩa", "Loại", "Phát âm", "Giới từ"])
-                        final_df = pd.concat([df_current, new_df], ignore_index=True)
-                        if save_to_gsheets(final_df):
-                            st.success("🚀 Đã nạp hàng loạt thành công!")
-                            st.cache_data.clear()
-                            st.rerun()
-                except Exception as e:
-                    st.error(f"Định dạng nhập vào chưa đúng Hiếu ơi: {e}")
 
     st.divider()
     st.subheader(f"📋 Danh sách ({len(df_current)} từ)")
