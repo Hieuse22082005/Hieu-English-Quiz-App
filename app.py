@@ -454,51 +454,53 @@ with st.sidebar:
 # --- 1. DASHBOARD QUẢN LÝ ---
 if menu == "⚙️ Dashboard Quản lý":
     st.title("⚙️ Quản lý Từ vựng Cloud")
-     # with tab1:
-     #    with st.form("add_form", clear_on_submit=True):
-     #        c1, c2, c3, c4, c5 = st.columns([2, 3, 1, 2, 1.5])
-     #        w = c1.text_input("Từ (Word)")
-     #        m = c2.text_input("Nghĩa (Meaning)")
-     #        t = c3.selectbox("Loại", ["n", "v", "adj", "adv", "phr"])
-     #        p = c4.text_input("Phát âm (IPA)")
-     #        pr = c5.text_input("Giới từ (Prep)")
-     #        submitted = st.form_submit_button("LƯU LÊN GOOGLE SHEETS", use_container_width=True)
+    tab1, tab2 = st.tabs(["✨ Thêm từ đơn", "📦 Thêm hàng loạt"])
+    
+    with tab1:
+        with st.form("add_form", clear_on_submit=True):
+            c1, c2, c3, c4, c5 = st.columns([2, 3, 1, 2, 1.5])
+            w = c1.text_input("Từ (Word)")
+            m = c2.text_input("Nghĩa (Meaning)")
+            t = c3.selectbox("Loại", ["n", "v", "adj", "adv", "phr"])
+            p = c4.text_input("Phát âm (IPA)")
+            pr = c5.text_input("Giới từ (Prep)")
+            submitted = st.form_submit_button("LƯU LÊN GOOGLE SHEETS", use_container_width=True)
             
-     #        if submitted:
-     #            if w and m:  
-     #                new_entry = {
-     #                    "Từ": w,
-     #                    "Nghĩa": m,
-     #                    "Loại": t,
-     #                    "Phát âm": p,
-     #                    "Giới từ": pr
-     #                }
+            if submitted:
+                if w and m:  
+                    new_entry = {
+                        "Từ": w,
+                        "Nghĩa": m,
+                        "Loại": t,
+                        "Phát âm": p,
+                        "Giới từ": pr
+                    }
                     
-     #                with st.spinner("Đang đồng bộ lên Cloud..."):
-     #                    if save_to_gsheets(new_entry):
-     #                        st.success(f"🚀 Đã thêm thành công từ: {w}")
-     #                        st.cache_data.clear() 
-     #                        time.sleep(1)
-     #                        st.rerun()
-     #            else:
-     #                st.warning("Hiếu ơi, điền thiếu Từ hoặc Nghĩa rồi kìa!") 
+                    with st.spinner("Đang đồng bộ lên Cloud..."):
+                        if save_to_gsheets(new_entry):
+                            st.success(f"🚀 Đã thêm thành công từ: {w}")
+                            st.cache_data.clear() 
+                            time.sleep(1)
+                            st.rerun()
+                else:
+                    st.warning("Hiếu ơi, điền thiếu Từ hoặc Nghĩa rồi kìa!")
 
-    # with tab2:
-    #     txt = st.text_area("Định dạng: Từ, Nghĩa, Loại, Phát âm, Giới từ", placeholder="Depend, Phụ thuộc, v, /dɪˈpend/, on")
-    #     if st.button("🚀 NẠP HÀNG LOẠT", use_container_width=True):
-    #         if txt:
-    #             try:
-    #                 # Tách dòng và tách dấu phẩy
-    #                 new_items = [[i.strip() for i in l.split(',')] for l in txt.strip().split('\n') if ',' in l]
-    #                 if new_items:
-    #                     new_df = pd.DataFrame(new_items, columns=["Từ", "Nghĩa", "Loại", "Phát âm", "Giới từ"])
-    #                     final_df = pd.concat([df_current, new_df], ignore_index=True)
-    #                     if save_to_gsheets(final_df):
-    #                         st.success("🚀 Đã nạp hàng loạt thành công!")
-    #                         st.cache_data.clear()
-    #                         st.rerun()
-    #             except Exception as e:
-    #                 st.error(f"Định dạng nhập vào chưa đúng Hiếu ơi: {e}")
+    with tab2:
+        txt = st.text_area("Định dạng: Từ, Nghĩa, Loại, Phát âm, Giới từ", placeholder="Depend, Phụ thuộc, v, /dɪˈpend/, on")
+        if st.button("🚀 NẠP HÀNG LOẠT", use_container_width=True):
+            if txt:
+                try:
+                    # Tách dòng và tách dấu phẩy
+                    new_items = [[i.strip() for i in l.split(',')] for l in txt.strip().split('\n') if ',' in l]
+                    if new_items:
+                        new_df = pd.DataFrame(new_items, columns=["Từ", "Nghĩa", "Loại", "Phát âm", "Giới từ"])
+                        final_df = pd.concat([df_current, new_df], ignore_index=True)
+                        if save_to_gsheets(final_df):
+                            st.success("🚀 Đã nạp hàng loạt thành công!")
+                            st.cache_data.clear()
+                            st.rerun()
+                except Exception as e:
+                    st.error(f"Định dạng nhập vào chưa đúng Hiếu ơi: {e}")
 
     st.divider()
     st.subheader(f"📋 Danh sách ({len(df_current)} từ)")
@@ -594,9 +596,11 @@ elif menu == "📝 Kiểm tra":
         st.warning("Cần tối thiểu 4 từ để tạo bài kiểm tra.")
     else:
         # 1. Thanh chọn dạng bài
+        # 1. Thanh chọn dạng bài
         mode = st.radio("Chọn dạng kiểm tra:", 
                 ["Dạng 1 (Trắc nghiệm)", "Dạng 2 (Làm đâu biết đó)", "Dạng 3 (Viết từ)", 
-                 "Dạng 4 (Loại từ)", "Dạng 5 (Giới từ)", "Dạng 6 (Chọn từ)"], 
+                 "Dạng 4 (Loại từ)", "Dạng 5 (Giới từ)", "Dạng 6 (Chọn từ)", 
+                 "Dạng 7 (Đồng nghĩa)", "Dạng 8 (Trái nghĩa)"], 
                 horizontal=True, key="quiz_mode_selector")
         
         st.divider()
@@ -628,9 +632,17 @@ elif menu == "📝 Kiểm tra":
                     prep_info = f" + {it['Giới từ']}" if it['Giới từ'] else ""
                     
                     st.markdown(f"""
-                        <div style="background: rgba(88, 166, 255, 0.1); padding: 12px; border-radius: 10px; border-left: 5px solid #58a6ff; margin-top: 20px;">
-                            <span style="color: #8b949e; font-size: 0.9em;">Câu {i+1}:</span> 
-                            <b style="font-size: 1.3em; color: #58a6ff; margin-left: 5px;">{it['Từ']}{prep_info}</b>
+                        <div style="background: rgba(88, 166, 255, 0.05); padding: 15px; border-radius: 10px; border-left: 5px solid #58a6ff; margin-top: 20px;">
+                            <h4 style="color: #58a6ff; margin: 0; font-size: 1.3em;">
+                                <span style="color: #8b949e; font-size: 0.8em; font-weight: normal; margin-right: 5px;">Câu {i+1}:</span> 
+                                {it['Từ']}{prep_info}
+                            </h4>
+                            <p style="color: #c9d1d9; margin: 8px 0 0 0; font-size: 0.95em;">
+                                <span style="background: #238636; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.85em; margin-right: 8px;">
+                                    {it.get('Loại', 'N/A')}
+                                </span>
+                                <i>{it.get('Phát âm', '')}</i>
+                            </p>
                         </div>
                     """, unsafe_allow_html=True)
                     
@@ -970,6 +982,111 @@ elif menu == "📝 Kiểm tra":
                     if st.button("Câu tiếp theo ➡️", key="next_q6_btn"): 
                         del st.session_state.q6
                         st.rerun()
+            # --- DẠNG 7: TÌM TỪ ĐỒNG NGHĨA ---
+            elif mode == "Dạng 7 (Đồng nghĩa)":
+                # Lọc ra những từ thực sự có dữ liệu ở cột 'Đồng nghĩa'
+                df_syn = df_current[df_current['Đồng nghĩa'] != ""]
+                
+                if len(df_syn) < 4:
+                    st.warning("⚠️ Cần tối thiểu 4 từ có điền cột 'Đồng nghĩa' để chơi dạng này!")
+                else:
+                    if 'q7' not in st.session_state:
+                        target = df_syn.sample(n=1).iloc[0]
+                        # Lấy các đáp án gây nhiễu từ các từ khác
+                        others = df_syn[df_syn['Từ'] != target['Từ']]['Đồng nghĩa'].unique().tolist()
+                        opts = [target['Đồng nghĩa']] + random.sample(others, min(len(others), 3))
+                        random.shuffle(opts)
+                        
+                        st.session_state.q7 = {
+                            'w': target['Từ'], 
+                            'ans': target['Đồng nghĩa'], 
+                            'opts': opts, 
+                            'done': False, 
+                            'meaning': target['Nghĩa'], 
+                            'user_choice': None
+                        }
+                    
+                    q = st.session_state.q7
+                    st.markdown(f'''
+                        <div class="word-card" style="border-left: 5px solid #bd93f9;">
+                            <h3 style="color: #bd93f9; margin: 0;">Tìm từ ĐỒNG NGHĨA với: {q['w']}</h3>
+                            <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Gợi ý nghĩa VN: {q['meaning']}</p>
+                        </div>
+                    ''', unsafe_allow_html=True)
+                    
+                    cols = st.columns(2)
+                    for i, opt in enumerate(q['opts']):
+                        with cols[i % 2]:
+                            is_selected = (q.get('user_choice') == opt)
+                            if st.button(opt, key=f"btn7_{i}", use_container_width=True, disabled=q['done'], type="primary" if is_selected else "secondary"):
+                                q['user_choice'] = opt
+                                q['done'] = True
+                                st.rerun()
+                    
+                    if q['done']:
+                        if q['user_choice'] == q['ans']:
+                            st.success("Chính xác! 🎉")
+                            play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
+                        else:
+                            st.error(f"Sai rồi! Đồng nghĩa của '{q['w']}' là: {q['ans']}")
+                            play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
+                        
+                        if st.button("Câu tiếp theo ➡️", key="next_q7_btn"): 
+                            del st.session_state.q7
+                            st.rerun()
+
+            # --- DẠNG 8: TÌM TỪ TRÁI NGHĨA ---
+            elif mode == "Dạng 8 (Trái nghĩa)":
+                # Lọc ra những từ có dữ liệu ở cột 'Trái nghĩa'
+                df_ant = df_current[df_current['Trái nghĩa'] != ""]
+                
+                if len(df_ant) < 4:
+                    st.warning("⚠️ Cần tối thiểu 4 từ có điền cột 'Trái nghĩa' để chơi dạng này!")
+                else:
+                    if 'q8' not in st.session_state:
+                        target = df_ant.sample(n=1).iloc[0]
+                        # Lấy các đáp án gây nhiễu
+                        others = df_ant[df_ant['Từ'] != target['Từ']]['Trái nghĩa'].unique().tolist()
+                        opts = [target['Trái nghĩa']] + random.sample(others, min(len(others), 3))
+                        random.shuffle(opts)
+                        
+                        st.session_state.q8 = {
+                            'w': target['Từ'], 
+                            'ans': target['Trái nghĩa'], 
+                            'opts': opts, 
+                            'done': False, 
+                            'meaning': target['Nghĩa'], 
+                            'user_choice': None
+                        }
+                    
+                    q = st.session_state.q8
+                    st.markdown(f'''
+                        <div class="word-card" style="border-left: 5px solid #ff5555;">
+                            <h3 style="color: #ff5555; margin: 0;">Tìm từ TRÁI NGHĨA với: {q['w']}</h3>
+                            <p style="color: #ffffff; margin: 5px 0 0 0; opacity: 0.9;">Gợi ý nghĩa VN: {q['meaning']}</p>
+                        </div>
+                    ''', unsafe_allow_html=True)
+                    
+                    cols = st.columns(2)
+                    for i, opt in enumerate(q['opts']):
+                        with cols[i % 2]:
+                            is_selected = (q.get('user_choice') == opt)
+                            if st.button(opt, key=f"btn8_{i}", use_container_width=True, disabled=q['done'], type="primary" if is_selected else "secondary"):
+                                q['user_choice'] = opt
+                                q['done'] = True
+                                st.rerun()
+                    
+                    if q['done']:
+                        if q['user_choice'] == q['ans']:
+                            st.success("Chính xác! 🎉")
+                            play_sound("https://www.soundjay.com/buttons/sounds/button-3.mp3")
+                        else:
+                            st.error(f"Sai rồi! Trái nghĩa của '{q['w']}' là: {q['ans']}")
+                            play_sound("https://www.soundjay.com/buttons/sounds/button-10.mp3")
+                        
+                        if st.button("Câu tiếp theo ➡️", key="next_q8_btn"): 
+                            del st.session_state.q8
+                            st.rerun()           
         st.markdown('</div>', unsafe_allow_html=True)
 elif menu == "🤖 Trợ lý AI":
     st.title("🤖 Hieu's English AI Assistant")
@@ -996,7 +1113,7 @@ elif menu == "🤖 Trợ lý AI":
             with st.spinner("AI đang suy nghĩ..."):
                 try:
                     # Thiết lập vai trò cho AI để nó hỗ trợ tốt nhất cho việc học tiếng Anh
-                    system_instruction = "Bạn là trợ lý học tiếng Anh thông minh trong ứng dụng Hieu's Hub. Hãy giải thích ngắn gọn, dễ hiểu và cung cấp ví dụ thực tế bám sát với toeic nhất ."
+                    system_instruction = "Bạn là trợ lý học tiếng Anh thông minh trong ứng dụng Hieu's Hub. Hãy giải thích ngắn gọn, dễ hiểu và cung cấp ví dụ thực tế bám sát với toeic nhất "
                     response = model.generate_content(f"{system_instruction}\n\nUser: {prompt}")
                     
                     full_response = response.text
